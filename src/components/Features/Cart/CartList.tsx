@@ -2,12 +2,14 @@
 import { useGetCart } from "@/entities/Cart/hooks/useGetCart";
 import { CartItem as TCartItem } from "@/entities/Cart/types/Cart";
 import CartItem from "./CartItem";
+import DrawerItem from "./DrawerItem";
 
 interface Props{
-  cartItems: TCartItem[];  
+  cartItems: TCartItem[];
+  isDrawer?: boolean;  
 }
 
-export function CartList({cartItems}: Props) {
+export function CartList({cartItems , isDrawer}: Props) {
   const {data: cart , isPending , error} = useGetCart();
 
   if(isPending) return <div>loading</div>;
@@ -15,10 +17,22 @@ export function CartList({cartItems}: Props) {
   if(error) throw new Error("خطایی رخ داد");
 
   return (
-    <div className="lg:border p-4 rounded-lg overflow-hidden">
-      {cartItems.map((item)=>(
-        <CartItem key={item.id} item={item}/>
-      ))}      
+    <div className="overflow-hidden ">
+      {isDrawer ?
+        cartItems.map((item)=>(
+          <DrawerItem 
+          key={item.id} 
+          item={item}
+          />
+        ))          
+        :
+        cartItems.map((item)=>(
+          <CartItem 
+          key={item.id} 
+          item={item}
+          />
+        ))  
+      }
     </div>
   )
 }

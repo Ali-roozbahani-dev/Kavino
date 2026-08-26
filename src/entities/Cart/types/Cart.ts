@@ -1,4 +1,4 @@
-import { ProductImage } from "@/entities/Product/types";
+import { ProductAttribute, ProductImage } from "@/entities/Product/types";
 
 export interface CartItem {
   id: number;
@@ -13,6 +13,8 @@ export interface CartItem {
   unit_price: number;
   discount_amount: number;
   final_price: number;
+  variant_stock: number;
+  attributes: ProductAttribute[];
 }
 
 export interface Cart {

@@ -1,46 +1,61 @@
 # 🏠 Home Appliances Store
 
-A modern **Home Appliances E-commerce** built with **Next.js**, currently under active development.
+A modern **Full-Stack Home Appliances E-commerce** application built with **Next.js** and **Django REST Framework**.
 
-> **⚠️ Project Status:** This project is still under development and new features will be added continuously.
+The project is currently under active development, with new features and improvements being added continuously.
 
 ---
 
 ## ✨ Features
 
 * ✅ Feature-Based Architecture
-* ✅ Custom API integration for the Home page
-* ✅ Product search
-* ✅ Product listing pages
-* ✅ Product filtering
-* ✅ Product sorting
-* ✅ Infinite Scroll for loading products
-* ✅ Virtualized product list for improved performance when rendering large datasets
-* ✅ Responsive pages are done
+* ✅ Responsive Design
+* ✅ Custom API integration
+* ✅ Product Search
+* ✅ Product Filtering
+* ✅ Product Sorting
+* ✅ Infinite Scrolling
+* ✅ Virtualized Product List
+* ✅ OTP-based Authentication
+* ✅ Access Token & Refresh Token Authentication
+* ✅ CSRF Protection
+* ✅ Protected Routes
+* ✅ Automatic Access Token Refresh
+* ✅ Product Reviews & Review Submission
+* ✅ Server-State Shopping Cart
+* ✅ API-driven Data Management
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Next.js (App Router)
-* React
-* TypeScript
-* Tailwind CSS
-* React Query (TanStack Query)
-* TanStack Virtual
-* Zustand
-* shadcn/ui
+* **Next.js** — App Router
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **TanStack Query (React Query)** — Server State Management
+* **TanStack Virtual** — Virtualized Lists
+* **Zustand** — Client State Management
+* **Axios** — HTTP Client & API Communication
+* **shadcn/ui** — UI Components
 
----
 
-## 📂 Project Structure
+## 🏗️ Architecture
 
-The project follows a **Feature-Based Architecture**, where each feature is organized into its own directory, making the codebase more scalable, maintainable, and easier to extend.
+The frontend follows a **Feature-Based Architecture**, where application functionality is organized into independent feature modules.
 
-Example:
+This approach helps keep the codebase:
+
+* Scalable
+* Maintainable
+* Modular
+* Easier to extend
+
+Example project structure:
 
 ```text
 src/
+
 ├── app/
 ├── components/
 ├── features/
@@ -49,58 +64,107 @@ src/
 │   ├── Home/
 │   ├── Products-List/
 │   ├── Product-Details/
-│   ├── search/
+│   ├── Reviews/
+│   ├── Search/
 │   └── ...
-├── lib/
 ├── entities/
+├── lib/
 ├── stores/
 └── types/
 ```
 
----
+The application also separates **server state** from **client state**:
 
-## 🚀 Implemented Pages
-
-* Home Page
-* Product Listing Page
+* **TanStack Query** is used for server-side data and API state.
+* **Zustand** is used for client-side state where appropriate.
 
 ---
 
-## 📌 Current Progress
+## 🔐 Authentication & Security
 
-Implemented:
+The application implements an **OTP-based authentication system** using access and refresh tokens.
 
-* Feature-Based project architecture
-* Home page connected to a custom API
+### Authentication Flow
+
+* OTP-based user authentication
+* Access Token & Refresh Token
+* HTTP-only cookies for authentication tokens
+* CSRF Token protection
+* Protected routes
+* Automatic access token refresh
+* Authentication state management with TanStack Query
+* Axios-based API communication
+
+The backend is responsible for authentication and authorization, while the Next.js frontend handles the client-side authentication state and protected navigation.
+
+---
+
+## 🚀 Implemented Features
+
+### 🏠 Home Page
+
+* Custom API integration
+* Responsive layout
+* Product sections
+
+### 🛍️ Product Listing
+
 * Product search
 * Product filtering
 * Product sorting
-* Infinite scrolling for products
+* Infinite scrolling
+* Virtualized product rendering
 
----
+### 🔐 Authentication
+
+* OTP login
+* Access & Refresh Token authentication
+* CSRF protection
+* Protected routes
+* Automatic token refresh
+* Authentication state management
+
+### 💬 Product Reviews
+
+* Display product reviews
+* Submit new reviews
+* API integration for review management
+
+### 🛒 Shopping Cart
+
+The shopping cart is implemented as **server state** and managed using **TanStack Query**.
+
+Implemented functionality includes:
+
+* Fetch cart data from the server
+* Add products to cart
+* Update item quantities
+* Remove cart items
+* Synchronize cart state with the backend
+* Cache and update server data using TanStack Query
+
 
 ## 🚧 Upcoming Features
 
-The following features are currently in progress:
-
-* Shopping Cart
 * Wishlist
-* User Authentication
 * User Profile
 * Checkout Process
-* Product Reviews
 * Order Management
-* Performance optimizations
+* Additional Performance Optimizations
+* More E-commerce Features
 
 ---
 
-## 📷 Preview
+## 🔗 Live Demo
 
-Screenshots will be added soon.
+🚧 **Coming Soon**
+
+The live demo link will be added here once the project is deployed.
 
 ---
 
 ## 📄 License
 
-This project is intended for learning and portfolio purposes.
+This project is intended for **learning and portfolio purposes**.
+
 

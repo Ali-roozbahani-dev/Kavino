@@ -6,11 +6,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { TreviewForm, ReviewFormSchema } from "../../../../../entities/Review/schema/ReviewFormSchema";
 import FieldError from "@/components/ui/Error/FieldError";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
 import { toast } from "sonner";
+import { api } from "@/api/axios_instance";
+import { isAxiosError } from "axios";
 
 
-export default function ReviewForm(){
+export default function ReviewForm({productSlug}: {productSlug: string}){  
     const {register , handleSubmit , reset , control , formState: {errors} } = useForm<TreviewForm>({
         resolver: zodResolver(ReviewFormSchema),
         defaultValues: {
@@ -21,7 +22,7 @@ export default function ReviewForm(){
 
     const sendReviewMutation = useMutation({
         mutationFn: async (data: TreviewForm)=>{
-            await axios.post("" , data)
+            await api.post(`/products/${productSlug}/reviews/` , data)
         },
         onSuccess: ()=>{
             toast.success("نظر شما با موفقیت ثبت شد و پس از تائید منتشر میشود");
@@ -30,7 +31,18 @@ export default function ReviewForm(){
                 rating: 0,
             });
         },
-        onError: ()=>{
+        onError: (err)=>{
+            if(isAxiosError(err)){
+                if(err.response?.status === 401){
+                    toast.error("برای ثبت نظر ابتدا وارد حساب کاربری خود شوید");
+                    return
+                }
+                if(err.response?.status === 409){
+                    toast.error("شما قبلا برای این محصول ثبت نظر کرده اید");
+                    return
+                }
+
+            }
             toast.error("خطایی در حین ثبت نظر شما رخ داد")
         }
     })

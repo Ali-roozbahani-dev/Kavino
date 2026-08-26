@@ -17,7 +17,7 @@ export function useAddToCart() {
             variant,
             quantity,
         }: Params): Promise<Tcart> => {
-            const res = await api.post<Tcart>("/api/cart/items/",
+            const res = await api.post<Tcart>("/cart/items/",
                 {
                     variant,
                     quantity,
@@ -32,8 +32,8 @@ export function useAddToCart() {
             toast.success("محصول به سبد خرید اضافه شد");
         },
 
-        onError: () => {
-            toast.error("خطایی رخ داد");
+        onError: (err) => {
+            toast.error(err.message);
         },
     });
 

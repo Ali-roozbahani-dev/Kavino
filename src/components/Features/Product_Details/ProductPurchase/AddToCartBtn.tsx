@@ -16,7 +16,7 @@ export default function AddToCartBtn({selectedVariant }: Props) {
   const {addToCart , isAddingToCart} = useAddToCart();
 
   if(isPending) return <div>loading</div>
-  if(error) throw new Error("خطایی رخ داد")
+  if(error) throw new Error(error.message)
 
   const addedVariant = cart.items.find(
     (item) => item.variant_id === selectedVariant.id
@@ -33,15 +33,16 @@ export default function AddToCartBtn({selectedVariant }: Props) {
       {addedVariant ? (
         <div
           className="w-full flex justify-between items-center border border-primary-text3 text-theme-2 
-        rounded-sm px-2 py-1 lg:py-2 lg:text-[16px]"
+        rounded-sm px-2 h-11 lg:h-12.5 lg:py-2 lg:text-[16px]"
         >
-          {/* {selectedVariant.id!! && (
-            <QuantitySelector
-              className="ms-3 xl:ms-0 order-last xl:order-first"
-              itemId={selectedVariant.id} 
-              quantity={addedVariant.quantity}             
-            />
-          )} */}
+        
+          <QuantitySelector
+            className="ms-3 xl:ms-0 order-last xl:order-first"
+            itemId={addedVariant.id} 
+            quantity={addedVariant.quantity} 
+            stock={addedVariant.variant_stock}            
+          />
+          
           <Link
             href={"/cart"}
             className="border border-theme-2 font-semibold p-2 text-[12px] md:text-[13px]"
@@ -54,7 +55,7 @@ export default function AddToCartBtn({selectedVariant }: Props) {
           disabled={isAddingToCart}
           onClick={addToCartHandler}
           variant={"Blue1"}
-          className="w-full rounded-sm px-5 py-5 lg:py-6 lg:text-[16px]"
+          className="w-full rounded-sm px-5 h-11  lg:h-12.5 lg:text-[16px]"
         >
           {isAddingToCart ? (
             <Loader2 className="size-5 lg:size-6 animate-spin" />

@@ -42,7 +42,7 @@ export default function FilterContainer({facets,onSubmit}: Tprops){
         side="right"
         variant="sidebar"     
         collapsible={isMobile ? "offcanvas" : "none"} 
-        className="w-80 border-l md:sticky h-full md:border"
+        className="w-80 border-l h-full md:border"
         >
         
             <form

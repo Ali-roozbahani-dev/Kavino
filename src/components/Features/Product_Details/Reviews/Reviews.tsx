@@ -27,7 +27,7 @@ return (
             </div>
 
             <div className="lg:order-first w-full lg:w-1/2">
-                <ReviewForm />
+                <ReviewForm productSlug={productSlug}/>
             </div>
         </div>
 

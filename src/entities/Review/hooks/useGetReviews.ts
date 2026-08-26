@@ -40,5 +40,6 @@ export function useGetReviews(slug: string) {
 
       return Number(url.searchParams.get("page"));
     },
+    staleTime: Infinity,
   });
 }

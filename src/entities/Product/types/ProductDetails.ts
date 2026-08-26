@@ -24,6 +24,7 @@ export interface ProductImage {
 }
 
 export interface ProductAttribute {
+  id: number;
   attribute: string;
   value: string;
   properties: Record<string, unknown>;

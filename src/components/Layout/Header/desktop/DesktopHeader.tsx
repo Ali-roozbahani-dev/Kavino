@@ -1,12 +1,11 @@
 import Logo from "../Logo";
-import LoginLink from "../LoginLink";
 import CartLink from "../CartLink";
-import { TCategoriesGroup } from "../Categories/utils/categorizeCategories";
 import SearchHeader from "@/components/Features/Search/SearchHeader";
+import AuthMenu from "../AuthMenu ";
 
 export default function DesktopHeader() {
   return (    
-    <div className="px-3 lg:px-7">
+    <div className="px-3 lg:px-17">
       <div className="container-0 py-3  bg-white">
         <div className="flex-between pt-2">
           <div className="flex items-center flex-1">
@@ -19,7 +18,7 @@ export default function DesktopHeader() {
           </div>
           <div className="flex">
             <div className="me-3">
-              <LoginLink />
+              <AuthMenu />
             </div>
 
             <div>

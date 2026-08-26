@@ -5,7 +5,7 @@ import {
   ProductVariant,
   VariantAttribute,
 } from "../../../../entities/Product/types";
-import { getVariantAttribute } from "../utils/variant_attributes";
+import { getVariantAttribute } from "../../../../entities/Product/utils/variant_attributes";
 
 interface Props {
   activeVariant: ProductVariant;

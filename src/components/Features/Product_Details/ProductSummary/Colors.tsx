@@ -3,7 +3,7 @@
 import { useProductStore } from "@/stores/product_store";
 import { ProductVariant } from "../../../../entities/Product/types";
 import ColorItem from "./ColorItem";
-import { getVariantAttributeValue } from "../utils/variant_attributes";
+import { getVariantAttributeValue } from "../../../../entities/Product/utils/variant_attributes";
 
 export default function Colors({ variants }: { variants: ProductVariant[] }) {
   // فعال variant پیدا کردن

@@ -11,7 +11,7 @@ export function useClearCart(){
 
     const mutation = useMutation({
         mutationFn: async (): Promise<Tcart> => {
-            const res = await api.delete<Tcart>(`/api/cart/clear/`);
+            const res = await api.delete<Tcart>(`/cart/clear/`);
             return res.data;
         },
         onSuccess: (newCart)=>{

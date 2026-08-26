@@ -12,11 +12,11 @@ import EditNumLink from "./EditNumLink"
 import {useState } from "react"
 import RequestOtpBtn from "./RequestOtpBtn"
 import { useRouter } from "next/navigation"
-import { useRequestOtp } from "./hooks/useRequestOtp"
-import { useVerifyOtp } from "./hooks/useVerifyOtp"
-import { useOtpCountdown } from "./hooks/useOtpCountdown"
-import { otpSchema } from "./schema/otpSchema"
-import { loginSchema } from "./schema/loginSchema"
+import { useRequestOtp } from "../../../../entities/Auth/hooks/useRequestOtp"
+import { useVerifyOtp } from "../../../../entities/Auth/hooks/useVerifyOtp"
+import { useOtpCountdown } from "../../../../entities/Auth/hooks/useOtpCountdown"
+import { otpSchema } from "../../../../entities/Auth/schema/otpSchema"
+import { loginSchema } from "../../../../entities/Auth/schema/loginSchema"
 
 
 
@@ -32,6 +32,7 @@ export default function OtpForm({mobile , callbackUrl}: Props) {
  const {requestOtpMutation , isSendingRequest} = useRequestOtp();
  const {verifyOtpMutation, isVerifyingOtp } = useVerifyOtp({
       phone_number: mobile,
+      callbackUrl
   });
  const {secondsLeft} = useOtpCountdown(); 
  const [otp, setOtp] = useState(""); 
@@ -47,16 +48,21 @@ export default function OtpForm({mobile , callbackUrl}: Props) {
 
 
   const sendRequestHandler = ({ mobile }: { mobile: string }) => {
-    const validation = loginSchema.safeParse({
-      mobile,
-    });
+    const validation = loginSchema.safeParse({ mobile});
 
     if (!validation.success) {
       router.push("/Login");
       return;
     }
 
-    requestOtpMutation({ mobile });
+    requestOtpMutation(
+      { mobile },
+      {
+        onSuccess: () => {
+          setOtp("");
+        },
+      }
+    );
   }; 
 
 

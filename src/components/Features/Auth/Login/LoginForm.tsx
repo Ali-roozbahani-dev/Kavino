@@ -4,8 +4,8 @@ import { InputGroup,InputGroupInput } from "@/components/ui/input-group";
 import { Label } from "@/components/ui/label";
 import RequestOtpBtn from "./RequestOtpBtn";
 import FieldError from "@/components/ui/Error/FieldError";
-import { useRequestOtp } from "./hooks/useRequestOtp";
-import { loginSchema } from "./schema/loginSchema";
+import { useRequestOtp } from "../../../../entities/Auth/hooks/useRequestOtp";
+import { loginSchema } from "../../../../entities/Auth/schema/loginSchema";
 
 
 interface Tprops{

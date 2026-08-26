@@ -5,9 +5,8 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { DirectionProvider } from "@radix-ui/react-direction";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
-import Footer from "@/components/Layout/Footer/Footer";
-import Header from "@/components/Layout/Header/Header";
 import { Toaster } from "@/components/ui/sonner"
+import { AuthBootstrap } from "@/entities/Auth/AuthBootstrap";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -28,7 +27,8 @@ export default function RootLayout({
     >
       <body className={vazir.className}>
         <DirectionProvider dir="rtl">
-          <ReactQueryProvider>                                       
+          <ReactQueryProvider>   
+            <AuthBootstrap />                                    
             {children}                        
           </ReactQueryProvider>
           <Toaster />          

@@ -12,7 +12,7 @@ export function useRequestOtp(){
     const requestOtpMutation = useMutation({
         mutationFn: async ({mobile , callbackUrl}: {mobile: string; callbackUrl?: string})=>{        
         
-        await api.post("/api/user/auth/request-otp/",{
+        await api.post("/auth/request-otp/",{
             phone_number: mobile 
         }) 
 

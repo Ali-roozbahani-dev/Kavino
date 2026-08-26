@@ -1,9 +1,10 @@
 import { api } from "@/api/axios_instance";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-
+import { authQueryKeys } from "../authQueryKeys";
+import { cartQueryKey } from "@/entities/Cart/queryKeys";
 interface VerifyOtpParams {
     phone_number: string;
     callbackUrl?: string;
@@ -11,21 +12,33 @@ interface VerifyOtpParams {
 
 export function useVerifyOtp({ phone_number , callbackUrl}: VerifyOtpParams) {
     const router = useRouter();
+    const queryClient = useQueryClient();
     
     const verifyOtpMutation = useMutation({
         mutationFn: async (otp: string) => {        
 
-            await api.post("/api/user/auth/verify-otp/",
+        const res = await api.post("/auth/verify-otp/",
                 {
                     phone_number,
                     otp,
                 }
             );
+
+            console.log(res)
         },
 
-        onSuccess: () => {
+        onSuccess: async () => {
+            await Promise.all([
+                queryClient.invalidateQueries({
+                    queryKey: authQueryKeys.me,
+                }),
+                queryClient.invalidateQueries({
+                    queryKey: cartQueryKey,
+                }),
+            ]);
+                
             toast.success("ورود با موفقیت");
-            router.push(callbackUrl ?? "/")
+            router.push(callbackUrl ?? "/");
         },
 
         onError: (error) => {

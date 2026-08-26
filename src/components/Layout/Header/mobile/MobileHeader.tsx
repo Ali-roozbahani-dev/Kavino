@@ -1,10 +1,8 @@
-"use client";
 import Logo from "../Logo";
-import LoginLink from "../LoginLink";
 import CartLink from "../CartLink";
-import { useEffect, useState } from "react";
 import MobileNavbar from "./MobileNavbar";
 import { TCategoriesGroup } from "../Categories/utils/categorizeCategories";
+import AuthMenu from "../AuthMenu ";
 
 
 export default function MobileHeader({
@@ -33,7 +31,7 @@ export default function MobileHeader({
           </div>
 
           <div className="flex">
-            <LoginLink />
+            <AuthMenu />
           </div>
         </div>              
         

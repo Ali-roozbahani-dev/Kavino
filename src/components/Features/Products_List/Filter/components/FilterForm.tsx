@@ -44,7 +44,7 @@ export function FilterForm({
       <div
         className={`
           block
-          md:sticky md:top-34 md:right-0 md:p-4 md:self-start
+          md:sticky md:top-45 md:right-0 md:p-4 md:self-start
           ${showFilter ? "md:block" : "md:hidden"}
         `}
       >

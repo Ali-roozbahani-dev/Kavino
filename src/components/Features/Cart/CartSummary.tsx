@@ -2,13 +2,19 @@ import { CollapsibleDetails } from "./CollapsibleDetails";
 import OrderRegistrationBtn from "./OrderRegistrationBtn";
 
 
-export default function CartSummary(){
+interface Props{
+    inDrawer?: boolean;
+}
+
+export default function CartSummary({inDrawer}: Props){
 
     return(
         <div className="sticky border-t lg:border-0 top-[150px] px-4">  
         <div className="relative">
-            <CollapsibleDetails />            
+            <CollapsibleDetails />   
+            {inDrawer && 
             <h1 className="hidden lg:flex h-10 mb-4 items-center text-[15px] md:text-[18px] font-bold">خلاصه سفارش</h1>
+            }         
             <div className="lg:rounded-lg py-2 lg:p-4 lg:border">
                 <div className="pb-5 border-b hidden lg:block">
                     <div className="flex items-center justify-between">
