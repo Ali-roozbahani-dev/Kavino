@@ -1,3 +1,4 @@
+import { ApiPaginatedResponse } from "@/types/ApiPaginatedResponse";
 import { ProductListItem } from "./ProductListItem";
 
 
@@ -23,10 +24,7 @@ export interface Facets {
 }
 
 
-export interface TproductList{
-    count: number;
-    next: null;
-    previous: null;
+export interface TproductList extends ApiPaginatedResponse{
     results: ProductListItem[];
     facets: Facets; 
 }

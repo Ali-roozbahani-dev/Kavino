@@ -1,8 +1,8 @@
 import Logo from "../Logo";
 import CartLink from "../CartLink";
 import MobileNavbar from "./MobileNavbar";
-import { TCategoriesGroup } from "../Categories/utils/categorizeCategories";
-import AuthMenu from "../AuthMenu ";
+import { TCategoriesGroup } from "../desktop/Categories/utils/categorizeCategories";
+import AuthMenu from "../AuthMenu";
 
 
 export default function MobileHeader({

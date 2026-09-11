@@ -15,7 +15,7 @@ export default function ReviewForm({productSlug}: {productSlug: string}){
     const {register , handleSubmit , reset , control , formState: {errors} } = useForm<TreviewForm>({
         resolver: zodResolver(ReviewFormSchema),
         defaultValues: {
-            review: "",
+            comment: "",
             rating: 0,
         },
     });
@@ -27,7 +27,7 @@ export default function ReviewForm({productSlug}: {productSlug: string}){
         onSuccess: ()=>{
             toast.success("نظر شما با موفقیت ثبت شد و پس از تائید منتشر میشود");
             reset({
-                review: "",
+                comment: "",
                 rating: 0,
             });
         },
@@ -61,15 +61,15 @@ export default function ReviewForm({productSlug}: {productSlug: string}){
 
 
             <textarea 
-            {...register("review")}
+            {...register("comment")}
             disabled={sendReviewMutation.isPending}
             className="mt-4 mb-2 border rounded-md py-2.5 px-3.5 h-20 block w-full placeholder:text-[14px]"             
             placeholder="نظر خود را درباره این محصول بنویسید ..."
             />
-            {errors.review?.message && 
+            {errors.comment?.message && 
             <FieldError
             className="mb-2.5" 
-            message={errors.review?.message}/>}
+            message={errors.comment?.message}/>}
 
 
             <div className="flex justify-between items-end">

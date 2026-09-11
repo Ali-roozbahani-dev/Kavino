@@ -12,6 +12,7 @@ export interface ProductDetails {
   category: SingleCategory;
   images: ProductImage[];
   attributes: ProductAttribute[];
+  highlight_attributes: ProductAttribute[];
   variants: ProductVariant[];
   reviews: ReviewsSummary;
 }

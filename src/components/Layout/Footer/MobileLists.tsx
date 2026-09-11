@@ -18,7 +18,7 @@ export default function MobileLists() {
       <Accordion type="multiple" className="w-full">
         {footerLists.map((list, index) => (
           <AccordionItem key={index} value={`item-${index}`} className="py-1">
-            <AccordionTrigger className="text-base font-bold">
+            <AccordionTrigger className="text-base font-bold text-[14px] md:text-[16px]">
               {list.title}
             </AccordionTrigger>
 

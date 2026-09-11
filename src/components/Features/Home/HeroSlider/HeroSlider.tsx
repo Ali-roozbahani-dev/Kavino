@@ -5,7 +5,7 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from 'next/image';
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { HeroSliderItem } from "../types/homeDataTypes";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export default function HeroSlider({sliders}: Props){
   return (
     <div className={`p-0 ${styles.slider}`}>
         <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         navigation={{
             prevEl: ".custom-prev",
             nextEl: ".custom-next"
@@ -28,7 +28,11 @@ export default function HeroSlider({sliders}: Props){
         loop={true}
         pagination={{ clickable: true }}
         spaceBetween={0}
-        slidesPerView={1}      
+        slidesPerView={1}
+        autoplay={{
+            delay: 3000, 
+            disableOnInteraction: false,
+        }}
         >
         {sliders.map((slider,i)=>(
             <SwiperSlide key={i} className=''>
@@ -36,7 +40,7 @@ export default function HeroSlider({sliders}: Props){
                     <Image 
                     src={slider.desktop_image} 
                     width={1200} 
-                    height={410} 
+                    height={250} 
                     alt='تصویر بند' 
                     className='w-full h-auto hidden lg:block'                
                     />

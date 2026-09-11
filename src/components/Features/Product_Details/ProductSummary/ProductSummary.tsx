@@ -17,6 +17,7 @@ interface Props {
   name: string;
   brand: Tbrand;
   attributes: ProductAttribute[];
+  highlight_attributes: ProductAttribute[];
 }
 
 export default function ProductSummary({
@@ -25,7 +26,9 @@ export default function ProductSummary({
   name,
   brand,
   attributes,
+  highlight_attributes
 }: Props) {
+
   return (
     <div className="w-full mt-5 md:mt-0 md:p-3 lg:p-5">
       <div className="mb-4 flex justify-end items-center xl:hidden">
@@ -39,8 +42,11 @@ export default function ProductSummary({
       </h1>
       <Brand brand={brand} />
       <Rating reviews_summary={reviews_summary} />
-      <MainProperties attributes={attributes} />
       <Colors variants={variants} />
+      <MainProperties 
+      highlight_attributes={highlight_attributes}
+      attributes={attributes}
+      />
     </div>
   );
 }

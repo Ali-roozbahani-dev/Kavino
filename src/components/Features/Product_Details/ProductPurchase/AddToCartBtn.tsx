@@ -4,7 +4,7 @@ import { Loader2, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import QuantitySelector from "../../Cart/QuantitySelector";
 import { ProductVariant } from "@/entities/Product/types";
-import { useGetCart } from "@/entities/Cart/hooks/useGetCart";
+import { useCart } from "@/entities/Cart/hooks/useCart";
 import { useAddToCart } from "@/entities/Cart/hooks/useAddToCart";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function AddToCartBtn({selectedVariant }: Props) {
-  const { data: cart , isPending , error} = useGetCart();
+  const { data: cart , isPending , error} = useCart();
   const {addToCart , isAddingToCart} = useAddToCart();
 
   if(isPending) return <div>loading</div>

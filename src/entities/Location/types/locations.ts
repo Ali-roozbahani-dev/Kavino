@@ -1,14 +1,11 @@
 export interface Province {
   id: number;
   name: string;
-  slug: string;
-  tel_prefix: string;
+  cities: City[];
 }
 
 export interface City {
   id: number;
-  province_id: number;
   name: string;
-  slug: string;
-  county_id: number;
+  province: Omit<Province, "cities">
 }

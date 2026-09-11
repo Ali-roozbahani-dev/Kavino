@@ -1,58 +1,36 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const authPaths = ["/Login", "/LoginWithOtp"];
+const checkoutPaths = ["/checkout/address", "/checkout/shipping"];
+
 export async function proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
-
-    if (!pathname.startsWith("/Login")) {
-        return NextResponse.next();
-    }
-
     const accessToken = request.cookies.get("access_token")?.value;
+    const refreshToken = request.cookies.get("refresh_token")?.value;
+    
+    const hasSession = Boolean(accessToken) || Boolean(refreshToken);
 
-    // Access Token وجود دارد
-    if (accessToken) {
+    const isAuthPath = authPaths.some((p) => pathname.startsWith(p));
+    const isCheckoutPath = checkoutPaths.some((p) => pathname.startsWith(p));
+
+    // مسیرهای احراز هویت: اگه لاگینه، نیازی به این صفحه نداره
+    if (isAuthPath && hasSession) {
         return NextResponse.redirect(new URL("/", request.url));
     }
 
-    // Access Token وجود ندارد
-    try {
-        const refreshResponse = await fetch(
-            new URL("/api/auth/refresh", request.url),
-            {
-                method: "POST",
-                headers: {
-                    Cookie: request.headers.get("cookie") ?? "",
-                },
-                cache: "no-store",
-            }
-        );
-
-        // Refresh موفق نبود
-        if (!refreshResponse.ok) {
-            return NextResponse.next();
-        }
-
-        // Refresh موفق شد
-        const response = NextResponse.redirect(
-            new URL("/", request.url)
-        );
-
-        // Cookieهای جدید Backend/Route Handler را منتقل کن
-        const setCookie = refreshResponse.headers.get("set-cookie");
-
-        if (setCookie) {
-            response.headers.set("set-cookie", setCookie);
-        }
-
-        return response;
-    } catch {
-        return NextResponse.next();
+    // اگه لاگین نیست، اجازه‌ی ورود نده : checkout مسیرهای
+    if (isCheckoutPath && !hasSession) {
+        return NextResponse.redirect(new URL("/Login", request.url));
     }
+
+    return NextResponse.next();
 }
 
 export const config = {
     matcher: [
         "/Login",
         "/LoginWithOtp",
+        "/checkout/address",
+        "/checkout/shipping"
     ],
 };

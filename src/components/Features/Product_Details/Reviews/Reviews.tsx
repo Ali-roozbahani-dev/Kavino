@@ -30,7 +30,6 @@ return (
                 <ReviewForm productSlug={productSlug}/>
             </div>
         </div>
-
         <ReviewListSection productSlug={productSlug}/>
     </div>        
 )

@@ -25,7 +25,7 @@ export default function RootLayout({
       dir="rtl"
       className={cn("h-full", "antialiased", vazir.variable, "font-sans", geist.variable)}
     >
-      <body className={vazir.className}>
+      <body className={`${vazir.className} body-scrollbar-custom`}>
         <DirectionProvider dir="rtl">
           <ReactQueryProvider>   
             <AuthBootstrap />                                    

@@ -5,6 +5,10 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { authQueryKeys } from "../authQueryKeys";
 import { cartQueryKey } from "@/entities/Cart/queryKeys";
+import { getAuthChannel } from "../BroadcastChannel/getAuthChannel";
+import { authChannelActions } from "../BroadcastChannel/authChannelActions";
+import { getCartChannel } from "@/entities/Cart/BroadcastChannel/getCartChannel";
+import { cartChannelActions } from "@/entities/Cart/BroadcastChannel/cartChannelActions";
 interface VerifyOtpParams {
     phone_number: string;
     callbackUrl?: string;
@@ -17,25 +21,26 @@ export function useVerifyOtp({ phone_number , callbackUrl}: VerifyOtpParams) {
     const verifyOtpMutation = useMutation({
         mutationFn: async (otp: string) => {        
 
-        const res = await api.post("/auth/verify-otp/",
+        await api.post("/auth/verify-otp/",
                 {
                     phone_number,
                     otp,
                 }
             );
-
-            console.log(res)
         },
 
         onSuccess: async () => {
             await Promise.all([
-                queryClient.invalidateQueries({
+                queryClient.removeQueries({
                     queryKey: authQueryKeys.me,
                 }),
                 queryClient.invalidateQueries({
                     queryKey: cartQueryKey,
                 }),
             ]);
+
+            getAuthChannel()?.postMessage({ type: authChannelActions.login });
+            getCartChannel()?.postMessage({type: cartChannelActions.invalidate});
                 
             toast.success("ورود با موفقیت");
             router.push(callbackUrl ?? "/");

@@ -2,6 +2,7 @@
 
 import { Cart } from "@/entities/Cart/types/Cart";
 import BulkDelete from "./BulkDelete";
+import { formatNumberWithoutSeparator } from "@/utils/formatNumber";
 
 
 interface Props{
@@ -18,7 +19,7 @@ export default function CartListHeader({cart , isClearing , clearCart}: Props){
             <div>
                 <h1 className="font-semibold text-[22px] me-2 inline-block">سبد خرید</h1>
                 <span className="text-primary-text text-[13px] md:text-[14px]">
-                    ({cart.items.length}) عدد کالا
+                    ({formatNumberWithoutSeparator(cart.items.length)}) عدد کالا
                 </span>
             </div> 
             <div>

@@ -8,7 +8,9 @@ export function useAuth(){
     return useQuery({
         queryKey: authQueryKeys.me,
         queryFn: getMe,  
-        staleTime: 0,      
-        gcTime: Infinity,                       
+        staleTime: 1000 * 60 * 5,      
+        gcTime: Infinity,   
+        retry: false,          
+        refetchOnWindowFocus: false,                          
     })
 }

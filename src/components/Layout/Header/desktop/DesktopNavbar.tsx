@@ -2,8 +2,8 @@
 
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
-import Categories from "../Categories/Desktop/Categories";
-import { TCategoriesGroup } from "../Categories/utils/categorizeCategories";
+import Categories from "./Categories/Categories";
+import { TCategoriesGroup } from "./Categories/utils/categorizeCategories";
 import StaticNavbarItems from "../NavbarHeader/StaticNavbarItems";
 import { usePathname } from "next/navigation";
 import SearchHeader from "@/components/Features/Search/SearchHeader";
@@ -58,7 +58,7 @@ export default function DesktopNavbar({
   <div className="relative">    
     <div
       className={`
-        absolute inset-x-0 top-0 
+        absolute inset-x-0 top-0 bg-white
         transition-all duration-200
         ${showNavbar
           ? "translate-y-0 opacity-100"
@@ -67,7 +67,7 @@ export default function DesktopNavbar({
       `}
     >
       <div className="shadow">
-        <div className="container-0 relative bg-white">
+        <div className="container-0 relative">
           
           <div className="lg:hidden w-full p-2">
             <SearchHeader />

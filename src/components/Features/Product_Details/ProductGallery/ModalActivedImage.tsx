@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from "swiper/types";
 import {Navigation} from "swiper/modules";
 import Image from "next/image"
 import "swiper/css";
@@ -7,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { ProductImage } from '@/entities/Product/types';
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { useSyncSwiper } from './hooks/useSyncSwiper';
 
 interface Props{

@@ -1,6 +1,6 @@
 "use client";
 
-import { useProductStore } from "@/stores/product_store";
+import { useProductStore } from "@/entities/Product/stores/product_store";
 import { ProductVariant } from "../../../../entities/Product/types";
 import ColorItem from "./ColorItem";
 import { getVariantAttributeValue } from "../../../../entities/Product/utils/variant_attributes";

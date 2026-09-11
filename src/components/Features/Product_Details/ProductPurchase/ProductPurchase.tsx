@@ -5,7 +5,8 @@ import PurchaseHeader from "./PurchaseHeader";
 import AddToCartBtn from "./AddToCartBtn";
 import StoreFeatures from "./StoreFeatures";
 import { ProductVariant } from "@/entities/Product/types";
-import { useProductStore } from "@/stores/product_store";
+import { useProductStore } from "@/entities/Product/stores/product_store";
+import SectionSpinner from "@/components/ui/Loading/SectionLoading";
 
 
 interface Props{  
@@ -18,12 +19,12 @@ export default function ProductPurchase({PurchaseInTabs , variants}: Props){
     const selectedVariantId = useProductStore((state)=> state.selectedVariantId);
     const selectedVariant = variants.find((variant)=> variant.id === selectedVariantId);
 
-    if(!selectedVariant) return null;        
-    
-
     return (
-        <div className="flex justify-between items-center xl:block w-full px-3.5 py-2
+        <div className="flex justify-between h-[60px] xl:h-auto items-center xl:block w-full px-3.5 py-2
         xl:border md:rounded-xl xl:p-5">
+            {selectedVariant!! ?
+
+            <>
             <div className="hidden xl:block">
                 <PurchaseHeader                 
                 selectedVariant={selectedVariant}
@@ -41,6 +42,11 @@ export default function ProductPurchase({PurchaseInTabs , variants}: Props){
              selectedVariant={selectedVariant}
              />
             </div>
+            </>
+            :
+            <SectionSpinner dotsClass="size-10" containerClass="h-full xl:h-[174px]"/>           
+
+            }
 
             {!PurchaseInTabs && 
             <div className="hidden xl:block mt-3">

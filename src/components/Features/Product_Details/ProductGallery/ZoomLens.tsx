@@ -1,5 +1,5 @@
 "use client"
-import { Fullscreen, Plus, Scan } from "lucide-react";
+import { Scan } from "lucide-react";
 
 interface Props {
     left: number;

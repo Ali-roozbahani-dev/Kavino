@@ -3,6 +3,8 @@ import { toast } from "sonner";
 import { Cart as Tcart } from "@/entities/Cart/types/Cart";
 import { cartQueryKey } from "../queryKeys";
 import { api } from "../../../api/axios_instance";
+import { cartChannelActions } from "../BroadcastChannel/cartChannelActions";
+import { getCartChannel } from "../BroadcastChannel/getCartChannel";
 
 
 interface Params{
@@ -25,6 +27,7 @@ export function useChangeQuantity({itemId , currentQuantity}: Params){
         },
         onSuccess: (newCart)=>{
             queryClient.setQueryData(cartQueryKey , newCart);
+            getCartChannel()?.postMessage({type: cartChannelActions.invalidate});
         },
         onError: ()=>{
             toast.error("خطایی رخ داد");

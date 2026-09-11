@@ -6,7 +6,7 @@ export default function Brand({ brand }: { brand: Tbrand }) {
   const { name, logo, slug } = brand;
 
   return (
-    <div className="my-1 flex items-center justify-between">
+    <div className="relative my-1 flex items-center justify-between py-5">
       <Link
         href={`/brand/${slug}`}
         className="text-blue-500 font-semibold text-[18px]"
@@ -19,7 +19,7 @@ export default function Brand({ brand }: { brand: Tbrand }) {
           width={500}
           height={500}
           alt={`${name} image`}
-          className="w-30"
+          className="w-30 absolute left-0 top-0"
         />
       )}
     </div>

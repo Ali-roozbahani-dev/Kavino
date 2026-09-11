@@ -11,14 +11,15 @@ interface Props {
 
 export default function CategorySlider({categories}: Props) {
   return (
-    <div className='my-10'>
+    <div className='my-10 px-3'>
         <Swiper
-        spaceBetween={25}        
+        spaceBetween={0}        
         breakpoints={{
         400: { slidesPerView: 3.2 },
         640: { slidesPerView: 4.2 },
-        740: { slidesPerView: 5.2 },
-        1280: { slidesPerView: 8.3 },
+        800: { slidesPerView: 5.2 },
+        1000: { slidesPerView: 6.2 },
+        1280: { slidesPerView: 7.4 },
         }} 
             
         >

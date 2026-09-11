@@ -9,7 +9,7 @@ import {
 import { Result } from "./Result"
 import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
-import { useSearchResult } from "./api/useSearchResult"
+import { useSearchResult } from "../../../entities/Product/hooks/useSearchResult"
 
 
 export default function SearchHeader() {

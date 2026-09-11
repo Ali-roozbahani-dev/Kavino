@@ -34,6 +34,6 @@
     "src/components/Features/Products_List/types",
     "src/components/Features/Products_List/Filter",
     "src/components/Features/Products_List/components"
-  ],
+, "src/entities/Product/schema"  ],
   "exclude": ["node_modules"]
 }

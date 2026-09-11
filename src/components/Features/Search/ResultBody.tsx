@@ -22,8 +22,8 @@ export default function ResultBody({ results, isPending }: Tprops) {
       {results?.length ? (
         <div
           style={{ direction: "ltr" }}
-          className="-mx-(--card-spacing) h-100 space-y-4 
-        overflow-y-scroll border-t  px-(--card-spacing) py-4 text-sm leading-relaxed"
+          className="-mx-(--card-spacing) h-100 space-y-4
+        overflow-y-auto border-t p-2 scrollbar-hide"
         >
           <div style={{ direction: "rtl" }}>
             <ul>

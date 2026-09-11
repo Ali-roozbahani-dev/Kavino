@@ -14,7 +14,7 @@ export default function ReviewCard({review}: Props){
             <ReviewHeader 
             created_at={created_at}
             rating={rating}
-            user={user}
+            user={user.length ? user : "کاربر ناشناس"}
             />
             <ReviewContent comment={comment}/>
         </div>        

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LogOut, Package, User } from "lucide-react";
-import LogoutBtn from "@/components/Features/Auth/Logout/LogoutBtn";
+import LogoutDialog from "@/components/Features/Auth/Logout/LogoutDialog";
 
 export default function 
 Menu(){
@@ -31,7 +31,7 @@ Menu(){
             سفارش‌های من
             </Link>
 
-            <LogoutBtn />
+            <LogoutDialog />
         </div>
     )
 }

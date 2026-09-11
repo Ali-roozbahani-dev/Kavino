@@ -1,43 +1,60 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Link from "next/link";
-import { FaChevronLeft } from "react-icons/fa6";
-import HomePageProductCard  from "@/components/ui/Product/Cards/HomePageProductCard";
-import { ProductListItem } from "@/entities/Product/types"
+import { FaChevronLeft, FaFire } from "react-icons/fa6";
+import HomePageProductCard from "@/components/ui/Product/Cards/HomePageProductCard";
+import { ProductListItem } from "@/entities/Product/types";
 
-
-export default function SpecialOffers({products}: {products: ProductListItem[]}) {
-
-  
+export default function SpecialOffers({
+  products,
+}: {
+  products: ProductListItem[];
+}) {
   return (
-    <div className="my-10">
-      <div className="flex justify-between items-center py-2.5">
-        <h1 className="font-bold text-[15px] lg:text-[18px]">
-          پیشنهاد های ویژه
-        </h1>
-        <Link href={"/"} className="text-theme-4 text-[14px] lg:text-[17px]">
+    <section className="my-10 overflow-hidden md:rounded-2xl
+    bg-linear-to-r from-theme-4/15 via-theme-4/7 to-transparent p-4 sm:p-5 md:p-6">
+
+      {/* Header */}
+      <div className="mb-5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-theme-4/10 text-theme-4">
+            <FaFire className="text-lg" />
+          </div>
+
+          <h2 className="font-bold text-[15px] lg:text-[18px]">
+            پیشنهادهای ویژه
+          </h2>
+        </div>
+
+        <Link
+          href="/"
+          className="flex items-center text-theme-4 text-[13px] lg:text-[15px]"
+        >
           <span className="font-bold">مشاهده همه</span>
-          <FaChevronLeft className="inline-block ms-2" />
+          <FaChevronLeft className="ms-2 text-xs" />
         </Link>
       </div>
-      <Swiper
-        spaceBetween={25}
-        breakpoints={{
-          400: { slidesPerView: 2.2 },
-          768: { slidesPerView: 3.2 },
-          1024: { slidesPerView: 4.2 },
-          1280: { slidesPerView: 5.2 },
-        }}
-      >
-        {products.map((pro)=>(
 
-        <SwiperSlide key={pro.id}>
-          <HomePageProductCard product={pro}/>
-        </SwiperSlide>
+      {/* Slider */}
+      <Swiper
+        slidesPerView={6.2}
+        spaceBetween={12}
+        breakpoints={{
+          500: { slidesPerView: 2.1, spaceBetween: 12 },
+          768: { slidesPerView: 3.2, spaceBetween: 16 },
+          1024: { slidesPerView: 4.2, spaceBetween: 18 },
+          1280: { slidesPerView: 5.2, spaceBetween: 20 },
+        }}
+        className="overflow-visible!"
+      >
+        {products.map((pro) => (
+          <SwiperSlide key={pro.id} className="h-auto">
+            <HomePageProductCard product={pro} />
+          </SwiperSlide>
         ))}
-        
       </Swiper>
-    </div>
+    </section>
   );
 }

@@ -3,6 +3,8 @@ import { toast } from "sonner";
 import { Cart as Tcart } from "@/entities/Cart/types/Cart";
 import { cartQueryKey } from "../queryKeys";
 import { api } from "../../../api/axios_instance";
+import { cartChannelActions } from "../BroadcastChannel/cartChannelActions";
+import { getCartChannel } from "../BroadcastChannel/getCartChannel";
 
 interface Params {
     variant: number;
@@ -29,6 +31,9 @@ export function useAddToCart() {
 
         onSuccess: (newCart) => {
             queryClient.setQueryData(cartQueryKey, newCart);
+
+            getCartChannel()?.postMessage({type: cartChannelActions.invalidate});
+            
             toast.success("محصول به سبد خرید اضافه شد");
         },
 

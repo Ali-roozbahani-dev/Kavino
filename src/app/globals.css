@@ -160,12 +160,48 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
-}
+  .rtl{
+    direction: rtl;
+  }
+  
+  .ltr{
+    direction: ltr;
+  }
+  .body-scrollbar-custom::-webkit-scrollbar-button {
+    display: none;
+  }
 
-.rtl{
-  direction: rtl;
-}
+  .body-scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    padding: 0 20px;
+    background-color: rgb(238, 238, 238)
+  }
 
-.ltr{
-  direction: ltr;
+  .body-scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: rgb(193, 193, 193);
+    border-radius: 0;
+    border: 2px rgb(238, 238, 238);
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: rgb(5, 0, 80);
+    border-radius: 10px;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE و Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 }

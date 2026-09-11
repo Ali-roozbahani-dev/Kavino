@@ -39,9 +39,9 @@ export function ShareProduct() {
         if (!value) setIsCopied(false);
     }}>
       <DialogTrigger asChild>
-        <Button  className="border-0 p-0 bg-transparent hover:bg-transparent text-primary-text2">
+        <button  className="bg-transparent hover:bg-transparent text-primary-text2">
            <Share2 className="size-5.5 md:size-6.5"/>
-        </Button>
+        </button>
       </DialogTrigger>      
       <DialogContent className="sm:max-w-md">
         <DialogHeader>

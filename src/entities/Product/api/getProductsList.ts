@@ -1,4 +1,4 @@
-import { Tqueries } from "@/components/Features/Products_List/types/TproductSection";
+import { Tqueries } from "@/entities/Product/types/TproductSection";
 import { TproductList } from "@/entities/Product/types";
 
 export async function getProductsList(

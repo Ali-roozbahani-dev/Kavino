@@ -1,3 +1,5 @@
+import { ApiPaginatedResponse } from "@/types/ApiPaginatedResponse";
+
 export interface Review {
   id: number;
   user: string;
@@ -6,9 +8,6 @@ export interface Review {
   created_at: string;
 }
 
-export interface ReviewsResponse {
-  count: number;
-  next: string | null;
-  previous: string | null;
+export interface ReviewsResponse extends ApiPaginatedResponse{
   results: Review[];
 }

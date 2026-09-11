@@ -2,7 +2,7 @@ import z from "zod";
 
 export const ReviewFormSchema = z.object({
 
-    review: z
+    comment: z
     .string()
     .trim()
     .min(1, "لطفا نظر خود را وارد کنید"),

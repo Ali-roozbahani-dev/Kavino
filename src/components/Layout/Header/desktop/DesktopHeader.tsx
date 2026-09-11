@@ -1,7 +1,7 @@
 import Logo from "../Logo";
 import CartLink from "../CartLink";
 import SearchHeader from "@/components/Features/Search/SearchHeader";
-import AuthMenu from "../AuthMenu ";
+import AuthMenu from "../AuthMenu";
 
 export default function DesktopHeader() {
   return (    

@@ -3,6 +3,7 @@ import { Loader2, Minus, Plus, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useChangeQuantity } from "@/entities/Cart/hooks/useChangeQuantity";
 import { useDeleteCartItem } from "@/entities/Cart/hooks/useDeleteCartItem";
+import { formatNumberWithoutSeparator } from "@/utils/formatNumber";
 
 
 interface Props {
@@ -49,7 +50,7 @@ className}: Props) {
         )}
       </button>
       <span className="font-semibold w-1/3 flex-center">
-        {quantity}
+        {formatNumberWithoutSeparator(quantity)}
       </span>
 
       {quantity > 1 ? (

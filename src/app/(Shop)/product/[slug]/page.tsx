@@ -18,9 +18,11 @@ export default async function ProductPage({ params }: PageProps) {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
   const product = await getProduct(decodedSlug);
+  
   const {
     id,
     attributes,
+    highlight_attributes,
     brand,
     category,
     description,
@@ -55,6 +57,7 @@ export default async function ProductPage({ params }: PageProps) {
               name={name}
               brand={brand}
               attributes={attributes}
+              highlight_attributes={highlight_attributes}
             />
           </div>
           <div

@@ -1,6 +1,4 @@
-import ProductsSection from "@/components/Features/Products_List/components/ProductsSection";
-import { Tqueries } from "@/components/Features/Products_List/types/TproductSection";
-import { productQueryKey } from "@/components/Features/Products_List/utils/productQueries";
+import { Tqueries } from "@/entities/Product/types/TproductSection";
 import Main from "@/components/Layout/Main/Main";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { getProductsList } from "@/entities/Product/api/getProductsList";
@@ -9,6 +7,8 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
+import { productQueryKey } from "@/entities/Product/utils/productQueries";
+import ProductsSection from "@/components/Features/Products_List/ProductsSection";
 
 type PageProps = {
   params: Promise<{

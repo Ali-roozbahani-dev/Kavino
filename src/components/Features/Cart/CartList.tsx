@@ -1,23 +1,16 @@
-"use client"
-import { useGetCart } from "@/entities/Cart/hooks/useGetCart";
 import { CartItem as TCartItem } from "@/entities/Cart/types/Cart";
 import CartItem from "./CartItem";
-import DrawerItem from "./DrawerItem";
+import DrawerItem from "./Drawer/DrawerItem";
 
 interface Props{
   cartItems: TCartItem[];
   isDrawer?: boolean;  
 }
 
-export function CartList({cartItems , isDrawer}: Props) {
-  const {data: cart , isPending , error} = useGetCart();
-
-  if(isPending) return <div>loading</div>;
-
-  if(error) throw new Error("خطایی رخ داد");
+export function CartList({cartItems , isDrawer}: Props) {  
 
   return (
-    <div className="overflow-hidden ">
+    <div className={`${isDrawer ? "scrollbar-custom max-h-[350px] overflow-y-auto" : "mb-10"}`}>
       {isDrawer ?
         cartItems.map((item)=>(
           <DrawerItem 

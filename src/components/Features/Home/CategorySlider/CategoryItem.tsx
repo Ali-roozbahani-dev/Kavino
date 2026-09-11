@@ -10,17 +10,21 @@ export default function CategoryItem({category}: Props){
 
 
     return (
-        <Link href={`/category/${category.slug}`} className="block rounded-lg border p-4  w-full">
-            <div className="">
+        <Link 
+        href={`/category/${category.slug}`} 
+        className="flex flex-col items-center justify-center 
+         w-[120px]  xl:w-[140px]"
+        >
+            <div className="rounded-full overflow-hidden">
                 <Image 
                 src={category.image ?? "/"}
-                width={1990}
-                height={2500}
+                width={140}
+                height={140}
                 alt="category image"
-                className="w-13 h-auto mx-auto"
+                className="h-[120px] xl:h-[140px] w-full mx-auto"
                 />
             </div>
-            <p className="text-center font-bold mt-5 text-[12px] lg:text-[14px]">{category.name}</p>
+            <p className="text-center font-semibold text-[12px] lg:text-[14px] pt-4">{category.name}</p>
         </Link>
     )
 }

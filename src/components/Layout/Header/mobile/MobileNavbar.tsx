@@ -13,7 +13,7 @@ import {
 import {
   Accordion,  
 } from "@/components/ui/accordion";
-import { TCategoriesGroup } from "../Categories/utils/categorizeCategories";
+import { TCategoriesGroup } from "../desktop/Categories/utils/categorizeCategories";
 import CategoryItem from "./CategoryItem";
 import StaticNavbarItems from "../NavbarHeader/StaticNavbarItems";
 import Image from "next/image";
@@ -34,7 +34,7 @@ export default function MobileNavbar({categoriesGroup,}:{categoriesGroup: TCateg
           <Image src={"/mainLogo.png"} width={100} height={100} alt="logo"/>          
         </SheetHeader>
 
-        <div className="overflow-y-auto h-full pb-20">
+        <div className="overflow-y-auto h-full pb-20  scrollbar-custom">
           <SheetTitle className="font-vazir text-right px-3 my-1 font-bold">
             دسته بندی ها
           </SheetTitle>
@@ -49,9 +49,9 @@ export default function MobileNavbar({categoriesGroup,}:{categoriesGroup: TCateg
             ))}
           </Accordion>
 
-          <ul className="mt-5">
-            <StaticNavbarItems />
-          </ul>                   
+          
+          <StaticNavbarItems />
+                             
         </div>
       </SheetContent>
     </Sheet>

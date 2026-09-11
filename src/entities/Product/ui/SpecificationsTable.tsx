@@ -1,7 +1,6 @@
 "use client";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { ProductAttribute, ProductVariant } from "../types";
-import { useProductStore } from "@/stores/product_store";
 
 interface Props {
   attributes: ProductAttribute[];

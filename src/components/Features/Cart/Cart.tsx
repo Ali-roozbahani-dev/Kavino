@@ -1,16 +1,17 @@
 "use client";
-import { useGetCart } from "@/entities/Cart/hooks/useGetCart";
+import { useCart } from "@/entities/Cart/hooks/useCart";
 import { CartList } from "./CartList";
 import CartListHeader from "./CartListHeader";
-import CartSummary from "./CartSummary";
+import CheckoutSummary from "../Checkout/Summary/CheckoutSummary";
 import EmptyCart from "./EmptyCart";
 import { useClearCart } from "@/entities/Cart/hooks/useClearCart";
+import SectionSpinner from "@/components/ui/Loading/SectionLoading";
 
 export default function Cart() {
   const { clearCart, isClearing } = useClearCart();
-  const {data: cart , isPending , error} = useGetCart();
+  const {data: cart , isPending , error} = useCart();
 
-  if(isPending) return <div>loading</div>;
+  if(isPending) return <SectionSpinner containerClass="h-120"/>;
 
   if(error) throw new Error("خطایی رخ داد");
 
@@ -30,7 +31,7 @@ export default function Cart() {
             className="w-full fixed bottom-0 right-0 z-49 lg:z-auto lg:static 
             lg:w-4/10 xl:w-3/10 lg:ps-6 bg-white"
           >
-            <CartSummary />
+            <CheckoutSummary />
           </div>
         </div>
       ) : (

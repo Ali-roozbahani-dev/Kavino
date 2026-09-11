@@ -3,6 +3,7 @@ import ReviewToolbar from "../ReviewToolbar/ReviewToolbar";
 import ReviewList from "./ReviewList";
 import LoadMoreReviews from "../LoadMoreReviews";
 import ReviewListSkeleton from "@/entities/Review/ui/ReviewListSkeleton";
+import EmptyReviews from "../EmptyReviews";
 
 export default function ReviewListSection({productSlug}: {productSlug: string}) {
     const {
@@ -16,10 +17,13 @@ export default function ReviewListSection({productSlug}: {productSlug: string}) 
     if(isPending) return <ReviewListSkeleton />;
 
     const reviews = data?.pages.flatMap((page) => page.results) ?? [];
+    
+    if(reviews.length <= 0) return <EmptyReviews />
+
 
     return (
         <>        
-        <ReviewToolbar />
+        {/* <ReviewToolbar /> */}
 
         <ReviewList reviews={reviews} />
 

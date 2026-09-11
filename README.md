@@ -23,6 +23,8 @@ The project is currently under active development, with new features and improve
 * ✅ Automatic Access Token Refresh
 * ✅ Product Reviews & Review Submission
 * ✅ Server-State Shopping Cart
+* ✅ Checkout Process
+* ✅ Cross-Tab State Synchronization with Broadcast Channel
 * ✅ API-driven Data Management
 
 ---
@@ -36,9 +38,11 @@ The project is currently under active development, with new features and improve
 * **TanStack Query (React Query)** — Server State Management
 * **TanStack Virtual** — Virtualized Lists
 * **Zustand** — Client State Management
+* **Broadcast Channel API** — Cross-Tab State Synchronization
 * **Axios** — HTTP Client & API Communication
 * **shadcn/ui** — UI Components
 
+---
 
 ## 🏗️ Architecture
 
@@ -61,6 +65,7 @@ src/
 ├── features/
 │   ├── Auth/
 │   ├── Cart/
+│   ├── Checkout/
 │   ├── Home/
 │   ├── Products-List/
 │   ├── Product-Details/
@@ -77,6 +82,7 @@ The application also separates **server state** from **client state**:
 
 * **TanStack Query** is used for server-side data and API state.
 * **Zustand** is used for client-side state where appropriate.
+* **Broadcast Channel API** is used to synchronize important client-side state changes across different browser tabs.
 
 ---
 
@@ -96,6 +102,16 @@ The application implements an **OTP-based authentication system** using access a
 * Axios-based API communication
 
 The backend is responsible for authentication and authorization, while the Next.js frontend handles the client-side authentication state and protected navigation.
+
+---
+
+## 🔄 Cross-Tab State Synchronization
+
+The application uses the **Broadcast Channel API** to synchronize important state changes between different browser tabs.
+
+This allows multiple open tabs of the application to stay synchronized without requiring a full page refresh.
+
+The Broadcast Channel mechanism is used to coordinate important state updates across tabs, helping maintain a consistent application state and user experience.
 
 ---
 
@@ -142,13 +158,30 @@ Implemented functionality includes:
 * Remove cart items
 * Synchronize cart state with the backend
 * Cache and update server data using TanStack Query
+* Cross-tab synchronization for important cart state changes
 
+### 💳 Checkout
+
+The checkout process has been implemented and integrated with the backend.
+
+Implemented functionality includes:
+
+* Address selection
+* Shipping method selection
+* Checkout state management
+* Coupon code support
+* Shipping cost handling
+* Order preparation and checkout submission
+* Integration with the checkout API
+
+Checkout state is coordinated across the relevant checkout sections to provide a consistent user experience throughout the checkout flow.
+
+---
 
 ## 🚧 Upcoming Features
 
 * Wishlist
 * User Profile
-* Checkout Process
 * Order Management
 * Additional Performance Optimizations
 * More E-commerce Features
@@ -166,5 +199,6 @@ The live demo link will be added here once the project is deployed.
 ## 📄 License
 
 This project is intended for **learning and portfolio purposes**.
+
 
 
