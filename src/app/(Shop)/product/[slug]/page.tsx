@@ -46,7 +46,7 @@ export default async function ProductPage({ params }: PageProps) {
       <Main className="lg:px-5 2xl:px-10">
         <ProductBreadcrumb name={name} path={category.path} />
 
-        <div className="flex flex-wrap md:mt-3.5 mb-5">
+        <div className="flex flex-wrap mb-5">
           <div className="w-full lg:w-1/2 xl:w-2/5">
             <ProductGallery images={images} />
           </div>

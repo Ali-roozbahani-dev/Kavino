@@ -8,7 +8,7 @@ import {
   ReviewsSummary,
   Brand as Tbrand,
 } from "../../../../entities/Product/types";
-import AddToFavorite from "@/components/Features/Product_Details/AddToFavorite";
+import FavoriteToggle from "@/components/Features/Favorites/ui/FavoriteToggle";
 import { ShareProduct } from "@/components/Features/Product_Details/ShareProduct";
 
 interface Props {
@@ -33,7 +33,7 @@ export default function ProductSummary({
     <div className="w-full mt-5 md:mt-0 md:p-3 lg:p-5">
       <div className="mb-4 flex justify-end items-center xl:hidden">
         <div className="flex-center text-primary-text2">
-          <AddToFavorite />
+          {/* <FavoriteToggle /> */}
           <ShareProduct />
         </div>
       </div>

@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardFooter, CardTitle } from "@/components/ui/card";
 import { ProductListItem } from "@/entities/Product/types";
 import { getDiscountPercentage } from "@/utils/getDiscountPercentage";
+import { getImageUrl } from "@/shared/lib/getImageUrl";
 import Image from "next/image";
 import Link from "next/link";
 import NoStock from "./NoStock";
@@ -46,7 +47,7 @@ export default function ProductsPageCard({
           {!has_stock && <NoStock />}
 
           <Image
-            src={`${process.env.NEXT_PUBLIC_API_URL}${image}`}
+            src={getImageUrl(image)}
             width={2000}
             height={2000}
             alt={name}

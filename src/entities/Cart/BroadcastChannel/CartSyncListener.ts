@@ -1,7 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useCallback } from "react";
 import { cartChannelActions, CartChannelMessage } from "./cartChannelActions";
-import { useBroadcastChannelListener } from "@/lib/broadcast/useBroadcastChannelListener";
+import { useBroadcastChannelListener } from "@/shared/lib/broadcast/useBroadcastChannelListener";
 import { CART_CHANNEL_NAME } from "./getCartChannel";
 import { cartQueryKey } from "../queryKeys";
 

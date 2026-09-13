@@ -7,7 +7,7 @@ import { TreviewForm, ReviewFormSchema } from "../../../../../entities/Review/sc
 import FieldError from "@/components/ui/Error/FieldError";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { api } from "@/api/axios_instance";
+import { api } from "@/shared/lib/axios_instance";
 import { isAxiosError } from "axios";
 
 

@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/card"
 import { ProductListItem } from "@/entities/Product/types"
 import { getDiscountPercentage } from "@/utils/getDiscountPercentage"
+import { getImageUrl } from "@/shared/lib/getImageUrl"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -27,7 +28,7 @@ export default function HomePageProductCard({product}: {product: ProductListItem
             %
           </Badge>          
           <Image
-          src={`${process.env.NEXT_PUBLIC_API_URL}${product.image}`}
+          src={getImageUrl(product.image)}
           width={196}
           height={2000}
           alt={product.name}

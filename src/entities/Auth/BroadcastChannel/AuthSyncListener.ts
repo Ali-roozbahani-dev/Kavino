@@ -5,14 +5,14 @@ import { authQueryKeys } from "@/entities/Auth/authQueryKeys";
 import { cartQueryKey } from "@/entities/Cart/queryKeys";
 import { AUTH_CHANNEL_NAME } from "./getAuthChannel";
 import { authChannelActions, AuthChannelMessage } from "./authChannelActions";
-import { useBroadcastChannelListener } from "@/lib/broadcast/useBroadcastChannelListener";
+import { useBroadcastChannelListener } from "@/shared/lib/broadcast/useBroadcastChannelListener";
 
 export function AuthSyncListener() {
     const queryClient = useQueryClient();
 
     const handleMessage = useCallback((message: AuthChannelMessage) => {
         if (message.type === authChannelActions.login) {
-            queryClient.removeQueries({ queryKey: authQueryKeys.me });
+            queryClient.invalidateQueries({ queryKey: authQueryKeys.me });
             queryClient.invalidateQueries({ queryKey: cartQueryKey });
         }
 

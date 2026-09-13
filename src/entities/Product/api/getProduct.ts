@@ -1,9 +1,10 @@
 import { ProductDetails } from "../types/ProductDetails";
+import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
 
 
 export async function getProduct(slug: string): Promise<ProductDetails> {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/products/${slug}`,
+    `${getApiBaseUrl()}/products/${slug}`,
     {
       next: {
         revalidate: 60,

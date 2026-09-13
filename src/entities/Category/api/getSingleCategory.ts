@@ -1,9 +1,10 @@
 import { CategoryListItem } from "../types/Category";
+import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
 
 export const getSingleCategory = async (
   slug: string,
 ): Promise<CategoryListItem | null> => {
-  const res = await fetch(`http://127.0.0.1:8000/api/categories/${slug}`, {
+  const res = await fetch(`${getApiBaseUrl()}/${slug}`, {
     next: {
       revalidate: 3600,
     },

@@ -21,7 +21,7 @@ import FormBtns from "./FormBtns";
 import { SlidersHorizontal } from "lucide-react";
 import { Facets } from "@/entities/Product/types";
 import { usePathname } from "next/navigation";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/shared/hooks/use-mobile";
 
 
 type Tprops = {

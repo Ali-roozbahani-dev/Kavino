@@ -1,5 +1,6 @@
 import { Tqueries } from "@/entities/Product/types/TproductSection";
 import { TproductList } from "@/entities/Product/types";
+import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
 
 export async function getProductsList(
   queries: Partial<Tqueries>,
@@ -16,7 +17,7 @@ export async function getProductsList(
   });
 
   const res = await fetch(
-    `http://127.0.0.1:8000/api/products?${searchParams.toString()}`,
+    `${getApiBaseUrl()}/products?${searchParams.toString()}`,
     {
       next: {
         revalidate: 300,

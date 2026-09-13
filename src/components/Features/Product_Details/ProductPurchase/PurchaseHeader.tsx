@@ -2,7 +2,7 @@
 
 import DiscountBadge from "./DiscountBadge";
 import { ProductVariant } from "@/entities/Product/types";
-import AddToFavorite from "../AddToFavorite";
+import FavoriteToggle from "../../Favorites/ui/FavoriteToggle";
 import { ShareProduct } from "../ShareProduct";
 
 interface Props{    
@@ -21,7 +21,7 @@ export default function PurchaseHeader({selectedVariant}: Props){
             </div>
 
             <div className="ms-auto flex-center  text-primary-text2">
-                <AddToFavorite />
+                {/* <FavoriteToggle /> */}
                 <ShareProduct />
             </div>
         </div>

@@ -11,7 +11,7 @@ export function PriceFilter({initialMaxPrice}: Tprops) {
     const { watch, setValue } = useFormContext<FormInput, any, FormOutput>();
 
     const minPrice = watch("min_price") ?? 0;
-    const maxPrice = watch("max_price") ?? 0;
+    const maxPrice = watch("max_price") ?? 10000000;
 
     
     return (

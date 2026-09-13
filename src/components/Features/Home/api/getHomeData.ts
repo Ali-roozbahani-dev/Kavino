@@ -1,10 +1,8 @@
 import { HomeData } from "../types/homeDataTypes";
-
-
+import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
 
 export const getHomeData = async (): Promise<HomeData>=>{
-    const domain = process.env.NEXT_PUBLIC_API_URL
-    const res = await fetch(`${domain}/api/home/`,{
+    const res = await fetch(`${getApiBaseUrl()}/home/`,{
         next: {
             revalidate: 60 * 60 * 2
         }

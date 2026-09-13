@@ -1,4 +1,4 @@
-import { api } from "@/api/axios_instance";
+import { api } from "@/shared/lib/axios_instance";
 import { AddressList } from "../types/AddressList";
 
 

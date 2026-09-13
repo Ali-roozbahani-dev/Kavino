@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useOtpCountdown } from "./useOtpCountdown";
-import { api } from "@/api/axios_instance";
+import { api } from "@/shared/lib/axios_instance";
 
 export function useRequestOtp(){
     const router = useRouter();

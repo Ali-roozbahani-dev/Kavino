@@ -1,4 +1,4 @@
-import { ApiPaginatedResponse } from "@/types/ApiPaginatedResponse";
+import { ApiPaginatedResponse } from "@/components/Features/Home/types/ApiPaginatedResponse";
 import { ProductListItem } from "./ProductListItem";
 
 

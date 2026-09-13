@@ -35,13 +35,13 @@ export async function generateMetadata({
     ],
 
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_API_URL}/products/${product.slug}`,
+      canonical: `/product/${product.slug}`,
     },
 
     openGraph: {
       title,
       description,
-      url: `${process.env.NEXT_PUBLIC_API_URL}/products/${product.slug}`,
+      url: `/product/${product.slug}`,
       type: "website",
       locale: "fa_IR",
       siteName: "Kaveh Shop",

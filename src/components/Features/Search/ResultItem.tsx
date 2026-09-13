@@ -1,4 +1,5 @@
 import { ProductListItem} from "@/entities/Product/types";
+import { getImageUrl } from "@/shared/lib/getImageUrl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ export default function ResultItem({ product }: { product: ProductListItem }) {
     <li className="bg-[#eef7ff] mb-2">
       <Link target="blank" href={`/product/${product.slug}`} className="flex items-center">
         <Image
-          src={`http://127.0.0.1:8000${product.image}`}
+          src={getImageUrl(product.image)}
           alt="تصویر نتایج"
           width={1200}
           height={1200}

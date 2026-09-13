@@ -10,7 +10,7 @@ import {
 } from "@tanstack/react-query";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { productQueryKey } from "@/entities/Product/utils/productQueries";
+import { productFacetsQueryKey, productQueryKey } from "@/entities/Product/utils/productQueries";
 import ProductsSection from "@/components/Features/Products_List/ProductsSection";
 
 type PageProps = {
@@ -42,7 +42,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProductListPage({ params }: PageProps) {
+export default async function CategoryProductsPage({ params }: PageProps) {
   const { slugs } = await params;
     
   const decodedSlug = decodeURIComponent([...slugs].reverse()[slugs.length - 1]);
@@ -70,6 +70,12 @@ export default async function ProductListPage({ params }: PageProps) {
         page: pageParam,
       }),
     initialPageParam: 1,
+  });
+
+  await queryClient.prefetchQuery({
+    queryKey: productFacetsQueryKey({ category: category.slug }),
+    queryFn: () =>
+      getProductsList({ ...initialQueries, page: 1 }).then((res) => res.facets),
   });
 
   return (

@@ -1,4 +1,4 @@
-import { api } from "@/api/axios_instance";
+import { api } from "@/shared/lib/axios_instance";
 import { ShippingMethodList } from "../types/ShippingMethod";
 
 export async function getShippingMethods(): Promise<ShippingMethodList> {

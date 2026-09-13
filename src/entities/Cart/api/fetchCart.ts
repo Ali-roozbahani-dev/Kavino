@@ -1,4 +1,4 @@
-import { api } from "@/api/axios_instance";
+import { api } from "@/shared/lib/axios_instance";
 import { Cart } from "../types/Cart";
 import { getMe } from "@/entities/Auth/api/getMe";
 

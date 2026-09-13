@@ -5,8 +5,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 
-
-
 type PageProps = {
   searchParams: Promise<{
     callbackUrl?: string;

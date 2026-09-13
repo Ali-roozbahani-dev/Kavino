@@ -4,10 +4,12 @@ import Main from "@/components/Layout/Main/Main";
 import ShippingSection from "@/components/Features/Checkout/Shipping/ShippingSection";
 import { useCheckoutGuard } from "@/entities/Checkout/hooks/useCheckoutGuard";
 import PageLoading from "@/components/ui/Loading/PageLoading";
-import AddressSection from "@/components/Features/Checkout/Address/AddressSection";
+import AddressSection from "@/components/Features/Checkout/select_address/ui/AddressSection";
 import CouponSection from "@/components/Features/Checkout/Coupon/CouponSection";
 import CheckoutSummary from "@/components/Features/Checkout/Summary/CheckoutSummary";
 import useSelectedShippingMethod from "@/entities/Shipping/hooks/useSelectedShippingMethod";
+
+
 
 
 export default function ShippingPage(){    

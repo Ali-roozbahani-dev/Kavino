@@ -11,7 +11,7 @@ interface Props {
 
 export default function CategorySlider({categories}: Props) {
   return (
-    <div className='my-10 px-3'>
+    <div className='my-10 px-3 xl:px-5'>
         <Swiper
         spaceBetween={0}        
         breakpoints={{

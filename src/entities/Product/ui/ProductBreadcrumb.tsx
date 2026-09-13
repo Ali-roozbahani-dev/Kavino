@@ -27,7 +27,7 @@ export default function ProductBreadcrumb({name , path}: Props) {
       }}
     >      
       <Breadcrumb>
-        <BreadcrumbList className="flex-nowrap whitespace-nowrap text-[12px] md:text-[13px]">
+        <BreadcrumbList className="flex-nowrap whitespace-nowrap text-[12px] md:text-[13px] py-3.5">
           <BreadcrumbItem>
             <BreadcrumbLink href="/">خانه</BreadcrumbLink>
           </BreadcrumbItem>

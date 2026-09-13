@@ -1,6 +1,6 @@
 "use client";
 import { Loader2, Minus, Plus, Trash2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { useChangeQuantity } from "@/entities/Cart/hooks/useChangeQuantity";
 import { useDeleteCartItem } from "@/entities/Cart/hooks/useDeleteCartItem";
 import { formatNumberWithoutSeparator } from "@/utils/formatNumber";
