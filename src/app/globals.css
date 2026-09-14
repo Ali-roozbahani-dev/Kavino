@@ -182,7 +182,7 @@
     border-radius: 0;
     border: 2px rgb(238, 238, 238);
   }
-
+  
   .scrollbar-custom::-webkit-scrollbar-button {
     display: none;
   }

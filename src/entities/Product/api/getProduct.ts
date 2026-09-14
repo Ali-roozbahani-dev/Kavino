@@ -6,9 +6,7 @@ export async function getProduct(slug: string): Promise<ProductDetails> {
   const response = await fetch(
     `${getApiBaseUrl()}/products/${slug}`,
     {
-      next: {
-        revalidate: 60,
-      },
+      cache: "no-store"
     }
   );
 

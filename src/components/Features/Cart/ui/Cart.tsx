@@ -1,11 +1,11 @@
 "use client";
 import { useCart } from "@/entities/Cart/hooks/useCart";
-import { CartList } from "../../../ui/Cart/CartList";
 import CartListHeader from "./CartListHeader";
 import CheckoutSummary from "../../Checkout/Summary/CheckoutSummary";
 import EmptyCart from "./EmptyCart";
 import { useClearCart } from "@/components/Features/Cart/hooks/useClearCart";
 import SectionSpinner from "@/components/ui/Loading/SectionLoading";
+import { CartList } from "./CartList";
 
 export default function Cart() {
   const { clearCart, isClearing } = useClearCart();

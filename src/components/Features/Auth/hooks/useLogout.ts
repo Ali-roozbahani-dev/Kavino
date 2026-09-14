@@ -5,9 +5,8 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { getAuthChannel } from "../BroadcastChannel/getAuthChannel";
 import { authChannelActions } from "../BroadcastChannel/authChannelActions";
-import { getCartChannel } from "@/entities/Cart/BroadcastChannel/getCartChannel";
-import { cartChannelActions } from "@/entities/Cart/BroadcastChannel/cartChannelActions";
 import { EMPTY_CART } from "@/entities/Cart/empty_cart";
+import { cartChannelActions, getCartChannel } from "../../Cart";
 
 export function useLogout() {
     const queryClient = useQueryClient();

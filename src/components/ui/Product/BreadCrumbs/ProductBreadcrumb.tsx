@@ -39,12 +39,7 @@ export default function ProductBreadcrumb({name , path}: Props) {
                   <BreadcrumbLink href={`/category/${item.slug}`}>{item.name}</BreadcrumbLink>
                 </BreadcrumbItem>                
               </React.Fragment>
-            ))}
-                       
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>            
-            <BreadcrumbPage>{name}</BreadcrumbPage>            
-          </BreadcrumbItem>
+            ))}          
         </BreadcrumbList>
       </Breadcrumb>
     </div>

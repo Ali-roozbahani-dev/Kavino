@@ -23,7 +23,7 @@ setOpenModal }: Props) {
   return (
     <div
       className="hidden lg:flex w-1/6 flex-col rounded-lg
-      shadow-[0_0_5px_2px_#f0f0f0] mt-3 p-1"
+      shadow-[0_0_5px_2px_#f0f0f0] mt-3 p-1 min-h-[445px]"
     >
       {barImages.map((image, index) => {
         const isLast = index === barImages.length - 1;

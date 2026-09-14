@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { cartQueryKey } from "../queryKeys";
-import { getCart } from "../api/getCart";
+import { getCart } from "../../../components/Features/Cart/api/getCart";
 import { useAuth } from "@/components/Features/Auth/hooks/useAuth";
 
 
@@ -12,6 +12,8 @@ export function useCart() {
     queryFn: getCart,
     staleTime: 1000 * 60 * 5,
     gcTime: Infinity,  
-    enabled: !isLoading,    
+    enabled: !isLoading, 
+    refetchOnMount: true,  
+    refetchOnWindowFocus: true,
   });
 }

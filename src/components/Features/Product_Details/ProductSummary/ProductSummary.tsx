@@ -37,9 +37,10 @@ export default function ProductSummary({
           <ShareProduct />
         </div>
       </div>
-      <h1 className="font-semibold text-[16px] md:text-[17px] lg:text-[20px] lg:border-b lg:pb-5">
+      <h1 className="font-semibold text-[16px] md:text-[17px] lg:text-[20px] w-full line-clamp-2">
         {name}
       </h1>
+      <div className="lg:h-px w-full bg-primary-text3 lg:mt-4"></div>
       <Brand brand={brand} />
       <Rating reviews_summary={reviews_summary} />
       <Colors variants={variants} />

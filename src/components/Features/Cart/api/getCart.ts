@@ -1,6 +1,6 @@
-import { getMe } from "@/components/Features/Auth";
 import { api } from "@/shared/lib/axios_instance";
-import { Cart } from "../types/Cart";
+import { Cart } from "../../../../entities/Cart/types/Cart";
+import { getMe } from "../../Auth";
 
 export async function getCart(): Promise<Cart> {
   await getMe(); // برسی احراز هویت قبل از دریافت سبد خرید

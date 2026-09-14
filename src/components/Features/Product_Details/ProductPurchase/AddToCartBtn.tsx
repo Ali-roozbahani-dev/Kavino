@@ -6,6 +6,7 @@ import QuantitySelector from "../../Cart/ui/QuantitySelector";
 import { ProductVariant } from "@/entities/Product/types";
 import { useCart } from "@/entities/Cart/hooks/useCart";
 import { useAddToCart } from "@/components/Features/Cart/hooks/useAddToCart";
+import NotifyWhenAvailableBtn from "./NotifyWhenAvailableBtn";
 
 interface Props {
   selectedVariant: ProductVariant;
@@ -27,6 +28,8 @@ export default function AddToCartBtn({selectedVariant }: Props) {
 
     addToCart({quantity: 1 , variant : selectedVariant.id});
   };
+
+  if(!selectedVariant.has_stock) return <NotifyWhenAvailableBtn />
 
   return (
     <>

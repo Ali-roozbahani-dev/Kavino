@@ -9,7 +9,7 @@ export default function DrawerItem({item}: {item: TCartItem}){
     const {id ,product_name , quantity ,  variant_stock , attributes , final_price , discount_amount , image} = item;
 
     return(
-        <div className="flex flex-wrap justify-between not-last:border-b not-last:pb-4 not-first:pt-4">
+        <div className="flex justify-between not-last:border-b not-last:pb-4 not-first:pt-4">
         
             <div className="flex">
                 <div className="w-25">
@@ -39,7 +39,7 @@ export default function DrawerItem({item}: {item: TCartItem}){
                         </div>
                     </div>
 
-                    <div className="w-full mt-4">                
+                    <div className="pt-4 pb-2">                
                         <div className="w-max ms-auto">
                             <ItemPrice
                             final_price={final_price} 

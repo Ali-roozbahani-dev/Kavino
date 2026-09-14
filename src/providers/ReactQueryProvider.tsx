@@ -1,7 +1,6 @@
 "use client";
-
 import { AuthSyncListener } from "@/components/Features/Auth/BroadcastChannel/AuthSyncListener";
-import { CartSyncListener } from "@/entities/Cart/BroadcastChannel/CartSyncListener";
+import { CartSyncListener } from "@/components/Features/Cart";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState } from "react";

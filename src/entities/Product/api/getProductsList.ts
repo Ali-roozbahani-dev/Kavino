@@ -19,9 +19,7 @@ export async function getProductsList(
   const res = await fetch(
     `${getApiBaseUrl()}/products?${searchParams.toString()}`,
     {
-      next: {
-        revalidate: 300,
-      },
+      cache: "no-store"
     },
   );
 

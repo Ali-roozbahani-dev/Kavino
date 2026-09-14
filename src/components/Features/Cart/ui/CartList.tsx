@@ -10,7 +10,7 @@ interface Props{
 export function CartList({cartItems , isDrawer}: Props) {  
 
   return (
-    <div className={`${isDrawer ? "scrollbar-custom max-h-[350px] overflow-y-auto" : "mb-10"}`}>
+    <div className={isDrawer ? "scrollbar-custom max-h-[330px] overflow-y-auto" : "mb-10"}>
       {isDrawer ?
         cartItems.map((item)=>(
           <DrawerItem 
