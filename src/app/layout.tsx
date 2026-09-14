@@ -6,7 +6,7 @@ import { cn } from "@/shared/lib/utils";
 import { DirectionProvider } from "@radix-ui/react-direction";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
 import { Toaster } from "@/components/ui/sonner"
-import { AuthBootstrap } from "@/entities/Auth/AuthBootstrap";
+import { AuthBootstrap } from "@/components/Features/Auth/AuthBootstrap";
 
 export const dynamic = "force-dynamic";
 

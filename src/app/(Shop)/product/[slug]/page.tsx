@@ -1,7 +1,7 @@
 import ProductGallery from "@/components/Features/Product_Details/ProductGallery/ProductGallery";
 import ProductSummary from "@/components/Features/Product_Details/ProductSummary/ProductSummary";
-import Main from "@/components/Layout/Main/Main";
-import ProductBreadcrumb from "@/entities/Product/ui/ProductBreadcrumb";
+import Main from "@/components/ui/Main";
+import ProductBreadcrumb from "@/components/ui/Product/BreadCrumbs/ProductBreadcrumb";
 import ProductPurchase from "@/components/Features/Product_Details/ProductPurchase/ProductPurchase";
 import ProductTabs from "@/components/Features/Product_Details/ProductTabs/ProductTabs";
 import { getProduct } from "@/entities/Product/api/getProduct";

@@ -1,8 +1,8 @@
-import { useGetReviews } from "@/entities/Review/hooks/useGetReviews";
+import { useGetReviews } from "@/components/Features/Product_Details/Reviews/hooks/useGetReviews";
 import ReviewToolbar from "../ReviewToolbar/ReviewToolbar";
 import ReviewList from "./ReviewList";
 import LoadMoreReviews from "../LoadMoreReviews";
-import ReviewListSkeleton from "@/entities/Review/ui/ReviewListSkeleton";
+import ReviewListSkeleton from "@/components/Features/Product_Details/Reviews/ui/ReviewListSkeleton";
 import EmptyReviews from "../EmptyReviews";
 
 export default function ReviewListSection({productSlug}: {productSlug: string}) {

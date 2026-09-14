@@ -29,11 +29,11 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "src/components/Features/Products_List/ProductsSection",
-    "src/components/Features/Products_List/utils",
-    "src/components/Features/Products_List/types",
-    "src/components/Features/Products_List/Filter",
-    "src/components/Features/Products_List/components"
-, "src/entities/Product/schema"  ],
+    "src/components/Features/Products/ProductsSection",
+    "src/components/Features/Products/utils",
+    "src/components/Features/Products/types",
+    "src/components/Features/Products/Filter",
+    "src/components/Features/Products/components"
+, "src/components/Features/Products/Filter/schema"  ],
   "exclude": ["node_modules"]
 }

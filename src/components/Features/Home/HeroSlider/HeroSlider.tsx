@@ -15,7 +15,7 @@ interface Props{
 }
 
 export default function HeroSlider({sliders}: Props){
-
+  
 
   return (
     <div className={`p-0 ${styles.slider}`}>
@@ -36,7 +36,7 @@ export default function HeroSlider({sliders}: Props){
         >
         {sliders.map((slider,i)=>(
             <SwiperSlide key={i} className=''>
-                <Link href={`/${slider.button_url}`}>
+                <Link href={`${slider.button_url}`}>
                     <Image 
                     src={slider.desktop_image} 
                     width={1200} 

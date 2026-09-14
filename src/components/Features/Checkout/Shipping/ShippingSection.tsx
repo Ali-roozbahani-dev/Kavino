@@ -1,7 +1,7 @@
 "use client"
-import { useGetShippingMethods } from "@/entities/Shipping/hooks/useGetShippingMethods";
+import { useGetShippingMethods } from "@/components/Features/Checkout/Shipping/hooks/useGetShippingMethods";
 import SectionSpinner from "@/components/ui/Loading/SectionLoading";
-import { useCheckoutStore } from "@/entities/Checkout/store/checkoutStore";
+import { useCheckoutStore } from "@/components/Features/Checkout/store/checkoutStore";
 import MethodSelector from "./MethodSelector";
 
 

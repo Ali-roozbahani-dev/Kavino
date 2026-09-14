@@ -3,7 +3,7 @@ import { useForm , Controller} from "react-hook-form";
 import RatingInput from "./RatingInput";
 import SendReview from "./SendReview";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { TreviewForm, ReviewFormSchema } from "../../../../../entities/Review/schema/ReviewFormSchema";
+import { TreviewForm, ReviewFormSchema } from "./schema/ReviewFormSchema";
 import FieldError from "@/components/ui/Error/FieldError";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";

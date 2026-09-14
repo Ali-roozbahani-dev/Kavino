@@ -1,4 +1,4 @@
-import { Dots } from "@/components/dots"
+import { Dots } from "@/components/ui/Loading/dots"
 import Image from "next/image"
 
 

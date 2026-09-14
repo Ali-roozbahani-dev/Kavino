@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/field";
 import { RadioGroup } from "@/components/ui/radio-group";
 import { AddressListItem } from "@/entities/Address/types/AddressList";
-import { useCheckoutStore } from "@/entities/Checkout/store/checkoutStore";
+import { useCheckoutStore } from "@/components/Features/Checkout/store/checkoutStore";
 import { MapPin } from "lucide-react";
 import EmptyAddressSelector from "./EmptyAddressSelector";
 import AddressSelectorItem from "./AddressSelectorItem";

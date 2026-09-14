@@ -5,7 +5,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { ProductListItem } from "@/entities/Product/types"
-import { getDiscountPercentage } from "@/utils/getDiscountPercentage"
+import { getDiscountPercentage } from "@/shared/utils/getDiscountPercentage"
 import { getImageUrl } from "@/shared/lib/getImageUrl"
 import Image from "next/image"
 import Link from "next/link"

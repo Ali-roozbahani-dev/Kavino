@@ -1,5 +1,5 @@
 import { cn } from "@/shared/lib/utils";
-import { Dots } from "@/components/dots";
+import { Dots } from "@/components/ui/Loading/dots";
 
 
 interface Props{

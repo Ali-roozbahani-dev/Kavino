@@ -7,7 +7,7 @@ import { RadioGroupItem } from "@/components/ui/radio-group";
 import { AddressListItem } from "@/entities/Address/types/AddressList";
 import { Button } from "@/components/ui/button";
 import { Pencil, Plus } from "lucide-react";
-import { formatNumberWithoutSeparator } from "@/utils/formatNumber";
+import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 import AddressDialog from "@/components/Features/Address/form/ui/AddressDialog";
 
 export default function AddressSelectorItem({

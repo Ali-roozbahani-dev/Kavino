@@ -1,10 +1,10 @@
 "use client";
 
-import { useProductStore } from "@/entities/Product/stores/product_store";
+import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
 import {
   ProductVariant,
 } from "../../../../entities/Product/types";
-import { getVariantAttribute } from "../../../../entities/Product/utils/variant_attributes";
+import { getVariantAttribute } from "../util/variant_attributes";
 
 interface Props {
   activeVariant: ProductVariant;

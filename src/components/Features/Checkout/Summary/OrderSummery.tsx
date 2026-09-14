@@ -1,5 +1,5 @@
 import { Cart } from "@/entities/Cart/types/Cart";
-import { formatNumberWithoutSeparator } from "@/utils/formatNumber";
+import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 
 interface Props{
     cart: Cart;

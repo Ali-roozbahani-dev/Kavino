@@ -2,10 +2,10 @@
 import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import QuantitySelector from "../../Cart/QuantitySelector";
+import QuantitySelector from "../../Cart/ui/QuantitySelector";
 import { ProductVariant } from "@/entities/Product/types";
 import { useCart } from "@/entities/Cart/hooks/useCart";
-import { useAddToCart } from "@/entities/Cart/hooks/useAddToCart";
+import { useAddToCart } from "@/components/Features/Cart/hooks/useAddToCart";
 
 interface Props {
   selectedVariant: ProductVariant;

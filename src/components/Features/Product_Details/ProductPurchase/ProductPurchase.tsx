@@ -5,7 +5,7 @@ import PurchaseHeader from "./PurchaseHeader";
 import AddToCartBtn from "./AddToCartBtn";
 import StoreFeatures from "./StoreFeatures";
 import { ProductVariant } from "@/entities/Product/types";
-import { useProductStore } from "@/entities/Product/stores/product_store";
+import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
 import SectionSpinner from "@/components/ui/Loading/SectionLoading";
 
 

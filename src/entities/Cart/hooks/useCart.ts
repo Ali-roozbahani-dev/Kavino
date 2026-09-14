@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { cartQueryKey } from "../queryKeys";
-import { fetchCart } from "../api/fetchCart";
-import { useAuth } from "@/entities/Auth/hooks/useAuth";
+import { getCart } from "../api/getCart";
+import { useAuth } from "@/components/Features/Auth/hooks/useAuth";
 
 
 export function useCart() {
@@ -9,7 +9,7 @@ export function useCart() {
 
   return useQuery({
     queryKey: cartQueryKey,
-    queryFn: fetchCart,
+    queryFn: getCart,
     staleTime: 1000 * 60 * 5,
     gcTime: Infinity,  
     enabled: !isLoading,    

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useGetReviews } from "@/entities/Review/hooks/useGetReviews";
+import { useGetReviews } from "@/components/Features/Product_Details/Reviews/hooks/useGetReviews";
 import { ChevronDown, LoaderCircle } from "lucide-react";
 
 interface Props{

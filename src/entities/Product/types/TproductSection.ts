@@ -1,4 +1,4 @@
-import { filterProductsSchema } from "@/entities/Product/schema/filterProductsSchema";
+import { filterProductsSchema } from "@/components/Features/Products/Filter/schema/filterProductsSchema";
 import z from "zod";
 
 export type FormInput = z.input<typeof filterProductsSchema>;

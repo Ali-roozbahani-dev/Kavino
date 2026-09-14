@@ -1,4 +1,4 @@
-import { formatPersianDate } from "@/utils/date";
+import { formatPersianDate } from "@/shared/utils/date";
 import AverageStars from "../ReviewSummary/AverageStars";
 
 interface Props{

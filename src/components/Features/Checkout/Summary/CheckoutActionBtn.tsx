@@ -4,17 +4,17 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { usePathname, useRouter } from "next/navigation";
-import { useCheckoutStore } from "../../../../entities/Checkout/store/checkoutStore";
+import { useCheckoutStore } from "../store/checkoutStore";
 import { toast } from "sonner";
 import {
   checkoutStepsConfig,
   defaultStepConfig,
   StepContext,
-} from "@/entities/Checkout/config/checkoutStepsConfig";
-import { useUpdateCheckout } from "@/entities/Checkout/hooks/useUpdateCheckout";
-import { useCheckout } from "@/entities/Checkout/hooks/useCheckout";
-import CheckoutDialog from "@/entities/Checkout/ui/dialog/CheckoutDialog";
-import { Checkout } from "@/entities/Checkout/types/Checkout";
+} from "@/components/Features/Checkout/config/checkoutStepsConfig";
+import { useUpdateCheckout } from "@/components/Features/Checkout/hooks/useUpdateCheckout";
+import { useCheckout } from "@/components/Features/Checkout/hooks/useCheckout";
+import CheckoutDialog from "@/components/Features/Checkout/ui/dialog/CheckoutDialog";
+import { Checkout } from "@/components/Features/Checkout/types/Checkout";
 
 const SHIPPING_STEP_PATH = "/checkout/shipping";
 

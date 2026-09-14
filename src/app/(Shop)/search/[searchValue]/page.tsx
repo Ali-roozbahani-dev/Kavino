@@ -1,5 +1,5 @@
 import { Tqueries } from "@/entities/Product/types/TproductSection";
-import Main from "@/components/Layout/Main/Main";
+import Main from "@/components/ui/Main";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { getProductsList } from "@/entities/Product/api/getProductsList";
 import {
@@ -8,8 +8,8 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import { Metadata } from "next";
-import { productQueryKey } from "@/entities/Product/utils/productQueries";
-import ProductsSection from "@/components/Features/Products_List/ProductsSection";
+import { productQueryKey } from "@/components/Features/Products/util/productQueries";
+import ProductsSection from "@/components/Features/Products/products_list/ProductsSection";
 
 type PageProps = {
   params: Promise<{

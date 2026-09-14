@@ -15,8 +15,8 @@ import {
 } from "@/components/ui/select";
 import { useFormContext, Controller, useWatch } from "react-hook-form";
 import FieldError from "@/components/ui/Error/FieldError";
-import { useProvinces } from "@/entities/Location/hooks/useProvinces";
-import { Province } from "@/entities/Location/types/locations";
+import { useProvinces } from "@/components/Features/Address/hooks/useProvinces";
+import { Province } from "@/components/Features/Address/types/locations";
 
 export default function AddressLocationForm() {
   const {

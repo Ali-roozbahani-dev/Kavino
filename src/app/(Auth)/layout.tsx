@@ -1,6 +1,6 @@
 "use client"
-import LoginSkeleton from "@/entities/Auth/ui/LoginSkeleton";
-import { useGuestOnly } from "@/entities/Auth/hooks/useGuestOnly";
+import LoginSkeleton from "@/components/Features/Auth/ui/LoginSkeleton";
+import { useGuestOnly } from "@/components/Features/Auth/hooks/useGuestOnly";
 
 
 

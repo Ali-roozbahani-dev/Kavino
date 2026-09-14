@@ -1,6 +1,6 @@
 "use client"
 import { Cart } from "@/entities/Cart/types/Cart"
-import { formatNumberWithoutSeparator } from "@/utils/formatNumber";
+import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 import { ChevronsUpDown } from "lucide-react"
 import { useState } from "react"
 

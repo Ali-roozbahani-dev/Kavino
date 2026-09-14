@@ -1,6 +1,5 @@
 "use client";
-
-import { useProductStore } from "@/entities/Product/stores/product_store";
+import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
 import { useEffect } from "react";
 
 type Props = {

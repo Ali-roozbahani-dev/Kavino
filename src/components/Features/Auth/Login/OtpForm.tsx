@@ -12,11 +12,11 @@ import EditNumLink from "./EditNumLink"
 import {useState } from "react"
 import RequestOtpBtn from "./RequestOtpBtn"
 import { useRouter } from "next/navigation"
-import { useRequestOtp } from "../../../../entities/Auth/hooks/useRequestOtp"
-import { useVerifyOtp } from "../../../../entities/Auth/hooks/useVerifyOtp"
-import { useOtpCountdown } from "../../../../entities/Auth/hooks/useOtpCountdown"
-import { otpSchema } from "../../../../entities/Auth/schema/otpSchema"
-import { loginSchema } from "../../../../entities/Auth/schema/loginSchema"
+import { useRequestOtp } from "../hooks/useRequestOtp"
+import { useVerifyOtp } from "../hooks/useVerifyOtp"
+import { useOtpCountdown } from "../hooks/useOtpCountdown"
+import { otpSchema } from "../schema/otpSchema"
+import { loginSchema } from "../schema/loginSchema"
 
 
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { LogOut } from "lucide-react";
-import { useLogout } from "../../../../entities/Auth/hooks/useLogout";
+import { useLogout } from "../hooks/useLogout";
 import {
     AlertDialog,
     AlertDialogAction,

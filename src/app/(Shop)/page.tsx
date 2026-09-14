@@ -3,7 +3,7 @@ import BrandSlider from "@/components/Features/Home/BrandSlider/BrandSlider";
 import CategorySlider from "@/components/Features/Home/CategorySlider/CategorySlider";
 import HeroSlider from "@/components/Features/Home/HeroSlider/HeroSlider";
 import SpecialOffers from "@/components/Features/Home/SpecialOffers/SpecialOffers";
-import Main from "@/components/Layout/Main/Main";
+import Main from "@/components/ui/Main";
 import FourBanner from "@/components/ui/Banners/FourBanner";
 import TwinsBanner from "@/components/ui/Banners/TwinsBanner";
 
