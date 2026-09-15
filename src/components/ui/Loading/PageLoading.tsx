@@ -1,10 +1,11 @@
 import { Dots } from "@/components/ui/Loading/dots"
+import { cn } from "@/shared/lib/utils"
 import Image from "next/image"
 
 
-export default function PageLoading() {
+export default function PageLoading({containerclassName = ""}:{containerclassName?: string}) {
   return (
-    <div className="h-screen flex flex-col items-center">
+    <div className={cn("h-screen flex flex-col items-center" , containerclassName)}>
       <Image 
       src={"/loadingLogo.png"} 
       alt="Logo"

@@ -1,7 +1,7 @@
 "use client"
 import { useAddresses } from "@/entities/Address/hooks/useAddresses";
 import AddressSelector from "./AddressSelector";
-import SectionSpinner from "@/components/ui/Loading/SectionLoading";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 
 
 export default function AddressSection(){
@@ -13,7 +13,7 @@ export default function AddressSection(){
     
 
     if (addressesPending) {
-        return <SectionSpinner containerClass="h-40"/>;
+        return <SectionLoadingDots containerClass="h-40"/>;
     }
 
     if (addressesError) {

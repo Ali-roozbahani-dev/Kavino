@@ -4,14 +4,14 @@ import CartListHeader from "./CartListHeader";
 import CheckoutSummary from "../../Checkout/Summary/CheckoutSummary";
 import EmptyCart from "./EmptyCart";
 import { useClearCart } from "@/components/Features/Cart/hooks/useClearCart";
-import SectionSpinner from "@/components/ui/Loading/SectionLoading";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { CartList } from "./CartList";
 
 export default function Cart() {
   const { clearCart, isClearing } = useClearCart();
   const {data: cart , isPending , error} = useCart();
 
-  if(isPending) return <SectionSpinner containerClass="h-120"/>;
+  if(isPending) return <SectionLoadingDots containerClass="h-120"/>;
 
   if(error) throw new Error("خطایی رخ داد");
 

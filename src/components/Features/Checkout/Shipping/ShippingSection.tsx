@@ -1,6 +1,6 @@
 "use client"
 import { useGetShippingMethods } from "@/components/Features/Checkout/Shipping/hooks/useGetShippingMethods";
-import SectionSpinner from "@/components/ui/Loading/SectionLoading";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { useCheckoutStore } from "@/components/Features/Checkout/store/checkoutStore";
 import MethodSelector from "./MethodSelector";
 
@@ -22,7 +22,7 @@ export default function ShippingSection(){
     );
 
     if (Pending) {
-    return <SectionSpinner containerClass="h-40"/>;
+    return <SectionLoadingDots containerClass="h-40"/>;
     }
 
     if (error) {

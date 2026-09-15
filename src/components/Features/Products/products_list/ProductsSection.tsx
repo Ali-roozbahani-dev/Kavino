@@ -5,9 +5,12 @@ import ProductsList from "./ProductsList";
 import { FilterForm } from "@/components/Features/Products/Filter/ui/FilterForm";
 import { CategoryListItem } from "@/entities/Category/types/Category";
 import { PulsatingDots } from "@/components/ui/Loading/pulsating-dots";
-import { FormInput, FormOutput, Ordering } from "@/components/Features/Products/Filter/types/TproductSection";
+import { FormOutput, Ordering } from "@/components/Features/Products/Filter/types/TproductSection";
 import { useProductList } from "@/components/Features/Products/products_list/hooks/useProductList";
 import { useProductFacets } from "@/components/Features/Products/Filter/hooks/useProductFacets";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
+import Spinner from "@/components/ui/Loading/Spinner";
+import PageLoading from "@/components/ui/Loading/PageLoading";
 
 interface Tprops {
   initialBrand?: string;
@@ -67,7 +70,7 @@ export default function ProductsSection({
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
   if (isFacetsPending || !facets) {
-    return <div>loading ...</div>;
+    return <PageLoading containerclassName="mx-auto"/>;
   }
 
   if (isError) {
@@ -76,7 +79,7 @@ export default function ProductsSection({
 
   const products = data ? data.pages.flatMap((page) => page.results) : [];
 
-  return (
+  return (    
     <div className="flex w-full relative">
       <FilterForm
         facets={facets}
@@ -97,9 +100,11 @@ export default function ProductsSection({
           />
 
           {isListPending ? (
-            <div>loading list ...</div>
+            <div className="w-full h-50 flex-center">
+              <Spinner className="size-10 lg:size-13"/>
+            </div>
           ) : (
-            <>
+            <>            
               <ProductsList products={products} />
               <div ref={sentinel} className="h-2 w-full">
                 {isFetchingNextPage && (
