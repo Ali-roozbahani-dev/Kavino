@@ -11,7 +11,6 @@ export const getHomeData = async (): Promise<HomeData>=>{
     if (!res.ok) {
         throw new Error("خطایی رخ داد.");
     }
-
     
 
     return res.json();
