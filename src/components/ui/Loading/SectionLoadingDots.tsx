@@ -8,7 +8,7 @@ interface Props{
 
 }
 
-export default function SectionSpinner({containerClass , dotsClass}: Props){
+export default function SectionLoadingDots({containerClass , dotsClass}: Props){
 
     return (
         <div className={cn("h-full w-full" , containerClass)}>

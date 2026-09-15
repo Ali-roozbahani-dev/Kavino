@@ -6,7 +6,7 @@ import AddToCartBtn from "./AddToCartBtn";
 import StoreFeatures from "./StoreFeatures";
 import { ProductVariant } from "@/entities/Product/types";
 import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
-import SectionSpinner from "@/components/ui/Loading/SectionLoading";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 
 
 interface Props{  
@@ -44,7 +44,7 @@ export default function ProductPurchase({PurchaseInTabs , variants}: Props){
             </div>
             </>
             :
-            <SectionSpinner dotsClass="size-10" containerClass="h-full xl:h-[174px]"/>           
+            <SectionLoadingDots dotsClass="size-10" containerClass="h-full xl:h-[174px]"/>           
 
             }
 
