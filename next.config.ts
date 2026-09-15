@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-
 /**
  * BACKEND_INTERNAL_URL یک متغیر محیطیِ سمت سرور (بدون پیشوند NEXT_PUBLIC_) است
  * که در زمان اجرای container (نه زمان build) مقداردهی می‌شود، مثلاً:
