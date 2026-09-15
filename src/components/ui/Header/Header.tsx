@@ -2,7 +2,7 @@ import { getAllCategories } from "@/entities/Category/api/getAllCategories";
 import DesktopHeader from "./desktop/DesktopHeader";
 import MobileHeader from "./mobile/MobileHeader";
 import { categorizeCategories } from "./desktop/Categories/utils/categorizeCategories";
-import DesktopNavbar from "./desktop/DesktopNavbar";
+import DesktopNavbar from "./NavbarHeader/DesktopNavbar";
 
 export default async function Header() {
   const categories = await getAllCategories();

@@ -61,6 +61,8 @@
 
 
 :root {  
+  --navbar-height: 100px;
+  --base-offset: 100px;
   --card: oklch(1 0 0);  
   --card-foreground: oklch(0.145 0 0);  
   --popover: oklch(1 0 0);  
@@ -94,7 +96,11 @@
   --background: oklch(1 0 0);  
   --foreground: oklch(0.145 0 0);
 }
-
+@media (min-width: 1024px) {
+  :root {
+    --base-offset: 137px;
+  }
+}
 .dark {  
   --background: oklch(0.145 0 0);  
   --foreground: oklch(0.985 0 0);  

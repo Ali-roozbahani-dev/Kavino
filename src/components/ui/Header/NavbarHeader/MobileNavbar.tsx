@@ -14,8 +14,8 @@ import {
   Accordion,  
 } from "@/components/ui/accordion";
 import { TCategoriesGroup } from "../desktop/Categories/utils/categorizeCategories";
-import CategoryItem from "./CategoryItem";
-import StaticNavbarItems from "../NavbarHeader/StaticNavbarItems";
+import CategoryItem from "../mobile/CategoryItem";
+import StaticNavbarItems from "./StaticNavbarItems";
 import Image from "next/image";
 
 export default function MobileNavbar({categoriesGroup,}:{categoriesGroup: TCategoriesGroup;}) {
