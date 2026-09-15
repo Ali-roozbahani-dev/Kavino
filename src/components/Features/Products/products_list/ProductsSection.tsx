@@ -5,7 +5,7 @@ import ProductsList from "./ProductsList";
 import { FilterForm } from "@/components/Features/Products/Filter/ui/FilterForm";
 import { CategoryListItem } from "@/entities/Category/types/Category";
 import { PulsatingDots } from "@/components/ui/Loading/pulsating-dots";
-import { FormOutput, Ordering } from "@/entities/Product/types/TproductSection";
+import { FormInput, FormOutput, Ordering } from "@/components/Features/Products/Filter/types/TproductSection";
 import { useProductList } from "@/components/Features/Products/products_list/hooks/useProductList";
 import { useProductFacets } from "@/components/Features/Products/Filter/hooks/useProductFacets";
 
@@ -23,9 +23,9 @@ export default function ProductsSection({
   const sentinel = useRef(null);
   const [showFilter, setShowFilter] = useState(true);
   const [ordering, setOrdering] = useState<Ordering | undefined>(undefined);
-  const [formQueries, setFormQueries] = useState<FormOutput>({
-    category: initialCategory?.slug,
-    brand: initialBrand,
+  const [formQueries, setFormQueries] = useState<Omit<FormOutput, "page" | "ordering" | "search">>({
+    category: initialCategory?.slug ?? undefined,
+    brand: initialBrand ?? undefined,
     max_price: undefined,
     min_price: undefined,
     has_stock: undefined,

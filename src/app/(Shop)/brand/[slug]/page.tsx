@@ -1,4 +1,4 @@
-import { Tqueries } from "@/entities/Product/types/TproductSection";
+import { Tqueries } from "@/components/Features/Products/Filter/types/TproductSection";
 import Main from "@/components/ui/Main";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { getProductsList } from "@/entities/Product/api/getProductsList";
@@ -22,6 +22,7 @@ export default async function BrandProductsPage({ params }: PageProps) {
 
   const initialQueries: Omit<Tqueries, "page"> = {
     ordering: undefined,
+    category: undefined,
     brand: brandsSlug,
     max_price: undefined,
     min_price: undefined,

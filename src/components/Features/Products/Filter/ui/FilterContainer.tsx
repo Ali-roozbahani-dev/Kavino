@@ -17,20 +17,22 @@ import { CategoryCheckBoxes } from "./CategoryCheckBoxes";
 import { BrandCheckBoxes } from "./BrandCheckBoxes";
 import { PriceFilter } from "./PriceFilter";
 import { HasStockSwitch } from "./HasStockSwitch";
-import FormBtns from "./FormBtns";
+import FormResetBtn from "./FormResetBtn";
 import { SlidersHorizontal } from "lucide-react";
 import { Facets } from "@/entities/Product/types";
 import { usePathname } from "next/navigation";
 import { useIsMobile } from "@/shared/hooks/use-mobile";
+import { FormInput } from "../types/TproductSection";
 
 
 type Tprops = {
+  defaultValues: FormInput;
   facets: Facets;
   onSubmit: React.FormEventHandler<HTMLFormElement>;
 };
 
 
-export default function FilterContainer({facets,onSubmit}: Tprops){
+export default function FilterContainer({facets , onSubmit , defaultValues}: Tprops){
     const pathname = usePathname();
     const firstSegment = pathname.split('/')[1];
     const isMobile = useIsMobile();
@@ -98,7 +100,7 @@ export default function FilterContainer({facets,onSubmit}: Tprops){
             </SidebarContent>
 
             <SidebarFooter className="border-t">
-                <FormBtns />
+                <FormResetBtn defaultValues={defaultValues}/>
             </SidebarFooter>
             </form>      
         </Sidebar>

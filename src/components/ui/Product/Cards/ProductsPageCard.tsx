@@ -87,7 +87,7 @@ export default function ProductsPageCard({
             "
           >
             {/* Discount Badge */}
-        {hasDiscount && (
+        {(hasDiscount && has_stock) && (
           <Badge
             className="
               md:absolute z-10 bg-[#ee2e2e]
@@ -102,7 +102,7 @@ export default function ProductsPageCard({
             <div className="flex flex-col items-end w-full gap-1">
               
               {/* قیمت قبل از تخفیف */}
-              {hasDiscount && (
+              {(hasDiscount && has_stock) && (
                 <div
                   className="
                     flex items-center gap-1

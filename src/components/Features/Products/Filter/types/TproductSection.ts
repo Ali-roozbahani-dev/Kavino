@@ -1,5 +1,5 @@
-import { filterProductsSchema } from "@/components/Features/Products/Filter/schema/filterProductsSchema";
 import z from "zod";
+import { filterProductsSchema } from "../schema/filterProductsSchema";
 
 export type FormInput = z.input<typeof filterProductsSchema>;
 export type FormOutput = z.output<typeof filterProductsSchema>;

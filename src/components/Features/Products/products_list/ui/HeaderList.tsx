@@ -6,7 +6,7 @@ import { FilterTrigger } from "@/components/ui/FilterTrigger";
 import { Dispatch, SetStateAction } from "react";
 import { CategoryListItem } from "@/entities/Category/types/Category";
 import ProductsBreadCrumbs from "@/components/ui/Product/BreadCrumbs/ProductsBreadCrumbs";
-import { Ordering } from "@/entities/Product/types/TproductSection";
+import { Ordering } from "@/components/Features/Products/Filter/types/TproductSection";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 
 interface Tprops {

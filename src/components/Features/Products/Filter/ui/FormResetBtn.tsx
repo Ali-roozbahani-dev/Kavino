@@ -1,25 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { RefreshCcw } from "lucide-react";
 import { useFormContext } from "react-hook-form";
+import { FormInput } from "../types/TproductSection";
 
-export default function FormBtns(){
+export default function FormResetBtn({defaultValues}: {defaultValues: FormInput}){
     const {reset} = useFormContext()
 
     return (
-        <>
-        <Button className="w-full rounded-sm mb-3 py-5">
-            اعمال فیلتر ها
-        </Button>
-
         <Button 
-        onClick={reset}
+        onClick={()=> reset(defaultValues)}
         variant={"Light"}
         type="button" 
         className="w-full  rounded-sm py-5">
             <RefreshCcw />
             <span>پاک کردن فیلتر ها</span>
-        </Button>
-        </>       
+        </Button>    
        
     )
 }

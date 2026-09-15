@@ -1,4 +1,4 @@
-import { Tqueries } from "@/entities/Product/types/TproductSection";
+import { Tqueries } from "@/components/Features/Products/Filter/types/TproductSection";
 import Main from "@/components/ui/Main";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { getProductsList } from "@/entities/Product/api/getProductsList";
@@ -47,6 +47,7 @@ export default async function SearchResultPage({ params }: PageProps) {
     search,
     ordering: undefined,
     brand: undefined,
+    category: undefined,
     max_price: undefined,
     min_price: undefined,
     has_stock: undefined,

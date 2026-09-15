@@ -2,7 +2,7 @@
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useFormContext, Controller } from "react-hook-form";
-import { FormInput, FormOutput } from "../../../../../entities/Product/types/TproductSection";
+import { FormInput, FormOutput } from "../types/TproductSection";
 
 export function HasStockSwitch() {
   const { control } = useFormContext<FormInput, any, FormOutput>();

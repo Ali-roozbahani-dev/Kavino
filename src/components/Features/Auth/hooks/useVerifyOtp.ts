@@ -7,8 +7,7 @@ import { authQueryKeys } from "../authQueryKeys";
 import { cartQueryKey } from "@/entities/Cart/queryKeys";
 import { getAuthChannel } from "../BroadcastChannel/getAuthChannel";
 import { authChannelActions } from "../BroadcastChannel/authChannelActions";
-import { getCartChannel } from "@/entities/Cart/BroadcastChannel/getCartChannel";
-import { cartChannelActions } from "@/entities/Cart/BroadcastChannel/cartChannelActions";
+import { cartChannelActions, getCartChannel } from "../../Cart";
 interface VerifyOtpParams {
     phone_number: string;
     callbackUrl?: string;

@@ -1,4 +1,4 @@
-import { Tqueries } from "../../../../entities/Product/types/TproductSection";
+import { Tqueries } from "../Filter/types/TproductSection";
 
 export const productQueryKey = (queries: Omit<Tqueries, "page">) => {
   return ["productList", queries] as const;

@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Ordering } from "@/entities/Product/types/TproductSection";
+import { Ordering } from "@/components/Features/Products/Filter/types/TproductSection";
 import { Dispatch, SetStateAction } from "react";
 const sortOptions = [
   { value: "-created_at", label: "جدیدترین" },

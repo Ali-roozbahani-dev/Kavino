@@ -6,12 +6,16 @@ import Link from "next/link";
 import { FaChevronLeft, FaFire } from "react-icons/fa6";
 import HomePageProductCard from "@/components/ui/Product/Cards/HomePageProductCard";
 import { ProductListItem } from "@/entities/Product/types";
+import React from "react";
 
 export default function SpecialOffers({
   products,
 }: {
   products: ProductListItem[];
 }) {
+
+  const selected_products = products.slice(0,10);
+
   return (
     <section className="my-10 overflow-hidden md:rounded-2xl
     bg-linear-to-r from-theme-4/15 via-theme-4/7 to-transparent p-4 sm:p-5 md:p-6">
@@ -49,10 +53,14 @@ export default function SpecialOffers({
         }}
         className="overflow-visible!"
       >
-        {products.map((pro) => (
-          <SwiperSlide key={pro.id} className="h-auto">
-            <HomePageProductCard product={pro} />
-          </SwiperSlide>
+        {selected_products.map((pro) => (
+          <React.Fragment key={pro.id}>
+            {pro.has_stock &&
+            <SwiperSlide className="h-auto">
+              <HomePageProductCard product={pro} />
+            </SwiperSlide>
+            }
+          </React.Fragment>
         ))}
       </Swiper>
     </section>

@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { getProductsList } from "@/entities/Product/api/getProductsList";
-import { Tqueries } from "../../../../../entities/Product/types/TproductSection";
+import { Tqueries } from "../../Filter/types/TproductSection";
 import { productQueryKey } from "@/components/Features/Products/util/productQueries";
 
 export function useProductList(queries: Omit<Tqueries, "page">) {

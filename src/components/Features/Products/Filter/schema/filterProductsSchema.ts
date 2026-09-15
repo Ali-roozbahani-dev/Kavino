@@ -9,28 +9,25 @@ const priceField = (positive: boolean) =>
         : z.number().int().nonnegative()
     )
     .optional();
- 
+
+const arrayToCommaString = () =>
+  z.array(z.string().trim())
+    .optional()
+    .default([])
+    .transform((arr) => (arr.length > 0 ? arr.join(",") : undefined));
+
 export const filterProductsSchema = z.object({
   has_stock: z
-  .boolean()
-  .optional()
-  , 
+    .boolean()
+    .optional(),
 
-  category: z
-  .string()
-  .trim()
-  .optional()
-  ,
+  category: arrayToCommaString(),
 
   min_price: priceField(false),
 
   max_price: priceField(true),
 
-  brand: z
-  .string()
-  .trim()
-  .optional()
-  ,
+  brand: arrayToCommaString(),
 })
 .refine(
   (data) =>

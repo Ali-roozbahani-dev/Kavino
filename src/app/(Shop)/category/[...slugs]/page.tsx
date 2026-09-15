@@ -1,4 +1,4 @@
-import { Tqueries } from "@/entities/Product/types/TproductSection";
+import { Tqueries } from "@/components/Features/Products/Filter/types/TproductSection";
 import Main from "@/components/ui/Main";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { getSingleCategory } from "@/entities/Category/api/getSingleCategory";
