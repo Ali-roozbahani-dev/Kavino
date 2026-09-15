@@ -24,8 +24,12 @@ export default function TabsHeader({reviews_summary , activeTab}: Props){
 
     
     return(
-        <div className="border-y bg-primary-text3 px-2 md:px-3.5 
-        sticky top-[100px] lg:top-[137px] right-0 w-full z-49">
+        <div
+        className="border-y bg-primary-text3 px-2 md:px-3.5
+        sticky top-(--navbar-height)
+        transition-[top] duration-200
+        right-0 w-full z-40"
+        >
             <ul className="flex items-center font-semibold text-primary-text">
 
                 {headerItems.map((item)=>(

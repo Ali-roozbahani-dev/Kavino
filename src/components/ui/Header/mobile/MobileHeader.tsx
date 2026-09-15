@@ -1,6 +1,6 @@
 import Logo from "../Logo";
 import CartLink from "../CartLink";
-import MobileNavbar from "./MobileNavbar";
+import MobileNavbar from "../NavbarHeader/MobileNavbar";
 import { TCategoriesGroup } from "../desktop/Categories/utils/categorizeCategories";
 import AuthMenu from "../AuthMenu";
 
