@@ -20,7 +20,6 @@ type PageProps = {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { searchValue } = await params;
 
   return {
     title: `جستوجوی محصولات |  کاوه شاپ`,
