@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
     dangerouslyAllowLocalIP: true,
     remotePatterns: [
       {
+        protocol: 'http',
+        hostname: 'django',
+        port: '8000',
+        pathname: '/media/**',
+      },
+      {
         protocol: backendProtocol,
         hostname: backendHostname,
         port: backendPort,

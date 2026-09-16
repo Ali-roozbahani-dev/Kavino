@@ -20,7 +20,7 @@ export default function CategoryItem({category}: Props){
                 src={category.image ?? "/"}
                 width={140}
                 height={140}
-                alt="category image"
+                alt={category.name ?? "category image"}
                 className="h-[120px] xl:h-[140px] w-full mx-auto"
                 />
             </div>

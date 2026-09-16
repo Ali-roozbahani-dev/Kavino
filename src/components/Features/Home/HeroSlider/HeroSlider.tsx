@@ -41,7 +41,7 @@ export default function HeroSlider({sliders}: Props){
                     src={slider.desktop_image} 
                     width={1200} 
                     height={250} 
-                    alt='تصویر بند' 
+                    alt={slider.title ?? "تصویر هیرو بنر"} 
                     className='w-full h-auto hidden lg:block'                
                     />
 
@@ -49,7 +49,7 @@ export default function HeroSlider({sliders}: Props){
                     src={slider.mobile_image} 
                     width={1200} 
                     height={410} 
-                    alt='تصویر بند' 
+                    alt={slider.title ?? "تصویر هیرو بنر"} 
                     className='w-full h-auto lg:hidden'                
                     />
                 </Link>
