@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-query";
 import { productQueryKey } from "@/components/Features/Products/util/productQueries";
 import ProductsSection from "@/components/Features/Products/products_list/ProductsSection";
+import { notFound } from "next/navigation";
 
 type PageProps = {
   params: Promise<{
@@ -19,6 +20,8 @@ type PageProps = {
 export default async function BrandProductsPage({ params }: PageProps) {
   const { slug } = await params;
   const brandsSlug = decodeURIComponent(slug);
+
+  if(!brandsSlug) notFound();
 
   const initialQueries: Omit<Tqueries, "page"> = {
     ordering: undefined,

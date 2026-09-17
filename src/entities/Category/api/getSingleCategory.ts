@@ -4,7 +4,7 @@ import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
 export const getSingleCategory = async (
   slug: string,
 ): Promise<CategoryListItem | null> => {
-  const res = await fetch(`${getApiBaseUrl()}/${slug}`, {
+  const res = await fetch(`${getApiBaseUrl()}/categories/${slug}/`, {
     next: {
       revalidate: 3600,
     },
