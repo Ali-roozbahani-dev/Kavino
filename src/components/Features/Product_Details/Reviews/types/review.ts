@@ -1,4 +1,4 @@
-import { ApiPaginatedResponse } from "@/components/Features/Home/types/ApiPaginatedResponse";
+import { ApiPaginatedResponse } from "@/shared/types/ApiPaginatedResponse";
 
 export interface Review {
   id: number;

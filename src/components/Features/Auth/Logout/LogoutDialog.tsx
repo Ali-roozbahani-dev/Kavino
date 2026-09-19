@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactNode } from "react";
 import { LogOut } from "lucide-react";
 import { useLogout } from "../hooks/useLogout";
 import {
@@ -14,20 +15,26 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-export default function LogoutDialog() {
+interface LogoutDialogProps {
+    children?: ReactNode;
+}
+
+export default function LogoutDialog({ children }: LogoutDialogProps) {
     const { mutate: logout, isPending } = useLogout();
 
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
-                <button
-                    type="button"
-                    disabled={isPending}
-                    className="flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm text-destructive hover:bg-destructive/10"
-                >
-                    <LogOut className="size-4" />
-                    خروج از حساب
-                </button>
+                {children ?? (
+                    <button
+                        type="button"
+                        disabled={isPending}
+                        className="flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm text-destructive hover:bg-destructive/10"
+                    >
+                        <LogOut className="size-4" />
+                        خروج از حساب
+                    </button>
+                )}
             </AlertDialogTrigger>
 
             <AlertDialogContent dir="rtl">
@@ -49,7 +56,7 @@ export default function LogoutDialog() {
                     <AlertDialogAction
                         onClick={() => logout()}
                         disabled={isPending}
-                        variant={"Blue1"}
+                        variant="Blue1"
                         className="bg-destructive text-white hover:bg-destructive/90"
                     >
                         {isPending ? "در حال خروج..." : "خروج از حساب"}
