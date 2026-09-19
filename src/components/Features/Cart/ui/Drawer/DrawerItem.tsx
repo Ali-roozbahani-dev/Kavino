@@ -7,6 +7,7 @@ import ItemPrice from "../ItemPrice";
 
 export default function DrawerItem({item}: {item: TCartItem}){
     const {id ,product_name , quantity ,  variant_stock , attributes , final_price , discount_amount , image} = item;
+    
 
     return(
         <div className="flex justify-between not-last:border-b not-last:pb-4 not-first:pt-4">
