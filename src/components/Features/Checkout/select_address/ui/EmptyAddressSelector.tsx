@@ -1,4 +1,4 @@
-import AddressDialog from "@/components/Features/Address/form/ui/AddressDialog";
+import AddressDialog from "@/components/ui/Address/AddressFormDialog";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 

@@ -3,10 +3,10 @@ import { authQueryKeys } from "@/components/Features/Auth/authQueryKeys";
 import { cartQueryKey } from "@/entities/Cart/queryKeys";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { getAuthChannel } from "../BroadcastChannel/getAuthChannel";
-import { authChannelActions } from "../BroadcastChannel/authChannelActions";
+import { getAuthChannel } from "../../BroadcastChannel/getAuthChannel";
+import { authChannelActions } from "../../BroadcastChannel/authChannelActions";
 import { EMPTY_CART } from "@/entities/Cart/empty_cart";
-import { cartChannelActions, getCartChannel } from "../../Cart";
+import { cartChannelActions, getCartChannel } from "../../../Cart";
 
 export function useLogout() {
     const queryClient = useQueryClient();

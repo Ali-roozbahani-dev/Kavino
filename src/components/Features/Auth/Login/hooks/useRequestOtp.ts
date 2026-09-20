@@ -2,8 +2,8 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { useOtpCountdown } from "./useOtpCountdown";
 import { api } from "@/shared/lib/axios_instance";
+import { useOtpCountdown } from "./useOtpCountdown";
 
 export function useRequestOtp(){
     const router = useRouter();

@@ -8,7 +8,7 @@ import { AddressListItem } from "@/entities/Address/types/AddressList";
 import { Button } from "@/components/ui/button";
 import { Pencil, Plus } from "lucide-react";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
-import AddressDialog from "@/components/Features/Address/form/ui/AddressDialog";
+import AddressDialog from "@/components/ui/Address/AddressFormDialog";
 
 export default function AddressSelectorItem({
   address,

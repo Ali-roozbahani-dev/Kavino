@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { LogOut } from "lucide-react";
-import { useLogout } from "../hooks/useLogout";
+import { useLogout } from "./hooks/useLogout";
 import {
     AlertDialog,
     AlertDialogAction,
@@ -37,7 +37,7 @@ export default function LogoutDialog({ children }: LogoutDialogProps) {
                 )}
             </AlertDialogTrigger>
 
-            <AlertDialogContent dir="rtl">
+            <AlertDialogContent dir="rtl" className="md:max-w-lg!">
                 <AlertDialogHeader>
                     <AlertDialogTitle className="font-vazir">
                         خروج از حساب

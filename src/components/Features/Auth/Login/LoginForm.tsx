@@ -4,7 +4,7 @@ import { InputGroup,InputGroupInput } from "@/components/ui/input-group";
 import { Label } from "@/components/ui/label";
 import RequestOtpBtn from "./RequestOtpBtn";
 import FieldError from "@/components/ui/Error/FieldError";
-import { useRequestOtp } from "../hooks/useRequestOtp";
+import { useRequestOtp } from "./hooks/useRequestOtp";
 import { loginSchema } from "../schema/loginSchema";
 
 
