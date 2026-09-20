@@ -15,8 +15,9 @@ import {
 } from "@/components/ui/select";
 import { useFormContext, Controller, useWatch } from "react-hook-form";
 import FieldError from "@/components/ui/Error/FieldError";
-import { useProvinces } from "@/components/Features/Address/hooks/useProvinces";
-import { Province } from "@/components/Features/Address/types/locations";
+import { useProvinces } from "@/entities/Location/hooks/useProvinces";
+import { Province } from "@/entities/Location/types/locations";
+import AddressLocationFormSkeleton from "@/components/ui/Address/AddressLocationFormSkeleton";
 
 export default function AddressLocationForm() {
   const {
@@ -39,7 +40,7 @@ export default function AddressLocationForm() {
 
   const provinceCities = selectedProvince?.cities;
 
-  if (provincesPending) return <div>loading</div>;
+  if (provincesPending) return <AddressLocationFormSkeleton />;
 
   if (provincesError) throw new Error("خطا در دریافت اطلاعات");
 
@@ -67,7 +68,7 @@ export default function AddressLocationForm() {
                   setValue("city", undefined, { shouldDirty: true });
                 }}
               >
-                <SelectTrigger id="province" className="py-5 rounded-md">
+                <SelectTrigger id="province" className="py-5 rounded-md w-full">
                   <SelectValue placeholder="استان را انتخاب کنید" />
                 </SelectTrigger>
 
@@ -102,7 +103,7 @@ export default function AddressLocationForm() {
                 onValueChange={(value) => field.onChange(Number(value))}
                 disabled={!selectedProvinceId}
               >
-                <SelectTrigger id="city" className="py-5 rounded-md">
+                <SelectTrigger id="city" className="py-5 rounded-md w-full">
                   <SelectValue
                     placeholder={
                       selectedProvinceId ? "شهر را انتخاب کنید" : "ابتدا استان را انتخاب کنید"

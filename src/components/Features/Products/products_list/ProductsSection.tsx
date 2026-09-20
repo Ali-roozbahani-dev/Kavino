@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import HeaderList from "./ui/HeaderList";
 import ProductsList from "./ProductsList";
 import { FilterForm } from "@/components/Features/Products/Filter/ui/FilterForm";
@@ -8,9 +8,9 @@ import { PulsatingDots } from "@/components/ui/Loading/pulsating-dots";
 import { FormOutput, Ordering } from "@/components/Features/Products/Filter/types/TproductSection";
 import { useProductList } from "@/components/Features/Products/products_list/hooks/useProductList";
 import { useProductFacets } from "@/components/Features/Products/Filter/hooks/useProductFacets";
-import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import Spinner from "@/components/ui/Loading/Spinner";
 import PageLoading from "@/components/ui/Loading/PageLoading";
+import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
 
 interface Tprops {
   initialBrand?: string;
@@ -23,7 +23,6 @@ export default function ProductsSection({
   searchValue,
   initialCategory,
 }: Tprops) {
-  const sentinel = useRef(null);
   const [showFilter, setShowFilter] = useState(true);
   const [ordering, setOrdering] = useState<Ordering | undefined>(undefined);
   const [formQueries, setFormQueries] = useState<Omit<FormOutput, "page" | "ordering" | "search">>({
@@ -33,13 +32,13 @@ export default function ProductsSection({
     min_price: undefined,
     has_stock: undefined,
   });
-
+  
   // این کوئری فقط با category/search/brand عوض می‌شه، نه با فیلترها
   const { data: facets, isPending: isFacetsPending } = useProductFacets({
     category: initialCategory?.slug,
     search: searchValue,
   });
-
+  
   const {
     data,
     isPending: isListPending,
@@ -53,21 +52,9 @@ export default function ProductsSection({
     search: searchValue,
     ordering,
   });
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting && hasNextPage && !isFetchingNextPage) {
-          fetchNextPage();
-        }
-      },
-      { root: null, rootMargin: "50px" },
-    );
-
-    if (sentinel.current) observer.observe(sentinel.current);
-    return () => observer.disconnect();
-  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
+  
+  const sentinel = useInfiniteScrollObserver({fetchNextPage , isFetchingNextPage , hasNextPage});
+  
 
   if (isFacetsPending || !facets) {
     return <PageLoading containerclassName="mx-auto"/>;

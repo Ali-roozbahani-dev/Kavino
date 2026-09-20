@@ -8,14 +8,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import AddressForm from "./AddressForm";
+import AddressForm from "../../Features/Address/form/AddressForm";
 
 interface AddressDialogProps {
   trigger: React.ReactNode;
   initialAddressId?: number;
 }
 
-export default function AddressDialog({
+export default function AddressFormDialog({
   trigger,
   initialAddressId
 }: AddressDialogProps) {

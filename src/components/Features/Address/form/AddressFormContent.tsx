@@ -18,6 +18,7 @@ export default function AddressFormContent({
   createAddress: ReturnType<typeof useCreateAddress>;
   updateAddress: ReturnType<typeof useUpdateAddress>;
 }) {
+  
   const methods = useForm<CreateAddressInput>({
     resolver: zodResolver(createAddressSchema),
     defaultValues: initialAddress
@@ -56,17 +57,28 @@ export default function AddressFormContent({
   });
 
   const onSubmit = (data: CreateAddressInput) => {
-    const payload = {
-      ...data,
-      receiver_phone: `+98${data.receiver_phone}`,
-    };
-    
-    if (initialAddress) {
-      updateAddress.mutate({ id: initialAddress.id, data: payload });
-    } else {
-      createAddress.mutate(payload);
-    }
+  const payload = {
+    ...data,
+    receiver_phone: `+98${data.receiver_phone}`,
   };
+
+  if (initialAddress) {
+    updateAddress.mutate(
+      { id: initialAddress.id, data: payload },
+      {
+        onSuccess: () => {
+          methods.reset(data);
+        },
+      }
+    );
+  } else {
+    createAddress.mutate(payload, {
+      onSuccess: () => {
+        methods.reset();
+      },
+    });
+  }
+};
 
   const isPending = createAddress.isPending || updateAddress.isPending;
 

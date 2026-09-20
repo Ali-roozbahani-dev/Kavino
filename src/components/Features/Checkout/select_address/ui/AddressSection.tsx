@@ -1,5 +1,5 @@
 "use client"
-import { useAddresses } from "@/entities/Address/hooks/useAddresses";
+import { useAddressesList } from "@/components/Features/Address/address_list/hooks/useAddressesList";
 import AddressSelector from "./AddressSelector";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 
@@ -9,7 +9,7 @@ export default function AddressSection(){
         data: addresses,
         isPending: addressesPending,
         error: addressesError,
-    } = useAddresses();
+    } = useAddressesList();
     
 
     if (addressesPending) {
