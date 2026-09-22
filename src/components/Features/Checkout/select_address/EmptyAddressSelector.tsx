@@ -18,7 +18,7 @@ export default function EmptyAddressSelector() {
 
     <AddressDialog trigger={
         <Button   
-        variant="Blue1"     
+        variant="Blue3"     
         type="button"
         className="mt-4 rounded-sm px-4 py-2 text-sm font-medium text-primary-foreground"
       >

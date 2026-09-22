@@ -1,5 +1,5 @@
 "use client";
-import CartDrawer from "@/components/Features/Cart/ui/Drawer/CartDrawer";
+import CartDrawer from "@/components/ui/Cart/Drawer/CartDrawer";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/entities/Cart/hooks/useCart";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";

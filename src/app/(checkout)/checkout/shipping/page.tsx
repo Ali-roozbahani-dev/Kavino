@@ -4,7 +4,7 @@ import Main from "@/components/ui/Main";
 import ShippingSection from "@/components/Features/Checkout/Shipping/ShippingSection";
 import { useCheckoutGuard } from "@/components/Features/Checkout/hooks/useCheckoutGuard";
 import PageLoading from "@/components/ui/Loading/PageLoading";
-import AddressSection from "@/components/Features/Checkout/select_address/ui/AddressSection";
+import AddressSection from "@/components/Features/Checkout/select_address/AddressSection";
 import CouponSection from "@/components/Features/Checkout/Coupon/CouponSection";
 import CheckoutSummary from "@/components/Features/Checkout/Summary/CheckoutSummary";
 import useSelectedShippingMethod from "@/components/Features/Checkout/Shipping/hooks/useSelectedShippingMethod";
