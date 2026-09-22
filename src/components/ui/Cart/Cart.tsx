@@ -1,7 +1,7 @@
 "use client";
 import { useCart } from "@/entities/Cart/hooks/useCart";
 import CartListHeader from "./CartListHeader";
-import CheckoutSummary from "../../Checkout/Summary/CheckoutSummary";
+import CheckoutSummary from "../../Features/Checkout/Summary/CheckoutSummary";
 import EmptyCart from "./EmptyCart";
 import { useClearCart } from "@/components/Features/Cart/hooks/useClearCart";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";

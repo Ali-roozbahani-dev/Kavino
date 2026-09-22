@@ -1,6 +1,6 @@
 "use client"
 import { useCart } from "@/entities/Cart/hooks/useCart";
-import CheckoutSummary from "../../../Checkout/Summary/CheckoutSummary";
+import CheckoutSummary from "../../../Features/Checkout/Summary/CheckoutSummary";
 import { CartList } from "../CartList";
 
 

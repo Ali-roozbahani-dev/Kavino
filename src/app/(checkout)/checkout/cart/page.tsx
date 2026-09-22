@@ -1,4 +1,4 @@
-import Cart from "@/components/Features/Cart/ui/Cart";
+import Cart from "@/components/ui/Cart/Cart";
 import Footer from "@/components/ui/Footer/Footer";
 import Header from "@/components/ui/Header/Header";
 import Main from "@/components/ui/Main";

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import QuantitySelector from "../QuantitySelector";
 import { CartItem as TCartItem } from "@/entities/Cart/types/Cart";
 import CartColor from "../CartColor";
 import ItemPrice from "../ItemPrice";
+import QuantitySelector from "../QuantitySelector";
 
 
 export default function DrawerItem({item}: {item: TCartItem}){

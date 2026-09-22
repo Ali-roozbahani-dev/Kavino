@@ -15,7 +15,7 @@ export default function CartListHeader({cart , isClearing , clearCart}: Props){
     
 
     return (
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-4 py-2">
             <div>
                 <h1 className="font-semibold text-[22px] me-2 inline-block">سبد خرید</h1>
                 <span className="text-primary-text text-[13px] md:text-[14px]">

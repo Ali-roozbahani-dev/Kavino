@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import QuantitySelector from "../../Cart/ui/QuantitySelector";
+import QuantitySelector from "../../../ui/Cart/QuantitySelector";
 import { ProductVariant } from "@/entities/Product/types";
 import { useCart } from "@/entities/Cart/hooks/useCart";
 import { useAddToCart } from "@/components/Features/Cart/hooks/useAddToCart";
