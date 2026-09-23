@@ -24,8 +24,8 @@ export default function BulkDelete({isClearing , clearCart}: Props){
             <AlertDialogTrigger asChild>
                 <Button                 
                 variant={"destructive"} 
-                className="rounded-sm h-10 border bg-white">
-                    <Trash2 className="size-4.5"/>
+                className="rounded-sm text-[13px] md:text-[14px] h-10 border bg-white">
+                    <Trash2 className="size-4 md:size-4.5"/>
                     خالی کردن سبد خرید
                 </Button>                
             </AlertDialogTrigger>

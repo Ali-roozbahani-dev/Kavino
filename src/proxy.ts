@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const authPaths = ["/Login", "/LoginWithOtp"];
 const checkoutPaths = ["/checkout/address", "/checkout/shipping"];
+const protectedPaths = ["/profile"];
 
 export async function proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
@@ -12,6 +13,7 @@ export async function proxy(request: NextRequest) {
 
     const isAuthPath = authPaths.some((p) => pathname.startsWith(p));
     const isCheckoutPath = checkoutPaths.some((p) => pathname.startsWith(p));
+    const isProtectedPath = protectedPaths.some((p) => pathname.startsWith(p));
 
     // مسیرهای احراز هویت: اگه لاگینه، نیازی به این صفحه نداره
     if (isAuthPath && hasSession) {
@@ -23,6 +25,11 @@ export async function proxy(request: NextRequest) {
         return NextResponse.redirect(new URL("/Login", request.url));
     }
 
+    // اگه لاگین نیست، اجازه‌ی ورود نده : profile و زیرمسیرهاش
+    if (isProtectedPath && !hasSession) {
+        return NextResponse.redirect(new URL("/", request.url));
+    }
+
     return NextResponse.next();
 }
 
@@ -31,6 +38,8 @@ export const config = {
         "/Login",
         "/LoginWithOtp",
         "/checkout/address",
-        "/checkout/shipping"
+        "/checkout/shipping",
+        "/profile",
+        "/profile/:path*",
     ],
 };

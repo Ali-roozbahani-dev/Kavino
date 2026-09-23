@@ -1,4 +1,4 @@
-import { Review } from "@/components/Features/Product_Details/Reviews/types/review";
+import { Review } from "@/entities/Review/types/review";
 import ReviewCard from "./ReviewCard";
 
 interface Props{
