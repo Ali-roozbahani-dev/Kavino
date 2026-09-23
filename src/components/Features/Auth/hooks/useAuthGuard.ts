@@ -1,3 +1,4 @@
+"use client"
 // این هوک جهت اعمال روت پروتکشن سمت کلاینت پیاده سازی شده 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";

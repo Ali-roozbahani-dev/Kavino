@@ -19,12 +19,16 @@ export function CartList({cartItems , isDrawer}: Props) {
           />
         ))          
         :
-        cartItems.map((item)=>(
-          <CartItem 
-          key={item.id} 
-          item={item}
-          />
-        ))  
+        <div className="border p-4 rounded-lg">
+          {
+            cartItems.map((item)=>(
+              <CartItem 
+              key={item.id} 
+              item={item}
+              />
+            ))  
+          }
+        </div>
       }
     </div>
   )

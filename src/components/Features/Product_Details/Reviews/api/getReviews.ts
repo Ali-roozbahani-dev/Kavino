@@ -1,5 +1,5 @@
 import { api } from "@/shared/lib/axios_instance";
-import { ReviewsResponse } from "../types/review";
+import { ReviewsResponse } from "../../../../../entities/Review/types/review";
 
 interface Params{
   pageParam: number ; 

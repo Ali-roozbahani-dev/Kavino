@@ -21,7 +21,7 @@ export default function FavoriteProductsList(){
     if(isPending) return <SectionLoadingDots containerClass="h-20"/>;    
     if(error) throw new Error("خطا در اتصال");
 
-    const favoritesList = data.pages.flatMap((page)=> page.results);
+    const favoritesList = data.pages.flatMap((page)=> page.results) ?? [];
 
     if(favoritesList.length <= 0) return <EmptyFavorites />
 
