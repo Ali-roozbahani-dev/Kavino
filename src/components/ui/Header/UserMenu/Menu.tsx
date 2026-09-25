@@ -24,7 +24,7 @@ Menu(){
             </Link>
 
             <Link
-            href="/orders"
+            href="/profile/orders"
             className="flex items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-muted"
             >
             <Package className="size-4" />
