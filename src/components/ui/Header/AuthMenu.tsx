@@ -11,6 +11,8 @@ export default function AuthMenu() {
   const { data: user, isPending } = useAuth();
 
   useEffect(() => {
+    // Required to prevent hydration mismatch.
+    // eslint-disable-next-line 
     setMounted(true);
   }, []);
 

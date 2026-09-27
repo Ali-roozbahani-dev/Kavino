@@ -27,7 +27,7 @@ export default function Categories({
       <div className="p-5">
         <ParentsList
           parents={categoriesGroup.parents}
-          children={categoriesGroup.children}
+          categoryChildren={categoriesGroup.categoryChildren}
         />
       </div>
     </div>

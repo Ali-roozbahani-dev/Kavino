@@ -1,7 +1,5 @@
 import {
   ArrowLeft,
-  Heart,
-  MapPin,
   Clock3,
   CheckCircle2,
   Truck,

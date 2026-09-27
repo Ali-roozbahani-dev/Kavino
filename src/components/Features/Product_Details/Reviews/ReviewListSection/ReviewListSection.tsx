@@ -1,5 +1,4 @@
 import { useGetReviews } from "@/components/Features/Product_Details/Reviews/hooks/useGetReviews";
-import ReviewToolbar from "../ReviewToolbar/ReviewToolbar";
 import ReviewList from "./ReviewList";
 import LoadMoreReviews from "../LoadMoreReviews";
 import ReviewListSkeleton from "@/components/Features/Product_Details/Reviews/ui/ReviewListSkeleton";

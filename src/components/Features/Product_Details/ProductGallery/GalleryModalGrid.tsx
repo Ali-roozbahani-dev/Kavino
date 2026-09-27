@@ -1,4 +1,4 @@
-import { ProductImage } from "@/entities/Product/types";
+import { ProductImage } from "@/entities/Product";
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
 

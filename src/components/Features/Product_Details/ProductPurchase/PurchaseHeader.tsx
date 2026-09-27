@@ -1,8 +1,7 @@
 "use client"
 
 import DiscountBadge from "./DiscountBadge";
-import { ProductVariant } from "@/entities/Product/types";
-import FavoriteToggle from "../../Favorites/ui/FavoriteToggle";
+import { ProductVariant } from "@/entities/Product";
 import { ShareProduct } from "../ShareProduct";
 
 interface Props{    
@@ -10,7 +9,7 @@ interface Props{
 }
 
 export default function PurchaseHeader({selectedVariant}: Props){
-    const {price , discount_amount , final_price} = selectedVariant;
+    const {discount_amount} = selectedVariant;
 
     return (
         <div className="flex justify-between items-center">

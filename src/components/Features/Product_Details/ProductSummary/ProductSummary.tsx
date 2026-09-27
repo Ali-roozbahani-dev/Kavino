@@ -2,14 +2,8 @@ import Colors from "./Colors";
 import Brand from "./Brand";
 import Rating from "./Rating";
 import MainProperties from "./MainProperties";
-import {
-  ProductAttribute,
-  ProductVariant,
-  ReviewsSummary,
-  Brand as Tbrand,
-} from "../../../../entities/Product/types";
-import FavoriteToggle from "@/components/Features/Favorites/ui/FavoriteToggle";
-import { ShareProduct } from "@/components/Features/Product_Details/ShareProduct";
+import { ShareProduct } from "../ShareProduct";
+import { ProductAttribute, ProductVariant, ReviewsSummary , Brand as Tbrand} from "@/entities/Product";
 
 interface Props {
   reviews_summary: ReviewsSummary;

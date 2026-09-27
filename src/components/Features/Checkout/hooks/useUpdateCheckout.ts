@@ -13,7 +13,7 @@ export function useUpdateCheckout() {
       queryClient.setQueryData(["checkout"], data);
     },
 
-    onError: (error) => {      
+    onError: () => {      
       toast.error("خطا در اتصال به شبکه");
     },
   });

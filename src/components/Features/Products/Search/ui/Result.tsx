@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Link from "next/link";
 import { MdChevronLeft } from "react-icons/md";
 import ResultBody from "./ResultBody";
-import { ProductListItem } from "@/entities/Product/types";
+import { ProductListItem } from "@/entities/Product";
 
 interface Tprops {
   results: ProductListItem[] | undefined;

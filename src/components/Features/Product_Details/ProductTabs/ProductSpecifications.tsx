@@ -1,7 +1,7 @@
 import { ClipboardList } from "lucide-react";
 import styles from "../styles/ProductTabs.module.css";
 import SpecificationsTable from "../ui/SpecificationsTable";
-import { ProductAttribute, ProductVariant } from "@/entities/Product/types";
+import { ProductAttribute } from "@/entities/Product";
 
 interface Props {
   attributes: ProductAttribute[];

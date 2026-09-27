@@ -1,8 +1,8 @@
 "use client";
 import { useCallback } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { authQueryKeys } from "@/components/Features/Auth/authQueryKeys";
-import { cartQueryKey } from "@/entities/Cart/queryKeys";
+import { authQueryKeys } from "@/components/Features/Auth";
+import { cartQueryKey } from "@/entities/Cart";
 import { AUTH_CHANNEL_NAME } from "./getAuthChannel";
 import { authChannelActions, AuthChannelMessage } from "./authChannelActions";
 import { useBroadcastChannelListener } from "@/shared/lib/broadcast/useBroadcastChannelListener";

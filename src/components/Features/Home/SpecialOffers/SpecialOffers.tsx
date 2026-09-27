@@ -5,7 +5,7 @@ import "swiper/css";
 import Link from "next/link";
 import { FaChevronLeft, FaFire } from "react-icons/fa6";
 import HomePageProductCard from "@/components/ui/Product/Cards/HomePageProductCard";
-import { ProductListItem } from "@/entities/Product/types";
+import { ProductListItem } from "@/entities/Product";
 import React from "react";
 
 export default function SpecialOffers({

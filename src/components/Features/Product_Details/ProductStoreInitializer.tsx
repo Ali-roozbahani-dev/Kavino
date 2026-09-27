@@ -6,7 +6,7 @@ type Props = {
   defaultVariantId: number;
 };
 
-export default function ProductStoreInitializer({
+export function ProductStoreInitializer({
   defaultVariantId,
 }: Props) {
   const setVariant = useProductStore((state) => state.setVariant);

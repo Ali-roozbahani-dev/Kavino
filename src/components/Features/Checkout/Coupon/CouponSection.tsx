@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Tag, X } from "lucide-react";
+import { Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCheckoutStore } from "@/components/Features/Checkout/store/checkoutStore";

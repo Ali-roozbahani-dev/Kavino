@@ -1,4 +1,5 @@
-import { ProductAttribute, ProductImage } from "@/entities/Product/types";
+import { ProductAttribute, ProductImage } from "@/entities/Product";
+
 
 export interface CartItem {
   id: number;

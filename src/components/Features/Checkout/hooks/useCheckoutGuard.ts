@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/entities/Cart/hooks/useCart";
 import { useAuthGuard } from "@/components/Features/Auth/hooks/useAuthGuard";
@@ -18,43 +19,31 @@ export function useCheckoutGuard() {
     isAuthenticated,
   } = useAuthGuard();
 
-  const [isCheckingPermission, setIsCheckingPermission] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const isCheckingPermission =
+    authLoading ||
+    !isAuthenticated ||
+    cartLoading ||
+    cart === undefined;
 
   useEffect(() => {
-    if (authLoading) return;
+    if (isCheckingPermission) return;
 
-    // useAuthGuard خودش redirect به login را انجام می‌دهد
-    if (!isAuthenticated) return;
-
-    if (cartLoading || cart === undefined) return;
-
-    if (cartError) {
-      setHasError(true);
-      setIsCheckingPermission(false);
-      return;
-    }
+    if (cartError) return;
 
     const cartItems = cart.items ?? [];
 
     if (cartItems.length === 0) {
       router.replace("/checkout/cart");
-      return;
     }
-
-    setHasError(false);
-    setIsCheckingPermission(false);
-  }, [    
-    authLoading,
-    isAuthenticated,
-    cartLoading,
-    cart,
+  }, [
+    isCheckingPermission,
     cartError,
+    cart,
     router,
   ]);
 
   return {
     isCheckingPermission,
-    hasError,
+    hasError: cartError,
   };
 }

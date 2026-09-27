@@ -4,7 +4,7 @@ import Price from "./Price";
 import PurchaseHeader from "./PurchaseHeader";
 import AddToCartBtn from "./AddToCartBtn";
 import StoreFeatures from "./StoreFeatures";
-import { ProductVariant } from "@/entities/Product/types";
+import { ProductVariant } from "@/entities/Product";
 import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 

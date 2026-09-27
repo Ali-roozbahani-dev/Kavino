@@ -13,11 +13,11 @@ import { CategoryListItem } from "@/entities/Category/types/Category";
 
 interface Tprops {
   parent: CategoryListItem;
-  children: CategoryListItem[];
+  categoryChildren: CategoryListItem[];
 }
 
-export default function CategoryItem({ parent, children }: Tprops) {
-  const targetChildren1 = children.filter(
+export default function CategoryItem({ parent, categoryChildren }: Tprops) {
+  const targetChildren1 = categoryChildren.filter(
     (child) =>
       child.path.some((item) => item.slug === parent.path[0].slug) &&
       child.path.length === 2
@@ -47,7 +47,7 @@ export default function CategoryItem({ parent, children }: Tprops) {
 
         <AccordionContent className="pb-2">
           <div className="mx-3 overflow-hidden rounded-xl bg-gray-50">
-            {targetChildren1.map((child, index) => (
+            {targetChildren1.map((child) => (
               <SheetClose key={child.slug} asChild>
                 <Link
                   href={`/category/${child.slug}`}

@@ -19,7 +19,7 @@ import { PriceFilter } from "./PriceFilter";
 import { HasStockSwitch } from "./HasStockSwitch";
 import FormResetBtn from "./FormResetBtn";
 import { SlidersHorizontal } from "lucide-react";
-import { Facets } from "@/entities/Product/types";
+import { Facets } from "@/entities/Product";
 import { usePathname } from "next/navigation";
 import { useIsMobile } from "@/shared/hooks/use-mobile";
 import { FormInput } from "../types/TproductSection";

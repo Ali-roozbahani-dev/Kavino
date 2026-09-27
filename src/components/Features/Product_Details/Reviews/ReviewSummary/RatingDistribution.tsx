@@ -1,4 +1,4 @@
-import { DistributionCount } from "@/entities/Product/types";
+import { DistributionCount } from "@/entities/Product";
 import RatingBar from "./RatingBar";
 
 interface Props {

@@ -10,7 +10,7 @@ interface Props{
 }
 
 export function CollapsibleDetails({cart , shippingPrice}: Props) {
-  const {discount , total: final_Price , items_count , subtotal} = cart;  
+  const {discount , total: final_Price , items_count} = cart;  
   const [isOpen, setIsOpen] = useState(false)
 
   return (

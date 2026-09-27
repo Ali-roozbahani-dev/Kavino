@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Cart as Tcart } from "@/entities/Cart/types/Cart";
-import { cartQueryKey } from "../../../../entities/Cart/queryKeys";
+import { cartQueryKey } from "@/entities/Cart";
 import { api } from "../../../../shared/lib/axios_instance";
 import { cartChannelActions } from "../BroadcastChannel/cartChannelActions";
 import { getCartChannel } from "../BroadcastChannel/getCartChannel";

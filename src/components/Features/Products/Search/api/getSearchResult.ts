@@ -1,5 +1,5 @@
+import { ProductListItem, TproductList } from "@/entities/Product";
 import { api } from "@/shared/lib/axios_instance";
-import { ProductListItem, TproductList } from "@/entities/Product/types";
 
 export const fetchResult = async (search: string): Promise<ProductListItem[]> => {
   const res = await api.get<TproductList>(

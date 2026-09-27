@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { authQueryKeys } from "../../authQueryKeys";
-import { cartQueryKey } from "@/entities/Cart/queryKeys";
+import { cartQueryKey } from "@/entities/Cart";
 import { getAuthChannel } from "../../BroadcastChannel/getAuthChannel";
 import { authChannelActions } from "../../BroadcastChannel/authChannelActions";
 import { cartChannelActions, getCartChannel } from "../../../Cart";

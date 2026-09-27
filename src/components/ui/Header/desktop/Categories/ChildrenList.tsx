@@ -15,8 +15,6 @@ export default function ChildrenList({ activeChildren, category }: Tprops) {
     );
   });
 
-  console.log(thirdLevel)
-
   return (
     <ul className="mb-5 h-max">
       <li>

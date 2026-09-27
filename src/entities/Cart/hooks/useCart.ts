@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { cartQueryKey } from "../queryKeys";
-import { getCart } from "../../../components/Features/Cart/api/getCart";
 import { useAuth } from "@/components/Features/Auth/hooks/useAuth";
+import { getCart } from "../api/getCart";
 
 
 export function useCart() {

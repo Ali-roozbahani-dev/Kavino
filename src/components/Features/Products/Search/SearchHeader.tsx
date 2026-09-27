@@ -49,10 +49,10 @@ export default function SearchHeader() {
   
   
   useEffect(() => {
-    setOpenResult(false);
-  }, [pathname]);
-
- 
+  // تغییر مسیر  →  close search results
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  setOpenResult(false);
+}, [pathname]);
 
 
 

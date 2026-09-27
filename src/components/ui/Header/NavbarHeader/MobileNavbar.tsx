@@ -42,7 +42,7 @@ export default function MobileNavbar({categoriesGroup,}:{categoriesGroup: TCateg
             {categoriesGroup.parents.map((parent) => (
               <CategoryItem 
               parent={parent}
-              children={categoriesGroup.children}
+              categoryChildren={categoriesGroup.categoryChildren}
               key={parent.id}
 
               />              

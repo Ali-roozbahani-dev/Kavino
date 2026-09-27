@@ -1,4 +1,4 @@
-import { TproductList } from "@/entities/Product/types";
+import { TproductList } from "@/entities/Product";
 import { api } from "@/shared/lib/axios_instance";
 
 

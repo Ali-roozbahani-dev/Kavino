@@ -1,6 +1,6 @@
+import { OrderDetailDialog } from "@/components/Features/User_Profile";
 import { OrderListItem } from "@/entities/Orders";
 import { formatPersianDate } from "@/shared/utils/date";
-import { OrderDetailDialog } from "./OrderDetailDialog";
 import { formatNumber } from "@/shared/utils/formatNumber";
 
 

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { GalleryModal } from "./GalleryModal";
 import ActivedImage from "./ActivedImage";
-import { ProductImage } from "@/entities/Product/types";
+import { ProductImage } from "@/entities/Product";
 import ImageBar from "./ImageBar";
 
 

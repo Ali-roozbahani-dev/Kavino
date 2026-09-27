@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Brand as Tbrand } from "../../../../entities/Product/types";
+import { Brand as Tbrand } from "@/entities/Product";
 import Image from "next/image";
 
 export default function Brand({ brand }: { brand: Tbrand }) {

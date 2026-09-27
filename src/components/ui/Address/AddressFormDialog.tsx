@@ -1,5 +1,6 @@
 "use client";
 
+import { AddressForm } from "@/components/Features/Address";
 import {
   Dialog,
   DialogContent,
@@ -8,7 +9,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import AddressForm from "../../Features/Address/form/AddressForm";
 
 interface AddressDialogProps {
   trigger: React.ReactNode;

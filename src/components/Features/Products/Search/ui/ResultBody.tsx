@@ -1,7 +1,7 @@
 import Spinner from "@/components/ui/Loading/Spinner";
 import ResultItem from "./ResultItem";
 import EmptySearchResult from "@/components/Features/Products/Search/ui/EmptySearchResult";
-import { ProductListItem } from "@/entities/Product/types";
+import { ProductListItem } from "@/entities/Product";
 
 interface Tprops {
   results: ProductListItem[] | undefined;

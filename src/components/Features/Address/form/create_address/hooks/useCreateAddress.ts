@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { postAddress } from "../api/postAdress";
 import { toast } from "sonner";
-import { addressQueryKeys } from "../../../../../../entities/Address/addressQueryKeys";
 import { CreateAddressInput } from "../../schemas/AddressSchema";
+import { addressQueryKeys } from "@/entities/Address";
 
 
 

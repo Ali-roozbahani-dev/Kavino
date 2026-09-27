@@ -17,9 +17,7 @@ type PageProps = {
   }>;
 };
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: `جستوجوی محصولات |  کاوه شاپ`,

@@ -1,5 +1,5 @@
 "use client"
-import { ReviewsSummary } from "@/entities/Product/types";
+import { ReviewsSummary } from "@/entities/Product";
 import styles from "../styles/ProductTabs.module.css"
 
 const headerItems = [

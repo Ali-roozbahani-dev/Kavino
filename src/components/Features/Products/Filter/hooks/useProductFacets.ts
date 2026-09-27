@@ -1,7 +1,6 @@
-// entities/Product/hooks/useProductFacets.ts
 import { useQuery } from "@tanstack/react-query";
-import { getProductsList } from "../../../../../entities/Product/api/getProductsList";
 import { productFacetsQueryKey } from "../../util/productQueries";
+import { getProductsList } from "@/entities/Product";
 
 interface Params {
   category?: string;

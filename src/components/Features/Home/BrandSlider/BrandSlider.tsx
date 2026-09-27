@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import BrandItem from "./BrandItem";
-import { Brand } from "@/entities/Product/types";
+import { Brand } from "@/entities/Product";
 import { Tags } from "lucide-react";
 
 interface Props {

@@ -1,4 +1,4 @@
-import { ProductVariant, VariantAttribute } from "@/entities/Product/types";
+import { ProductVariant, VariantAttribute } from "@/entities/Product";
 
 
 export function getVariantAttribute(

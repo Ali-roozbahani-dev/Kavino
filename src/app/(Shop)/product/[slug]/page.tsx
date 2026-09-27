@@ -5,8 +5,8 @@ import ProductBreadcrumb from "@/components/ui/Product/BreadCrumbs/ProductBreadc
 import ProductPurchase from "@/components/Features/Product_Details/ProductPurchase/ProductPurchase";
 import ProductTabs from "@/components/Features/Product_Details/ProductTabs/ProductTabs";
 import { getProduct } from "@/entities/Product/api/getProduct";
-import ProductStoreInitializer from "@/components/Features/Product_Details/ProductStoreInitializer";
 import { createProductJsonLd } from "@/entities/Product/lib/createProductJsonLd";
+import { ProductStoreInitializer } from "@/components/Features/Product_Details";
 
 type PageProps = {
   params: Promise<{
@@ -20,7 +20,6 @@ export default async function ProductPage({ params }: PageProps) {
   const product = await getProduct(decodedSlug);
   
   const {
-    id,
     attributes,
     highlight_attributes,
     brand,

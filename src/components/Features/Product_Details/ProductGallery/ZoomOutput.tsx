@@ -1,6 +1,6 @@
 "use client"
 
-import { ProductImage } from "@/entities/Product/types";
+import { ProductImage } from "@/entities/Product";
 
 interface Props{
     activeImage: ProductImage;
