@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import styles from "../styles/ProductTabs.module.css"
 import ReviewForm from "./ReviewForm/ReviewForm";
 import ReviewSummary from "./ReviewSummary/ReviewSummary";
-import { ReviewsSummary } from "@/entities/Product/types";
+import { ReviewsSummary } from "@/entities/Product";
 import ReviewListSection from "./ReviewListSection/ReviewListSection";
 
 interface Props {

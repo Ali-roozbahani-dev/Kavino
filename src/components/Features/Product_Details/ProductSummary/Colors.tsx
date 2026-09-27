@@ -1,9 +1,9 @@
 "use client";
 
 import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
-import { ProductVariant } from "../../../../entities/Product/types";
 import ColorItem from "./ColorItem";
 import { getVariantAttributeValue } from "../util/variant_attributes";
+import { ProductVariant } from "@/entities/Product";
 
 export default function Colors({ variants }: { variants: ProductVariant[] }) {
   // فعال variant پیدا کردن

@@ -5,7 +5,7 @@ import Reviews from "../Reviews/Reviews";
 import TabsHeader from "./TabsHeader";
 import ProductSpecifications from "@/components/Features/Product_Details/ProductTabs/ProductSpecifications";
 import ProductPurchase from "../ProductPurchase/ProductPurchase";
-import { ProductAttribute, ProductVariant, ReviewsSummary } from "@/entities/Product/types";
+import { ProductAttribute, ProductVariant, ReviewsSummary } from "@/entities/Product";
 
 interface Props {
   variants: ProductVariant[];

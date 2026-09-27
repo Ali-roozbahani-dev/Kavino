@@ -19,6 +19,7 @@ export default function DesktopNavbar({
   const navBoxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowCategories(false);
   }, [pathname]);
 

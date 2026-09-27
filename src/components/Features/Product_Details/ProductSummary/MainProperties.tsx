@@ -1,5 +1,5 @@
+import { ProductAttribute } from "@/entities/Product";
 import { FaCircle } from "react-icons/fa";
-import { ProductAttribute } from "../../../../entities/Product/types";
 
 interface Props {
   attributes: ProductAttribute[];

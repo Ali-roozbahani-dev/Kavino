@@ -1,7 +1,7 @@
 import { InfiniteData, useMutation, useQueryClient } from "@tanstack/react-query";
 import { setDefaultAddress } from "../api/setDefaultAddress";
 import { toast } from "sonner";
-import { addressQueryKeys } from "@/entities/Address/addressQueryKeys";
+import { addressQueryKeys } from "@/entities/Address";
 import { AddressList } from "@/entities/Address";
 
 

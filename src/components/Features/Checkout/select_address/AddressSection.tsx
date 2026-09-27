@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 import {
   useAddressesList,
-} from "@/components/Features/Address/address_list/hooks/useAddressesList";
+} from "@/entities/Address/hooks/useAddressesList";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { useCheckoutStore } from "../store/checkoutStore";
-import SelectAddressHeader from "./SelectAddressHeader";
+import SelectAddressHeader from "../../../ui/Checkout/SelectAddressHeader";
 import SelectedAddress from "./SelectedAddress";
-import EmptyAddressSelector from "./EmptyAddressSelector";
+import EmptyAddressSelector from "../../../ui/Checkout/EmptyAddressSelector";
 
 export default function AddressSection() {
   const {

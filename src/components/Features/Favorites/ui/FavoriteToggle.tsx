@@ -1,15 +1,14 @@
 "use client";
 
 import { Bookmark } from "lucide-react";
-import { useAddFavorite } from "../add_to_favorite/hooks/useAddToFavorite";
-import { useDeleteFavorite } from "../remove_from_favorite/hooks/useDeleteFavorite";
 
 interface FavoriteToggleProps {
   productId: number;
 }
 
 export default function FavoriteToggle({ productId }: FavoriteToggleProps) {
-  // const { data: favoriteIds } = useGetFavorites();
+  productId
+  // const { data: favoriteIds } = useFavorites();
   // const isFavorite = favoriteIds?.includes(productId) ?? false;
 
   // const { mutate: addToFavorite, isPending: isAdding } = useAddFavorite();

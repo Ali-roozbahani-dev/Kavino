@@ -1,7 +1,5 @@
 "use client"
-import { ProductVariant } from "@/entities/Product/types";
-import { useProductStore } from "@/components/Features/Product_Details/stores/product_store";
-
+import { ProductVariant } from "@/entities/Product";
 
 export default function Price({selectedVariant}: {selectedVariant: ProductVariant}){
     const {price , discount_amount , final_price} = selectedVariant;

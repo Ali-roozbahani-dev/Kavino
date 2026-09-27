@@ -8,7 +8,7 @@ import { Dispatch, SetStateAction, useState } from "react"
 import ModalGalleryGrid from "./GalleryModalGrid";
 import GalleryModalSlider from "./GalleryModalSlider";
 import ModalActivedImage from "./ModalActivedImage";
-import { ProductImage } from "@/entities/Product/types";
+import { ProductImage } from "@/entities/Product";
 
 
 interface Props{

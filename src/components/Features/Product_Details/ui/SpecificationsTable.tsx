@@ -1,6 +1,6 @@
 "use client";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { ProductAttribute, ProductVariant } from "../../../../entities/Product/types";
+import { ProductAttribute } from "@/entities/Product";
 
 interface Props {
   attributes: ProductAttribute[];

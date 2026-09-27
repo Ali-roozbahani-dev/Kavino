@@ -1,6 +1,6 @@
 import { Tqueries } from "@/components/Features/Products/Filter/types/TproductSection";
-import { TproductList } from "@/entities/Product/types";
 import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
+import { TproductList } from "../types";
 
 export async function getProductsList(
   queries: Partial<Tqueries>,

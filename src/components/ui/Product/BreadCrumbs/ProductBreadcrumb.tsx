@@ -3,7 +3,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { CategoryPath} from "@/entities/Category/types/Category";
@@ -16,7 +15,7 @@ interface Props {
 
 }
 
-export default function ProductBreadcrumb({name , path}: Props) {
+export default function ProductBreadcrumb({path}: Props) {
   return (
     <div
       className="w-full overflow-x-auto scrollbar-none"

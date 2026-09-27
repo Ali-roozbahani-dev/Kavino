@@ -1,5 +1,5 @@
 import { api } from "@/shared/lib/axios_instance";
-import { AddressList } from "../../../../../entities/Address/types/AddressList";
+import { AddressList } from "../types/AddressList";
 
 
 export async function getAddresses(page : number): Promise<AddressList>{

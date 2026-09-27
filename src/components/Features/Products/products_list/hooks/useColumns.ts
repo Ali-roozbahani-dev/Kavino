@@ -4,6 +4,7 @@ import { RefObject, useEffect, useState } from "react";
 export function useColumns(ref: RefObject<HTMLDivElement | null>) {
   const [columns, setColumns] = useState(4);
 
+  
   useEffect(() => {
     if (!ref.current) return;
     const element = ref.current;
@@ -45,6 +46,8 @@ export function useColumns(ref: RefObject<HTMLDivElement | null>) {
       observer.disconnect();
       window.removeEventListener("resize", updateColumns);
     };
+    // ref object is stable; ref.current changes are handled by ResizeObserver.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return columns;

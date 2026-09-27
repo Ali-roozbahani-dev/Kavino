@@ -1,5 +1,5 @@
 import { CategoryListItem } from "@/entities/Category/types/Category";
-import { Brand, ProductListItem } from "@/entities/Product/types";
+import { Brand, ProductListItem } from "@/entities/Product";
 
 
 interface PublicItems {

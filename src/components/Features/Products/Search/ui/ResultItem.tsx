@@ -1,4 +1,4 @@
-import { ProductListItem} from "@/entities/Product/types";
+import { ProductListItem } from "@/entities/Product";
 import { getImageUrl } from "@/shared/lib/getImageUrl";
 import Image from "next/image";
 import Link from "next/link";

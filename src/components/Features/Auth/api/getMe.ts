@@ -1,5 +1,5 @@
 import { api } from "@/shared/lib/axios_instance";
-import { User } from "@/entities/User/types/User";
+import { User } from "@/entities/User/types";
 import { isAxiosError } from "axios";
 
 

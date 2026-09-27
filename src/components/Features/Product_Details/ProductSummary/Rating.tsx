@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import { ReviewsSummary } from "../../../../entities/Product/types";
+import { ReviewsSummary } from "@/entities/Product";
 
 export default function Rating({
   reviews_summary,

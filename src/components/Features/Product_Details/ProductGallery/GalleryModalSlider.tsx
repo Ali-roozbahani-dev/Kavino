@@ -1,11 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from "swiper/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from 'next/image';
-import { ProductImage } from '@/entities/Product/types';
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { ProductImage } from "@/entities/Product";
+import { Dispatch, SetStateAction} from 'react';
 import { useSyncSwiper } from './hooks/useSyncSwiper';
 
 interface Props{

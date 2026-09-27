@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useOrderDetail } from "@/components/Features/User_Profile";
-import Spinner from "../../Loading/Spinner";
+import Spinner from "../../../../ui/Loading/Spinner";
 
 interface OrderDetailDialogProps {
   orderId: number;

@@ -2,7 +2,6 @@
 
 import {
   Heart,
-  LogOut,
   MapPin,
   MessageSquare,
   Package,

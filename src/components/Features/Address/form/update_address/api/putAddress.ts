@@ -1,6 +1,6 @@
 import { api } from "@/shared/lib/axios_instance";
-import { AddressDetail } from "../../../../../../entities/Address/types/AddressDetail";
 import { CreateAddressInput } from "../../schemas/AddressSchema";
+import { AddressDetail } from "@/entities/Address";
 
 
 export async function putAddress(id: number , data: CreateAddressInput): Promise<AddressDetail>{

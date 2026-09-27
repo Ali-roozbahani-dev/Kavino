@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,  
   DialogHeader,  
@@ -25,7 +24,8 @@ export function ShareProduct() {
     await navigator.clipboard.writeText(window.location.href);
     setIsCopied(true);
 
-    } catch (error) {
+    
+    } catch {
     toast.error("خطا در کپی کردن لینک");
     }
    };

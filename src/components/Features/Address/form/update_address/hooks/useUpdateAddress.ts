@@ -1,10 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { AddressDetail } from "../../../../../../entities/Address/types/AddressDetail";
 import { putAddress } from "../api/putAddress";
-import { addressQueryKeys } from "../../../../../../entities/Address/addressQueryKeys";
 import { toast } from "sonner";
-import { AddressList } from "../../../../../../entities/Address/types/AddressList";
 import { CreateAddressInput } from "../../schemas/AddressSchema";
+import { AddressList, addressQueryKeys } from "@/entities/Address";
 
 
 export function useUpdateAddress() {

@@ -1,5 +1,5 @@
-import { ProductImage } from "@/entities/Product/types";
-import { Ellipsis, EllipsisVertical, ImagePlus, Images } from "lucide-react";
+import { ProductImage } from "@/entities/Product";
+import { Images } from "lucide-react";
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
 

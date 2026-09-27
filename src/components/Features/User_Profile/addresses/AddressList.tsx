@@ -1,8 +1,8 @@
 "use client"
 import { AddressItem, AddressItemSkeleton, EmptyAddress } from "@/components/ui/Profile";
-import { useAddressesList } from "@/components/Features/Address/address_list/hooks/useAddressesList"
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
+import { useAddressesList } from "@/entities/Address";
 
 export default function AddressList(){
     const {
@@ -10,7 +10,6 @@ export default function AddressList(){
     isPending,
     hasNextPage,
     isFetchingNextPage,
-    isError,
     error,
     fetchNextPage,
   } = useAddressesList();

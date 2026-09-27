@@ -1,4 +1,4 @@
-import { ReviewsSummary } from "@/entities/Product/types";
+import { ReviewsSummary } from "@/entities/Product";
 import RatingDistribution from "./RatingDistribution";
 import ReviewScore from "./ReviewScore";
 

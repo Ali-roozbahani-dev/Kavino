@@ -1,4 +1,4 @@
-import { addressQueryKeys } from "@/entities/Address/addressQueryKeys";
+import { addressQueryKeys } from "@/entities/Address";
 import { api } from "@/shared/lib/axios_instance";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";

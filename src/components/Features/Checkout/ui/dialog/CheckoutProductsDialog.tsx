@@ -1,5 +1,6 @@
 import { Checkout } from "@/components/Features/Checkout/types/Checkout";
 import { formatNumber, formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
+import Image from "next/image";
 
 interface CheckoutProductsSectionProps {
   cart: Checkout["cart"];
@@ -25,7 +26,7 @@ export default function CheckoutProductsDialog({
             className="flex items-center gap-3 rounded-lg border p-3"
           >
             <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md bg-muted">
-              <img
+              <Image
                 src={item.image.image}
                 alt={item.product_name}
                 className="h-full w-full object-contain"

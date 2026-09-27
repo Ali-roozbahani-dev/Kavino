@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
-import { ProductImage } from '@/entities/Product/types';
+import { ProductImage } from "@/entities/Product";
 import { Dispatch, SetStateAction } from 'react';
 import { useSyncSwiper } from './hooks/useSyncSwiper';
 

@@ -8,11 +8,11 @@ import { ChevronLeft } from "lucide-react";
 
 export default function ParentsList({
   parents,
-  children,
+  categoryChildren,
 }: TCategoriesGroup) {
   const [activeParent, setActiveParent] = useState(parents[0]);
 
-  const activeChildren = children.filter((child) =>
+  const activeChildren = categoryChildren.filter((child) =>
     child.path.some((item) => item.slug === activeParent.slug)
   );
 

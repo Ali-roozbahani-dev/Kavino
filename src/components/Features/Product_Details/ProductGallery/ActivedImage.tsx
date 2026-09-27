@@ -1,16 +1,15 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from "swiper/types";
 import {Pagination} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "../styles/ProductGallery.module.css";
 import Image from 'next/image';
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import ZoomOutput from './ZoomOutput';
 import ZoomLens from './ZoomLens';
-import { ProductImage } from '@/entities/Product/types';
+import { ProductImage } from "@/entities/Product";
 import { useSyncSwiper } from './hooks/useSyncSwiper';
 
 interface Props{

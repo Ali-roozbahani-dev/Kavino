@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useMemo, useRef } from "react";
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
-import { ProductListItem } from "@/entities/Product/types";
 import ProductsPageCard from "@/components/ui/Product/Cards/ProductsPageCard";
 import EmptyResult from "./ui/EmptyResult";
 import { useColumns } from "@/components/Features/Products/products_list/hooks/useColumns";
+import { ProductListItem } from "@/entities/Product";
 
 interface Props {
   products: ProductListItem[];

@@ -1,6 +1,6 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery} from "@tanstack/react-query";
 import { getAddresses } from "../api/getAddresses";
-import { addressQueryKeys } from "../../../../../entities/Address/addressQueryKeys";
+import { addressQueryKeys } from "../addressQueryKeys";
 
 
 export function useAddressesList() {

@@ -5,13 +5,12 @@ import {
   FieldLabel,  
   FieldSet,
 } from "@/components/ui/field"
-import { BrandOption } from "@/entities/Product/types";
+import { BrandOption } from "@/entities/Product";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 import { Controller, useFormContext } from "react-hook-form";
 
 
 export function BrandCheckBoxes({brandsOption}:{brandsOption: BrandOption[]}) {
-  console.log(brandsOption)
   const {control} = useFormContext();
 
   return (

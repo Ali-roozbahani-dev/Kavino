@@ -1,4 +1,5 @@
-import { VariantAttribute } from "@/entities/Product/types";
+import { VariantAttribute } from "@/entities/Product";
+
 
 
 export default function CartColor({attributes}: {attributes: VariantAttribute[]}){
