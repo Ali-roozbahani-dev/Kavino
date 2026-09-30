@@ -6,6 +6,8 @@ import { authChannelActions } from "../../BroadcastChannel/authChannelActions";
 import { cartChannelActions, getCartChannel } from "../../../Cart";
 import { authQueryKeys } from "../../authQueryKeys";
 import { cartQueryKey, EMPTY_CART } from "@/entities/Cart";
+import { favoriteQueryKeys } from "@/components/Features/Favorites/favoriteQueryKeys";
+import { EMPTY_FAV_IDS } from "@/components/Features/Favorites";
 
 export function useLogout() {
     const queryClient = useQueryClient();
@@ -17,7 +19,8 @@ export function useLogout() {
 
         onSuccess: () => {
             queryClient.setQueryData(authQueryKeys.me, null);
-            queryClient.setQueriesData({ queryKey: cartQueryKey } , EMPTY_CART);
+            queryClient.setQueryData( cartQueryKey, EMPTY_CART);
+            queryClient.setQueryData(favoriteQueryKeys.ids(), EMPTY_FAV_IDS);
 
             getAuthChannel()?.postMessage({ type: authChannelActions.logout });
             getCartChannel()?.postMessage({type: cartChannelActions.invalidate});

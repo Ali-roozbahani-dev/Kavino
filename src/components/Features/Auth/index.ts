@@ -4,3 +4,4 @@ export {useAuthGuard} from "./hooks/useAuthGuard"
 export {default as AuthGuardWrapper} from "./AuthGuardWrapper"
 export {AuthBootstrap} from "./AuthBootstrap"
 export { authQueryKeys } from "./authQueryKeys";
+export {useAuth} from "./hooks/useAuth"

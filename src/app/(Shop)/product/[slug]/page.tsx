@@ -20,6 +20,7 @@ export default async function ProductPage({ params }: PageProps) {
   const product = await getProduct(decodedSlug);
   
   const {
+    id,
     attributes,
     highlight_attributes,
     brand,
@@ -57,13 +58,15 @@ export default async function ProductPage({ params }: PageProps) {
               brand={brand}
               attributes={attributes}
               highlight_attributes={highlight_attributes}
+              productId={id}
             />
           </div>
           <div
             className="bg-white block w-full xl:w-1/4 xl:ms-auto border-t xl:border-0
               z-100 xl:z-auto fixed bottom-0 right-0 xl:relative"
           >
-            <ProductPurchase            
+            <ProductPurchase  
+            productId={id}          
             variants={variants} 
             />
           </div>
@@ -74,6 +77,7 @@ export default async function ProductPage({ params }: PageProps) {
           variants={variants}
           reviews_summary={reviews_summary}
           productSlug={productSlug}
+          productId={id}
         />
       </Main>
     </>

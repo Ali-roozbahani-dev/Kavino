@@ -1,4 +1,4 @@
-import { AddressList } from "@/components/Features/Address";
+import { AddressList } from "@/components/Features/User_Profile";
 import AddressFormDialog from "@/components/ui/Address/AddressFormDialog";
 import { Button } from "@/components/ui/button";
 import {

@@ -14,6 +14,7 @@ export default function FavoriteProductsList(){
     isFetchingNextPage,    
     isPending , 
     error} = useFavorites();   
+    
      
     const sentiel = useInfiniteScrollObserver({fetchNextPage , isFetchingNextPage , hasNextPage})
 

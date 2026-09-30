@@ -6,19 +6,23 @@ import { cartQueryKey } from "@/entities/Cart";
 import { AUTH_CHANNEL_NAME } from "./getAuthChannel";
 import { authChannelActions, AuthChannelMessage } from "./authChannelActions";
 import { useBroadcastChannelListener } from "@/shared/lib/broadcast/useBroadcastChannelListener";
+import { EMPTY_FAV_IDS, favoriteQueryKeys } from "../../Favorites";
 
 export function AuthSyncListener() {
     const queryClient = useQueryClient();
 
+    
     const handleMessage = useCallback((message: AuthChannelMessage) => {
         if (message.type === authChannelActions.login) {
             queryClient.invalidateQueries({ queryKey: authQueryKeys.me });
-            queryClient.invalidateQueries({ queryKey: cartQueryKey });
+            queryClient.invalidateQueries({ queryKey: cartQueryKey });   
+            queryClient.invalidateQueries({queryKey: favoriteQueryKeys.ids()});         
         }
 
         if (message.type === authChannelActions.logout) {
             queryClient.setQueryData(authQueryKeys.me, null);
             queryClient.invalidateQueries({ queryKey: cartQueryKey });
+            queryClient.setQueryData(favoriteQueryKeys.ids() , EMPTY_FAV_IDS);
         }
     }, [queryClient]);
 

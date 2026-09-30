@@ -13,13 +13,15 @@ interface Props {
   description: string;
   reviews_summary: ReviewsSummary;
   productSlug: string;
+  productId: number;
 }
 export default function ProductTabs({
   description,
   attributes,
   variants,
   reviews_summary,
-  productSlug
+  productSlug,
+  productId
 }: Props) {
   const [activeTab, setActiveTab] = useState("Description");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,7 +82,8 @@ export default function ProductTabs({
 
         <div className="hidden xl:block w-1/4 py-5 pe-5 relative">
           <div className="sticky top-50 w-full">
-            <ProductPurchase             
+            <ProductPurchase   
+            productId={productId}          
             variants={variants} 
             PurchaseInTabs={true} 
             />

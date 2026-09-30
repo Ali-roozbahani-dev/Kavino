@@ -12,13 +12,15 @@ import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 interface Props{  
     PurchaseInTabs?: boolean;
     variants: ProductVariant[];
+    productId: number;
 }
 
 
-export default function ProductPurchase({PurchaseInTabs , variants}: Props){
+export default function ProductPurchase({PurchaseInTabs , variants , productId}: Props){
     const selectedVariantId = useProductStore((state)=> state.selectedVariantId);
     const selectedVariant = variants.find((variant)=> variant.id === selectedVariantId);
 
+    
     return (
         <div className="flex justify-between h-[60px] xl:h-auto items-center xl:block w-full px-3.5 py-2
         xl:border md:rounded-xl xl:p-5">
@@ -26,7 +28,8 @@ export default function ProductPurchase({PurchaseInTabs , variants}: Props){
 
             <>
             <div className="hidden xl:block">
-                <PurchaseHeader                 
+                <PurchaseHeader   
+                productId={productId}              
                 selectedVariant={selectedVariant}
                 />
             </div>

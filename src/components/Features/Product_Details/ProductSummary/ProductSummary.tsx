@@ -4,6 +4,7 @@ import Rating from "./Rating";
 import MainProperties from "./MainProperties";
 import { ShareProduct } from "../ShareProduct";
 import { ProductAttribute, ProductVariant, ReviewsSummary , Brand as Tbrand} from "@/entities/Product";
+import { FavoriteToggle } from "../../Favorites";
 
 interface Props {
   reviews_summary: ReviewsSummary;
@@ -12,6 +13,7 @@ interface Props {
   brand: Tbrand;
   attributes: ProductAttribute[];
   highlight_attributes: ProductAttribute[];
+  productId: number;
 }
 
 export default function ProductSummary({
@@ -20,14 +22,15 @@ export default function ProductSummary({
   name,
   brand,
   attributes,
-  highlight_attributes
+  highlight_attributes,
+  productId
 }: Props) {
 
   return (
     <div className="w-full mt-5 md:mt-0 md:p-3 lg:p-5">
       <div className="mb-4 flex justify-end items-center xl:hidden">
         <div className="flex-center text-primary-text2">
-          {/* <FavoriteToggle /> */}
+          <FavoriteToggle productId={productId}/>
           <ShareProduct />
         </div>
       </div>

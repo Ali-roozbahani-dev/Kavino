@@ -8,6 +8,7 @@ import { cartQueryKey } from "@/entities/Cart";
 import { getAuthChannel } from "../../BroadcastChannel/getAuthChannel";
 import { authChannelActions } from "../../BroadcastChannel/authChannelActions";
 import { cartChannelActions, getCartChannel } from "../../../Cart";
+import { favoriteQueryKeys } from "@/components/Features/Favorites";
 interface VerifyOtpParams {
     phone_number: string;
     callbackUrl?: string;
@@ -35,6 +36,9 @@ export function useVerifyOtp({ phone_number , callbackUrl}: VerifyOtpParams) {
                 }),
                 queryClient.invalidateQueries({
                     queryKey: cartQueryKey,
+                }),
+                queryClient.invalidateQueries({
+                    queryKey: favoriteQueryKeys.all,
                 }),
             ]);
 
