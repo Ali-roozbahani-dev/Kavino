@@ -11,7 +11,7 @@ import {
   defaultStepConfig,
   StepContext,
 } from "@/components/Features/Checkout/config/checkoutStepsConfig";
-import { useUpdateCheckout } from "@/components/Features/Checkout/hooks/useUpdateCheckout";
+import { usePostCheckout } from "@/components/Features/Checkout/hooks/usePostCheckout";
 import { useCheckout } from "@/components/Features/Checkout/hooks/useCheckout";
 import CheckoutDialog from "@/components/Features/Checkout/ui/dialog/CheckoutDialog";
 import { Checkout } from "@/components/Features/Checkout/types/Checkout";
@@ -27,7 +27,7 @@ export default function CheckoutActionBtn() {
   const coupon_code = useCheckoutStore((s) => s.coupon_code);
   const reset = useCheckoutStore((s) => s.reset);
 
-  const { mutateAsync: submitCheckout, isPending } = useUpdateCheckout();
+  const { mutateAsync: submitCheckout, isPending } = usePostCheckout();
 
   const isShippingStep = pathname === SHIPPING_STEP_PATH;
 

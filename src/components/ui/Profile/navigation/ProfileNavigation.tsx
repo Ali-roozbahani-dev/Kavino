@@ -42,49 +42,56 @@ const navigationItems = [
 
 export default function ProfileNavigation() {
   const pathname = usePathname();
+  const isProfileRoot = pathname === "/profile";
 
   return (
-    <nav className="rounded-xl border bg-background p-2 lg:sticky top-[190px] right-0">
-      <div className="mb-2 px-3 py-3">
-        <p className="text-sm font-semibold">حساب کاربری</p>
+    <div
+      className={`w-full lg:w-[250px] relative ${
+        isProfileRoot ? "block" : "hidden lg:block"
+      }`}
+    >
+      <nav className="rounded-xl border bg-background p-2 mb-5 lg:mb-0 lg:sticky top-[190px] right-0">
+        <div className="mb-2 px-3 py-3">
+          <p className="text-sm font-semibold">حساب کاربری</p>
 
-        <p className="mt-1 text-xs text-muted-foreground">
-          مدیریت حساب و سفارش‌ها
-        </p>
-      </div>
+          <p className="mt-1 text-xs text-muted-foreground">
+            مدیریت حساب و سفارش‌ها
+          </p>
+        </div>
 
-      <div className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible">
-        {navigationItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = pathname === item.href;
+        <div className="flex gap-1 overflow-x-auto flex-col lg:overflow-visible">
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = pathname === item.href;
 
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`flex shrink-0 items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors ${
-                isActive
-                  ? "bg-primary/10 font-bold text-primary"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
-              }`}
-            >
-              <Icon
-                className={`size-4 ${
-                  isActive ? "text-primary" : "text-muted-foreground"
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex shrink-0 w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors ${
+                  isActive
+                    ? "bg-primary/10 font-bold text-primary"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
                 }`}
-              />
+              >
+                <Icon
+                  className={`size-4 ${
+                    isActive ? "text-primary" : "text-muted-foreground"
+                  }`}
+                />
 
-              <span>{item.title}</span>
-            </Link>
-          );
-        })}
-      </div>
+                <span>{item.title}</span>
+              </Link>
+            );
+          })}
+        </div>
 
-      <div className="mt-2 border-t pt-2">
-        <LogoutDialog>
-            <LogOutBtn />
-        </LogoutDialog>       
-      </div>
-    </nav>
+        <div className="mt-2 border-t pt-2">
+          <LogoutDialog>
+              <LogOutBtn />
+          </LogoutDialog>       
+        </div>
+      </nav>
+    </div>
   );
 }

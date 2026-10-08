@@ -4,8 +4,8 @@ import { favoriteQueryKeys } from "../../favoriteQueryKeys";
 import { FavoritesId } from "../types/favoritesId";
 import { EMPTY_FAV_IDS } from "../empty_fav_ids";
 
-async function deleteFavorite(productId: number) {
-  const { data } = await api.delete(`/favorites/${productId}/`);
+async function deleteFavorite(favoriteId: number) {
+  const { data } = await api.delete(`/favorites/${favoriteId}/`);
   return data;
 }
 
@@ -15,7 +15,7 @@ export function useDeleteFavorite() {
   return useMutation({
     mutationFn: deleteFavorite,
 
-    onMutate: async (productId: number) => {
+    onMutate: async (favoriteId: number) => {
       // جلوگیری از بازنویسی آپدیت خوش‌بینانه توسط رفچ‌های در جریان
       await queryClient.cancelQueries({ queryKey: favoriteQueryKeys.ids() });
 
@@ -27,16 +27,15 @@ export function useDeleteFavorite() {
       // آپدیت خوش‌بینانه: آبجکت با همان شکل FavoritesId برمی‌گردد
       queryClient.setQueryData<FavoritesId>(
         favoriteQueryKeys.ids(),
-        (old = EMPTY_FAV_IDS) => ({
-          ...old,
-          ids: old.ids.filter((id) => id !== productId),
-        })
+        (old = EMPTY_FAV_IDS) => ([
+          ...old.filter((item) => item.id !== favoriteId),
+        ])
       );
 
       return { previousFavorites };
     },
 
-    onError: (_err, _productId, context) => {
+    onError: (_err, _favoriteId, context) => {
       queryClient.setQueryData(
         favoriteQueryKeys.ids(),
         context?.previousFavorites

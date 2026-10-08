@@ -18,7 +18,7 @@ export default function ProductGallery({images}: {images: ProductImage[]}){
     return (
         <>
         <div className="w-full md:order-2 relative md:border md:rounded-lg  md:p-5">
-            <Badge className="absolute bg-primary-text right-4 top-4 lg:hidden rounded-sm pt-1.25 z-100">
+            <Badge className="absolute bg-primary-text right-4 top-4 lg:hidden rounded-sm pt-1.25 z-10">
                 <span>{images.length}</span>
                 /
                 <span>{activeIndex}</span>

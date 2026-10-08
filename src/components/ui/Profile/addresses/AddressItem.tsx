@@ -18,7 +18,7 @@ export default function AddressItem({address}: Props){
           >
             {/* Card Header */}
             <div className="flex items-start justify-between gap-4 border-b border-gray-100 pb-4">
-              <div className="flex items-center gap-3">
+              <div className="flex items-start gap-3">
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
                   <MapPin size={20} />
                 </div>

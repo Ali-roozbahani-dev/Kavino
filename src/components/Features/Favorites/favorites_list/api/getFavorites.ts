@@ -1,10 +1,10 @@
-import { TproductList } from "@/entities/Product";
 import { api } from "@/shared/lib/axios_instance";
+import { ProductListResponse } from "../types/ProductListResponse";
 
 
 
-export async function getFavorites(page: number): Promise<TproductList> {
-  const { data } = await api.get<TproductList>(`/favorites?page=${page}`);
+export async function getFavorites(page: number): Promise<ProductListResponse> {
+  const { data } = await api.get<ProductListResponse>(`/favorites?page=${page}`);
   return data;
 }
 

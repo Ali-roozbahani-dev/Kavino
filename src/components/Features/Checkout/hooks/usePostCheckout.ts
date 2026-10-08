@@ -1,13 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateCheckout } from "../api/updateCheckout";
-import { UpdateCheckoutRequest } from "../types/UpdateCheckoutRequest";
+import { PostCheckoutRequest } from "../types/PostCheckoutRequest";
 import { toast } from "sonner";
 
-export function useUpdateCheckout() {
+export function usePostCheckout() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (data: UpdateCheckoutRequest) => updateCheckout(data),
+    mutationFn: (data: PostCheckoutRequest) => updateCheckout(data),
 
     onSuccess: (data) => {
       queryClient.setQueryData(["checkout"], data);
