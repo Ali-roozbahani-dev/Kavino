@@ -29,6 +29,8 @@ export function OrdersList() {
   }
 
   const orders = data?.pages.flatMap((page) => page.results) ?? [];
+   
+  console.log(data)
 
   if (!orders.length) {
     return <EmptyOrders />;

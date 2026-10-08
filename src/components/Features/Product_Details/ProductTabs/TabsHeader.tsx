@@ -21,7 +21,7 @@ export default function TabsHeader({reviews_summary , activeTab}: Props){
             block: "start",
         });
     };
-
+    
     
     return(
         <div

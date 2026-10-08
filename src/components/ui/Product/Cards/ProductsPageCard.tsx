@@ -10,9 +10,11 @@ import { ProductListItem } from "@/entities/Product";
 export default function ProductsPageCard({
   product,
 }: {
-  product: ProductListItem;
+  product: ProductListItem ;
 }) {
   const { name, image, price, final_price, has_stock } = product;
+
+  console.log(product)
 
   const discountPercentage = getDiscountPercentage(product.price , product.final_price);
 

@@ -1,9 +1,9 @@
 import { api } from "@/shared/lib/axios_instance";
 import { Checkout } from "../types/Checkout";
-import { UpdateCheckoutRequest } from "../types/UpdateCheckoutRequest";
+import { PostCheckoutRequest } from "../types/PostCheckoutRequest";
 
 
-export async function updateCheckout(data: UpdateCheckoutRequest): Promise<Checkout> {  
+export async function updateCheckout(data: PostCheckoutRequest): Promise<Checkout> {  
   const res = await api.post<Checkout>('/checkout/' , data)
 
   return res.data;

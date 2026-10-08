@@ -81,7 +81,7 @@ export default function ProductTabs({
         </div>
 
         <div className="hidden xl:block w-1/4 py-5 pe-5 relative">
-          <div className="sticky top-50 w-full">
+          <div className="sticky top-[calc(var(--navbar-height)+70px)] w-full">
             <ProductPurchase   
             productId={productId}          
             variants={variants} 

@@ -1,6 +1,7 @@
 import { AddressList } from "@/components/Features/User_Profile";
 import AddressFormDialog from "@/components/ui/Address/AddressFormDialog";
 import { Button } from "@/components/ui/button";
+import { PageTitle } from "@/components/ui/Profile";
 import {
   Plus,
 } from "lucide-react";
@@ -10,12 +11,10 @@ export default function AddressesPage() {
   return (
     <section className="space-y-5">
       {/* Header */}
-      <div className="flex flex-col gap-4 bg-white p-5 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h1 className="text-lg font-bold text-gray-900">
-            آدرس‌های من
-          </h1>
-        </div>
+      <div className="flex  gap-4 bg-white py-5 lg:p-5 justify-between">
+        <PageTitle>
+          آدرس‌های من
+        </PageTitle>     
 
 
         <AddressFormDialog trigger={
@@ -23,7 +22,7 @@ export default function AddressesPage() {
         <Button
           variant={"Blue3"}
           type="button"
-          className="flex h-11 items-center justify-center gap-2 rounded-md px-5 text-sm font-medium"
+          className="flex h-9 md:h-11 items-center justify-center gap-2 rounded-md px-3 md:px-5 text-sm font-medium"
         >
           <Plus size={18} />
           افزودن آدرس جدید

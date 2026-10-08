@@ -1,3 +1,1 @@
-export const EMPTY_FAV_IDS = {
-    ids : []
-}
+export const EMPTY_FAV_IDS = [];

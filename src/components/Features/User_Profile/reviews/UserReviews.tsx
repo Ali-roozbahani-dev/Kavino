@@ -1,7 +1,7 @@
 "use client"
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver"
 import { useUserReviews } from "./hooks/useUserReviews";
-import { EmptyReviews, ReviewsHeader } from "@/components/ui/Profile";
+import { EmptyReviews, PageTitle, ReviewsHeader } from "@/components/ui/Profile";
 import FilterTabs from "./FilterTabs";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 
@@ -29,10 +29,14 @@ export default function UserReviews(){
 
     if(!reviews.length) return <EmptyReviews />;
     
+    console.log(reviews)
 
     return(
         <section className="space-y-5">
-            <ReviewsHeader reviews={reviews}/>
+
+            <PageTitle>
+                <ReviewsHeader reviews={reviews}/>
+            </PageTitle>
 
             <FilterTabs />
 

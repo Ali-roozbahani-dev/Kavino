@@ -27,6 +27,8 @@ export default function CheckoutProductsDialog({
           >
             <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md bg-muted">
               <Image
+                width={40}
+                height={40}
                 src={item.image.image}
                 alt={item.product_name}
                 className="h-full w-full object-contain"

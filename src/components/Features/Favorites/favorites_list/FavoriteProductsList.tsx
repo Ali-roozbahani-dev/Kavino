@@ -2,9 +2,9 @@
 
 import EmptyFavorites from "@/components/ui/Profile/favorites/EmptyFavorites";
 import { useFavorites } from "./hooks/useFavorites"
-import { ProductsPageCard } from "@/components/ui/Product";
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
 import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
+import FavoriteItemCard from "@/components/ui/Product/Cards/FavoriteItemCard";
 
 export default function FavoriteProductsList(){
     const {
@@ -28,11 +28,11 @@ export default function FavoriteProductsList(){
 
 
     return (
-        <section className="rounded-2xl border bg-white p-4 shadow-sm sm:p-5">
+        <section className="rounded-2xl bg-white p-4 sm:p-5">
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 xl:grid-cols-4">
             {favoritesList.map((product)=>(
-                <ProductsPageCard 
+                <FavoriteItemCard 
                 key={product.id}
                 product={product}
                 />

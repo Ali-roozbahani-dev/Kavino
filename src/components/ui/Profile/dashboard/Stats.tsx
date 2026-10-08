@@ -1,73 +1,61 @@
-import {
-  ArrowLeft,
-  Heart,
-  MapPin,
-  Package,
-} from "lucide-react";
-import Link from "next/link";
+"use client";
 
-const stats = [
-  {
-    title: "سفارش‌ها",
-    value: "12",
-    description: "سفارش ثبت شده",
-    icon: Package,
-    href: "/profile/orders",
-  },
-  {
-    title: "علاقه‌مندی‌ها",
-    value: "8",
-    description: "محصول ذخیره شده",
-    icon: Heart,
-    href: "/profile/favorites",
-  },
-  {
-    title: "آدرس‌ها",
-    value: "3",
-    description: "آدرس ثبت شده",
-    icon: MapPin,
-    href: "/profile/addresses",
-  },
-];
+import { useFavorites } from "@/components/Features/Favorites/favorites_list/hooks/useFavorites";
+import { useOrders } from "@/components/Features/User_Profile/orders/orders_list/hooks/useOrders";
+import { useAddressesList } from "@/entities/Address";
 
-export default function Stats(){
+import { Heart, MapPin, Package } from "lucide-react";
+import { StatCard } from "./StatCard";
+import { getInfiniteQueryCount } from "@/shared/utils/getInfiniteQueryCount";
 
+export default function Stats() {
+  const {
+    data: favoritesData,
+    isPending: favoritesLoading,
+  } = useFavorites();
 
-    return(
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        {stats.map((item) => {
-          const Icon = item.icon;
+  const {
+    data: ordersData,
+    isPending: ordersLoading,
+  } = useOrders();
 
-          return (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="group rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                  <Icon className="h-5 w-5" />
-                </div>
+  const {
+    data: addressesData,
+    isPending: addressesLoading,
+  } = useAddressesList();
 
-                <ArrowLeft className="h-4 w-4 text-muted-foreground transition group-hover:-translate-x-1 group-hover:text-blue-600" />
-              </div>
+  const favoriteCount = getInfiniteQueryCount(favoritesData);
+  const orderCount = getInfiniteQueryCount(ordersData);
+  const addressCount = getInfiniteQueryCount(addressesData);
 
-              <div className="mt-4">
-                <p className="text-sm text-muted-foreground">
-                  {item.title}
-                </p>
+  return (
+    <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <StatCard
+        title="سفارش‌ها"
+        value={orderCount}
+        description="سفارش ثبت شده"
+        icon={Package}
+        href="/profile/orders"
+        isLoading={ordersLoading}
+      />
 
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">{item.value}</span>
+      <StatCard
+        title="علاقه‌مندی‌ها"
+        value={favoriteCount}
+        description="محصول ذخیره شده"
+        icon={Heart}
+        href="/profile/favorites"
+        isLoading={favoritesLoading}
+      />
 
-                  <span className="text-xs text-muted-foreground">
-                    {item.description}
-                  </span>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
-      </section>
-    )
+      <StatCard
+        title="آدرس‌ها"
+        value={addressCount}
+        description="آدرس ثبت شده"
+        icon={MapPin}
+        href="/profile/addresses"
+        isLoading={addressesLoading}
+      />
+    </section>
+  );
 }
