@@ -3,13 +3,14 @@ import { ProfileNavigation } from "@/Features/User_Profile";
 import Header from "@/shared/layout/Header/Header";
 import Main from "@/ui/Main";
 
-export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
     <AuthGuardWrapper header={<Header />}>
       <Main className="lg:py-5">
