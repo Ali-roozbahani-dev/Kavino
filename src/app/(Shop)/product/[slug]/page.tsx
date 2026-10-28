@@ -1,12 +1,12 @@
-import ProductGallery from "@/components/Features/Product_Details/ProductGallery/ProductGallery";
-import ProductSummary from "@/components/Features/Product_Details/ProductSummary/ProductSummary";
-import Main from "@/components/ui/Main";
-import ProductBreadcrumb from "@/components/ui/Product/BreadCrumbs/ProductBreadcrumb";
-import ProductPurchase from "@/components/Features/Product_Details/ProductPurchase/ProductPurchase";
-import ProductTabs from "@/components/Features/Product_Details/ProductTabs/ProductTabs";
-import { getProduct } from "@/entities/Product/api/getProduct";
+import ProductGallery from "@/Features/Product_Details/ProductGallery/ProductGallery";
+import ProductSummary from "@/Features/Product_Details/ProductSummary/ProductSummary";
+import Main from "@/ui/Main";
+import ProductPurchase from "@/Features/Product_Details/ProductPurchase/ProductPurchase";
+import ProductTabs from "@/Features/Product_Details/ProductTabs/ProductTabs";
+import { getProduct } from "@/Features/Product_Details/api/getProduct";
 import { createProductJsonLd } from "@/entities/Product/lib/createProductJsonLd";
-import { ProductStoreInitializer } from "@/components/Features/Product_Details";
+import { ProductStoreInitializer } from "@/Features/Product_Details";
+import ProductBreadcrumb from "@/ui/BreadCrumbs/ProductBreadcrumb";
 
 type PageProps = {
   params: Promise<{
@@ -42,7 +42,7 @@ export default async function ProductPage({ params }: PageProps) {
           __html: JSON.stringify(jsonLd),
         }}
       />
-      <ProductStoreInitializer defaultVariantId={variants[0].id} />
+      <ProductStoreInitializer defaultVariantId={variants[0]?.id} />
       <Main className="lg:px-5 2xl:px-10">
         <ProductBreadcrumb name={name} path={category.path} />
 

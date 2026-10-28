@@ -1,7 +1,7 @@
-import { AuthGuardWrapper } from "@/components/Features/Auth";
-import Header from "@/components/ui/Header/Header";
-import Main from "@/components/ui/Main";
-import { ProfileNavigation } from "@/components/ui/Profile";
+import { AuthGuardWrapper } from "@/Features/Auth";
+import { ProfileNavigation } from "@/Features/User_Profile";
+import Header from "@/shared/layout/Header/Header";
+import Main from "@/ui/Main";
 
 export default function RootLayout({
   children,

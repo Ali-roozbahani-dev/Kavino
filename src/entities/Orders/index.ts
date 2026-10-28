@@ -1,3 +1,3 @@
-export type {OrdersList , OrderListItem} from "./types/orders"
-export type {OrderDetail , OrderDetailItem} from "./types/orderDetails"
+export type {OrdersList , OrderListItem} from "./models/orders.types"
+export type {OrderDetail , OrderDetailItem} from "./models/orderDetails.types"
 export {ordersQueryKeys} from "./ordersQueryKeys"

@@ -1,7 +1,6 @@
-import { AddressList } from "@/components/Features/User_Profile";
-import AddressFormDialog from "@/components/ui/Address/AddressFormDialog";
-import { Button } from "@/components/ui/button";
-import { PageTitle } from "@/components/ui/Profile";
+import { AddressList, PageTitle } from "@/Features/User_Profile";
+import AddressFormDialog from "@/Features/Address/ui/AddressFormDialog";
+import { Button } from "@/ui/button";
 import {
   Plus,
 } from "lucide-react";

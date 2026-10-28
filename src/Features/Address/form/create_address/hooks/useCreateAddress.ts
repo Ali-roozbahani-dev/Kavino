@@ -1,0 +1,27 @@
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { postAddress } from "../api/postAddress";
+import { toast } from "sonner";
+import { CreateAddressInput } from "../../schemas/AddressSchema";
+import { addressQueryKeys } from "@/entities/Address";
+
+
+
+export function useCreateAddress() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (data: CreateAddressInput)=> postAddress(data),
+    
+    onSuccess: () => {
+      // برای بهم نخوردن صفحه بندی دیتا از ست کردن کوئری اجتناب میکنیم
+      queryClient.invalidateQueries({
+        queryKey: addressQueryKeys.all,
+      });
+
+      toast.success("آدرس شما با موفقیت ثبت شد");
+    },
+
+    onError: ()=> {
+      toast.error("خطا در برقراری ارتباط")
+    }
+  });
+}

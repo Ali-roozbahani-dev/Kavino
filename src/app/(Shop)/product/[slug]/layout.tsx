@@ -1,4 +1,4 @@
-import { getProduct } from "@/entities/Product/api/getProduct";
+import { getProduct } from "@/Features/Product_Details/api/getProduct";
 import { Metadata } from "next";
 
 type PageProps = {

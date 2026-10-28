@@ -1,13 +1,13 @@
 "use client"
-import CheckoutHeader from "@/components/Features/Checkout/ui/CheckoutHeader";
-import Main from "@/components/ui/Main";
-import ShippingSection from "@/components/Features/Checkout/Shipping/ShippingSection";
-import { useCheckoutGuard } from "@/components/Features/Checkout/hooks/useCheckoutGuard";
-import PageLoading from "@/components/ui/Loading/PageLoading";
-import AddressSection from "@/components/Features/Checkout/select_address/AddressSection";
-import CouponSection from "@/components/Features/Checkout/Coupon/CouponSection";
-import CheckoutSummary from "@/components/Features/Checkout/Summary/CheckoutSummary";
-import useSelectedShippingMethod from "@/components/Features/Checkout/Shipping/hooks/useSelectedShippingMethod";
+import CheckoutHeader from "@/Features/Checkout/ui/CheckoutHeader";
+import Main from "@/ui/Main";
+import ShippingSection from "@/Features/Checkout/Shipping/ShippingSection";
+import { useCheckoutGuard } from "@/Features/Checkout/hooks/useCheckoutGuard";
+import PageLoading from "@/ui/Loading/PageLoading";
+import AddressSection from "@/Features/Checkout/select_address/AddressSection";
+import CouponSection from "@/Features/Checkout/Coupon/CouponSection";
+import CheckoutSummary from "@/Features/Checkout/Summary/CheckoutSummary";
+import useSelectedShippingMethod from "@/Features/Checkout/Shipping/hooks/useSelectedShippingMethod";
 
 
 

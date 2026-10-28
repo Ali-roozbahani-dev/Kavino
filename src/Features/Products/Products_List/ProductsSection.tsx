@@ -1,0 +1,110 @@
+"use client";
+import { useState } from "react";
+import HeaderList from "./ui/HeaderList";
+import ProductsList from "./ProductsList";
+import { FilterForm } from "@/Features/Products/Filter/ui/FilterForm";
+import { CategoryListItem } from "@/entities/Category/models/Category.types";
+import { PulsatingDots } from "@/ui/Loading/pulsating-dots";
+import { useProductList } from "@/Features/Products/Products_List/hooks/useProductList";
+import { useProductFacets } from "@/Features/Products/Filter/hooks/useProductFacets";
+import Spinner from "@/ui/Loading/Spinner";
+import PageLoading from "@/ui/Loading/PageLoading";
+import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
+import { Ordering } from "../Filter/types/TproductSection";
+import { FormOutput } from "../Filter/schema/filterProductsSchema";
+
+interface Tprops {
+  initialBrand?: string;
+  searchValue?: string;
+  initialCategory?: CategoryListItem;
+}
+
+export default function ProductsSection({
+  initialBrand,
+  searchValue,
+  initialCategory,
+}: Tprops) {
+  const [showFilter, setShowFilter] = useState(true);
+  const [ordering, setOrdering] = useState<Ordering | undefined>(undefined);
+  const [formQueries, setFormQueries] = useState<Omit<FormOutput, "page" | "ordering" | "search">>({
+    category: initialCategory?.slug ?? undefined,
+    brand: initialBrand ?? undefined,
+    max_price: undefined,
+    min_price: undefined,
+    has_stock: undefined,
+  });
+  
+  // این کوئری فقط با category/search/brand عوض می‌شه، نه با فیلترها
+  const { data: facets, isPending: isFacetsPending } = useProductFacets({
+    category: initialCategory?.slug,
+    search: searchValue,
+  });
+  
+  const {
+    data,
+    isPending: isListPending,
+    hasNextPage,
+    isFetchingNextPage,
+    isError,
+    error,
+    fetchNextPage,
+  } = useProductList({
+    ...formQueries,
+    search: searchValue,
+    ordering,
+  });
+  
+  const sentinel = useInfiniteScrollObserver({fetchNextPage , isFetchingNextPage , hasNextPage});
+  
+
+  if (isFacetsPending || !facets) {
+    return <PageLoading containerclassName="mx-auto"/>;
+  }
+
+  if (isError) {
+    throw error;
+  }
+
+  const products = data ? data.pages.flatMap((page) => page.results) : [];
+
+  return (    
+    <div className="flex w-full relative">
+      <FilterForm
+        facets={facets}
+        initialCategory={initialCategory}
+        setFormQueries={setFormQueries}
+        showFilter={showFilter}
+      />
+
+      <div className="flex-1">
+        <div className="w-full">
+          <HeaderList
+            initialCategory={initialCategory}
+            count={products.length}
+            ordering={ordering}
+            setOrdering={setOrdering}
+            showFilter={showFilter}
+            setShowFilter={setShowFilter}
+          />
+
+          {isListPending ? (
+            <div className="w-full h-50 flex-center">
+              <Spinner className="size-10 lg:size-13"/>
+            </div>
+          ) : (
+            <>            
+              <ProductsList products={products} />
+              <div ref={sentinel} className="h-2 w-full">
+                {isFetchingNextPage && (
+                  <div className="w-max mx-auto mt-5">
+                    <PulsatingDots className="w-11 ltr" />
+                  </div>
+                )}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}

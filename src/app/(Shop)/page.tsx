@@ -1,10 +1,10 @@
-import { getHomeData } from "@/components/Features/Home/api/getHomeData";
-import BrandSlider from "@/components/Features/Home/BrandSlider/BrandSlider";
-import CategorySlider from "@/components/Features/Home/CategorySlider/CategorySlider";
-import HeroSlider from "@/components/Features/Home/HeroSlider/HeroSlider";
-import SpecialOffers from "@/components/Features/Home/SpecialOffers/SpecialOffers";
-import FourBanner from "@/components/ui/Banners/FourBanner";
-import TwinsBanner from "@/components/ui/Banners/TwinsBanner";
+import { getHomeData } from "@/Features/Home/api/getHomeData";
+import BrandSlider from "@/Features/Home/BrandSlider/BrandSlider";
+import CategorySlider from "@/Features/Home/CategorySlider/CategorySlider";
+import HeroSlider from "@/Features/Home/HeroSlider/HeroSlider";
+import SpecialOffers from "@/Features/Home/SpecialOffers/SpecialOffers";
+import FourBanner from "@/Features/Home/ui/Banners/FourBanner";
+import TwinsBanner from "@/Features/Home/ui/Banners/TwinsBanner";
 
 export default async function HomePage() {
   const {
@@ -27,7 +27,9 @@ export default async function HomePage() {
       {heroItems.length > 0 && <HeroSlider sliders={heroItems} />}
 
       {categoryItems.length > 0 && (
-        <CategorySlider categories={categoryItems} />
+        <div className="max-w-400 mx-auto">
+          <CategorySlider categories={categoryItems} />
+        </div>
       )}
 
       <div className="container-0 md:px-3">

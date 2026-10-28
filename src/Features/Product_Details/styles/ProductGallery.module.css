@@ -1,0 +1,17 @@
+@reference "../../../app/globals.css";
+
+.slider{
+  @apply w-100 lg:w-80 2xl:w-100
+}
+
+.slider :global(.swiper-pagination) {
+  @apply lg:hidden;
+}
+
+.slider :global(.swiper-pagination-bullet) {
+  @apply bg-primary-text w-2 h-2
+}
+
+.slider :global(.swiper-pagination-bullet-active) {
+  @apply bg-theme-hover w-4 rounded-md;
+}

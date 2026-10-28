@@ -1,5 +1,5 @@
-import FavoriteProductsList from "@/components/Features/Favorites/favorites_list/FavoriteProductsList";
-import { PageTitle } from "@/components/ui/Profile";
+import FavoriteProductsList from "@/Features/Favorites/Favorites_List/FavoriteProductsList";
+import { PageTitle } from "@/Features/User_Profile";
 import { Heart } from "lucide-react";
 
 

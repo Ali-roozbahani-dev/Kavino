@@ -1,1 +1,0 @@
-export {default as ProductsPageCard} from "./Cards/ProductsPageCard"

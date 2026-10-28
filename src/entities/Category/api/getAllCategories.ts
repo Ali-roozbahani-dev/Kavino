@@ -1,4 +1,4 @@
-import { CategoryListItem } from "../types/Category";
+import { CategoryListItem } from "../models/Category.types";
 import { getApiBaseUrl } from "@/shared/lib/getApiBaseUrl";
 
 export const getAllCategories = async (): Promise<CategoryListItem[]> => {

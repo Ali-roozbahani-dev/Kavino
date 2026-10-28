@@ -1,5 +1,5 @@
 import { api } from "@/shared/lib/axios_instance";
-import { Province } from "../types/locations";
+import { Province } from "../models/locations.types";
 
 
 export async function getProvinces(): Promise<Province[]> {  

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Footer from "@/components/ui/Footer/Footer";
-import Header from "@/components/ui/Header/Header";
+import Footer from "@/shared/layout/Footer/Footer";
+import Header from "@/shared/layout/Header/Header";
 
 
 

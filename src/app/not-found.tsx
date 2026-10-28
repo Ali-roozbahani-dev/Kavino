@@ -1,6 +1,6 @@
-import Footer from "@/components/ui/Footer/Footer";
-import Header from "@/components/ui/Header/Header";
-import Main from "@/components/ui/Main";
+import Footer from "@/shared/layout/Footer/Footer";
+import Header from "@/shared/layout/Header/Header";
+import Main from "@/ui/Main";
 import Image from "next/image";
 import Link from "next/link";
 import { RxHome } from "react-icons/rx";

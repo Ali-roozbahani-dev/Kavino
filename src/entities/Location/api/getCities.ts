@@ -1,5 +1,5 @@
 import { api } from "@/shared/lib/axios_instance";
-import { City} from "../types/locations";
+import { City} from "../models/locations.types";
 
 
 export async function getCities(): Promise<City[]> {  

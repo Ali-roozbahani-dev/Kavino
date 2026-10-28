@@ -61,7 +61,6 @@ Example project structure:
 src/
 
 ├── app/
-├── components/
 ├── features/
 │   ├── Auth/
 │   ├── Cart/
@@ -73,9 +72,8 @@ src/
 │   ├── Search/
 │   └── ...
 ├── entities/
-├── lib/
-├── stores/
-└── types/
+├── shared/
+└── ui/
 ```
 
 The application also separates **server state** from **client state**:

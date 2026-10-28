@@ -1,6 +1,6 @@
 "use client"
-import LoginSkeleton from "@/components/Features/Auth/ui/LoginSkeleton";
-import { useGuestOnly } from "@/components/Features/Auth/hooks/useGuestOnly";
+import LoginSkeleton from "@/Features/Auth/ui/LoginSkeleton";
+import { useGuestOnly } from "@/Features/Auth/hooks/useGuestOnly";
 
 
 

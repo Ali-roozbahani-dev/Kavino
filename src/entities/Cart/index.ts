@@ -1,3 +1,3 @@
-export {cartQueryKey} from "./queryKeys"
+export {cartQueryKey} from "./cartQueryKeys"
 export { EMPTY_CART } from "./empty_cart";
-export type {Cart , CartItem} from "./types/Cart"
+export type {Cart , CartItem} from "./models/Cart.types"
