@@ -3,7 +3,7 @@ import axios from "axios";
 const isServer = typeof window === "undefined";
 
 const baseURL = isServer
-  ? `${process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:8000"}/api`
+  ? `${process.env.BACKEND_INTERNAL_URL ?? "http://django:8000"}/api`
   : "/api";
 
 export const api = axios.create({

@@ -2,13 +2,18 @@ import { AuthGuardWrapper } from "@/Features/Auth";
 import { ProfileNavigation } from "@/Features/User_Profile";
 import Header from "@/shared/layout/Header/Header";
 import Main from "@/ui/Main";
+import { connection } from "next/server";
+
+export const dynamic = "force-dynamic";
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  await connection();
 
   
   return (

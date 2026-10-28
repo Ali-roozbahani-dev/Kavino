@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Footer from "@/shared/layout/Footer/Footer";
 import Header from "@/shared/layout/Header/Header";
+import { connection } from "next/server";
 
-
+export const dynamic = "force-dynamic";
 
 
 export const metadata: Metadata = {
@@ -57,6 +58,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  await connection();
 
   return (
       <>

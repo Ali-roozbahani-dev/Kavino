@@ -6,7 +6,8 @@ import SpecialOffers from "@/Features/Home/SpecialOffers/SpecialOffers";
 import FourBanner from "@/Features/Home/ui/Banners/FourBanner";
 import TwinsBanner from "@/Features/Home/ui/Banners/TwinsBanner";
 
-export default async function HomePage() {
+export default async function HomePage() {  
+
   const {
     hero_slider,
     categories,
