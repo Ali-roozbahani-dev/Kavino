@@ -7,13 +7,15 @@ import { RxHome } from "react-icons/rx";
 
 
 
-export default function NotFound() {
+
+export default async function NotFound() {
+  
 
   return (
     <>
     <Header />    
     <Main>
-      <div className="max-w-md text-center mx-auto">
+      <div className="max-w-md text-center mx-auto mt-10">
 
         <Image
           src="/not-found.png"

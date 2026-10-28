@@ -3,7 +3,7 @@ import Footer from "@/shared/layout/Footer/Footer";
 import Header from "@/shared/layout/Header/Header";
 
 
-export const dynamic = "force-dynamic";
+
 
 export const metadata: Metadata = {
   title: "کاوه شاپ | فروشگاه اینترنتی لوازم خانگی",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

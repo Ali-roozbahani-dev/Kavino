@@ -3,8 +3,11 @@ import DesktopHeader from "./desktop/DesktopHeader";
 import MobileHeader from "./mobile/MobileHeader";
 import { categorizeCategories } from "./desktop/Categories/utils/categorizeCategories";
 import DesktopNavbar from "./NavbarHeader/DesktopNavbar";
+import { connection } from "next/server";
 
 export default async function Header() {
+  await connection();
+  
   const categories = await getAllCategories();
   const categoriesGroup = categorizeCategories(categories);
 
