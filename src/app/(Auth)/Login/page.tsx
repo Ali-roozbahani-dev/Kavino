@@ -1,4 +1,4 @@
-import { LoginForm } from "@/components/Features/Auth/Login/LoginForm";
+import { LoginForm } from "@/Features/Auth/Login/LoginForm";
 import Image from "next/image";
 import Link from "next/link";
 

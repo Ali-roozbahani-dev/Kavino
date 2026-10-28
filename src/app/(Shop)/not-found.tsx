@@ -1,4 +1,4 @@
-import Main from "@/components/ui/Main";
+import Main from "@/ui/Main";
 import Image from "next/image";
 import Link from "next/link";
 import { RxHome } from "react-icons/rx";

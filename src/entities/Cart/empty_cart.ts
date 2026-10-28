@@ -1,4 +1,4 @@
-import { Cart } from "./types/Cart";
+import { Cart } from "./models/Cart.types";
 
 export const EMPTY_CART: Cart = {
   id: 0,

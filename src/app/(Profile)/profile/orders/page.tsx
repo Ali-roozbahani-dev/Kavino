@@ -1,4 +1,4 @@
-import { OrdersList } from "@/components/Features/User_Profile";
+import { OrdersList } from "@/Features/User_Profile";
 
 export default function OrdersPage() {
   return (

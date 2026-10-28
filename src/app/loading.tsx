@@ -1,4 +1,4 @@
-import PageLoading from "@/components/ui/Loading/PageLoading"
+import PageLoading from "@/ui/Loading/PageLoading"
 
 
 

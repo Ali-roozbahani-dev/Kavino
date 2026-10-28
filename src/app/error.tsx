@@ -1,7 +1,7 @@
 "use client";
 
-import Main from "@/components/ui/Main";
-import { Button } from "@/components/ui/button";
+import Main from "@/ui/Main";
+import { Button } from "@/ui/button";
 import { RotateCcw } from "lucide-react";
 import Image from "next/image";
 

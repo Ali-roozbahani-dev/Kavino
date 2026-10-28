@@ -5,10 +5,10 @@ import { Geist } from "next/font/google";
 import { cn } from "@/shared/lib/utils";
 import { DirectionProvider } from "@radix-ui/react-direction";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
-import { Toaster } from "@/components/ui/sonner"
-import { AuthBootstrap } from "@/components/Features/Auth";
+import { Toaster } from "@/ui/sonner"
+import { AuthBootstrap } from "@/Features/Auth";
+import { SessionSyncProviders } from "@/providers/SessionSyncProviders";
 
-export const dynamic = "force-dynamic";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -30,7 +30,8 @@ export default function RootLayout({
     >
       <body className={`${vazir.className} body-scrollbar-custom`}>
         <DirectionProvider dir="rtl">
-          <ReactQueryProvider>   
+          <ReactQueryProvider>  
+            <SessionSyncProviders /> 
             <AuthBootstrap />                                    
             {children}                        
           </ReactQueryProvider>

@@ -1,6 +1,4 @@
 "use client";
-import { AuthSyncListener } from "@/components/Features/Auth/BroadcastChannel/AuthSyncListener";
-import { CartSyncListener } from "@/components/Features/Cart";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState } from "react";
@@ -24,9 +22,7 @@ export default function ReactQueryProvider({
 
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <AuthSyncListener />
-      <CartSyncListener />
+    <QueryClientProvider client={queryClient}>      
       {children}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

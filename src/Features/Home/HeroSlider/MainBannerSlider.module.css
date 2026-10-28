@@ -1,0 +1,10 @@
+@reference "../../../app/globals.css";
+
+
+.slider :global(.swiper-pagination-bullet) {
+  @apply bg-white w-3 h-3
+}
+
+.slider :global(.swiper-pagination-bullet-active) {
+  @apply bg-theme-hover w-6 rounded-md;
+}

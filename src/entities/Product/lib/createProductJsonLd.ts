@@ -1,7 +1,9 @@
-import { ProductDetails } from "../types";
+import { ProductDetails } from "../models";
 
 
 export function createProductJsonLd(product: ProductDetails) {
+
+  if(!product?.variants[0]) return;
 
   return {
     "@context": "https://schema.org",

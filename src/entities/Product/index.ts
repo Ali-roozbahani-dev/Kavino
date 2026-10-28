@@ -12,6 +12,4 @@ export type {
     ProductVariant,
     ReviewsSummary,
     VariantAttribute     
-} from "./types";
-
-export {getProductsList} from "./api/getProductsList"
+} from "./models";

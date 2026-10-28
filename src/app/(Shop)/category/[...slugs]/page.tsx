@@ -1,8 +1,8 @@
-import { Tqueries } from "@/components/Features/Products/Filter/types/TproductSection";
-import Main from "@/components/ui/Main";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { Tqueries } from "@/Features/Products/Filter/types/TproductSection";
+import Main from "@/ui/Main";
+import { SidebarProvider } from "@/ui/sidebar";
 import { getSingleCategory } from "@/entities/Category/api/getSingleCategory";
-import { getProductsList } from "@/entities/Product/api/getProductsList";
+import { getProductsList } from "@/Features/Products/Products_List/api/getProductsList";
 import {
   dehydrate,
   HydrationBoundary,
@@ -10,8 +10,8 @@ import {
 } from "@tanstack/react-query";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { productFacetsQueryKey, productQueryKey } from "@/components/Features/Products/util/productQueries";
-import ProductsSection from "@/components/Features/Products/products_list/ProductsSection";
+import { productFacetsQueryKey, productQueryKey } from "@/Features/Products/util/productQueries";
+import ProductsSection from "@/Features/Products/Products_List/ProductsSection";
 
 type PageProps = {
   params: Promise<{
