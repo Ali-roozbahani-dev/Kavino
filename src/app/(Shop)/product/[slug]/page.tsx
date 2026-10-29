@@ -7,6 +7,7 @@ import { getProduct } from "@/Features/Product_Details/api/getProduct";
 import { createProductJsonLd } from "@/entities/Product/lib/createProductJsonLd";
 import { ProductStoreInitializer } from "@/Features/Product_Details";
 import ProductBreadcrumb from "@/ui/BreadCrumbs/ProductBreadcrumb";
+import { serializeJsonLd } from "@/shared/utils/serializeJsonLd";
 
 type PageProps = {
   params: Promise<{
@@ -33,13 +34,13 @@ export default async function ProductPage({ params }: PageProps) {
     reviews: reviews_summary,
   } = product;
   const jsonLd = createProductJsonLd(product);
-
+  
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
+          __html: serializeJsonLd(jsonLd),
         }}
       />
       <ProductStoreInitializer defaultVariantId={variants[0]?.id} />

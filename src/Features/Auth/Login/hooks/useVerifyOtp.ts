@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { authQueryKeys } from "../../authQueryKeys";
 import { authChannelActions } from "../../BroadcastChannel/authChannelActions";
-import { getSafeCallbackUrl } from "@/shared/lib/safeRedirect";
+import { getSafeCallbackUrl } from "@/shared/lib/getSafeCallbackUrl";
 import { sessionEvents } from "@/shared/lib/sessionEvents";
 import { getChannel } from "@/shared/lib/getChannel";
 import { AUTH_CHANNEL_NAME } from "../../BroadcastChannel/authChannelName";
