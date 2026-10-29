@@ -1,5 +1,5 @@
 import OtpForm from "@/Features/Auth/Login/OtpForm";
-import { getSafeCallbackUrl } from "@/shared/lib/safeRedirect";
+import { getSafeCallbackUrl } from "@/shared/lib/getSafeCallbackUrl";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

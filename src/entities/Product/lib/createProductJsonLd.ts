@@ -1,3 +1,4 @@
+import { stripHtmlTags } from "@/shared/utils/stripHtmlTags";
 import { ProductDetails } from "../models";
 
 
@@ -10,7 +11,7 @@ export function createProductJsonLd(product: ProductDetails) {
     "@type": "Product",
     name: product.name,
     image: product.images.map((img) => img.image),
-    description: product.description,
+    description: stripHtmlTags(product.description),
     brand: {
         "@type": "Brand",
         name: product.brand.name,

@@ -17,17 +17,19 @@ type PageProps = {
   }>;
 };
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { searchValue } = await params;
+  const search = decodeURIComponent(searchValue);
 
   return {
-    title: `جستوجوی محصولات |  کاوه شاپ`,
+    title: `جستوجوی محصولات | کاوینو`,
     description: `خرید با بهترین قیمت`,
     openGraph: {
-      title: "...",
-      description: "...",
+      title: `${search}`,
+      description: `نتیجه جستو جو برای ${search}`,
       images: [
         {
-          url: "",
+          url: "/mainLogo.png",
           width: 1200,
           height: 630,
         },

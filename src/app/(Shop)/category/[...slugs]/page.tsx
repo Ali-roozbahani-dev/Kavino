@@ -12,6 +12,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { productFacetsQueryKey, productQueryKey } from "@/Features/Products/util/productQueries";
 import ProductsSection from "@/Features/Products/Products_List/ProductsSection";
+import { safeDecode } from "@/shared/utils/safeDecode";
 
 type PageProps = {
   params: Promise<{
@@ -23,17 +24,17 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slugs } = await params;
-  const category = decodeURIComponent(slugs[slugs.length - 1]);
+  const decodedSlug = safeDecode(slugs[0]);
 
   return {
-    title: `${category} | کاوه شاپ`,
-    description: `خرید ${category} با بهترین قیمت`,
+    title: `${decodedSlug} | کاوینو`,
+    description: `خرید ${decodedSlug} با بهترین قیمت`,
     openGraph: {
-      title: "...",
-      description: "...",
+      title: `${decodedSlug} | کاوینو`,
+      description: `خرید ${decodedSlug} با بهترین قیمت`,
       images: [
         {
-          url: "",
+          url: "/mainLogo.png",
           width: 1200,
           height: 630,
         },
@@ -45,7 +46,7 @@ export async function generateMetadata({
 export default async function CategoryProductsPage({ params }: PageProps) {
   const { slugs } = await params;
     
-  const decodedSlug = decodeURIComponent([...slugs].reverse()[slugs.length - 1]);
+  const decodedSlug = safeDecode(slugs[0]);
 
   const category = await getSingleCategory(decodedSlug);
 
