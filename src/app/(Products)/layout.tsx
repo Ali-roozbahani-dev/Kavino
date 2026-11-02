@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 
 export const metadata: Metadata = {
-  title: "کاوه شاپ | فروشگاه اینترنتی لوازم خانگی",
+  title: "محنا شاپ | فروشگاه اینترنتی لوازم خانگی",
   description:
     "کاوه شاپ، فروشگاه اینترنتی لوازم خانگی با تنوعی از محصولات آشپزخانه، لوازم برقی، صوتی و تصویری و کالاهای خانگی از برندهای معتبر با قیمت مناسب و ارسال سریع.",
 
@@ -25,25 +25,25 @@ export const metadata: Metadata = {
   ],
 
    openGraph: {
-    title: "کاوه شاپ | فروشگاه اینترنتی لوازم خانگی",
+    title: "محنا شاپ | فروشگاه اینترنتی لوازم خانگی",
     description:
       "خرید آنلاین انواع لوازم خانگی از برندهای معتبر با قیمت مناسب، ضمانت اصالت کالا و ارسال سریع.",
     type: "website",
     locale: "fa_IR",
-    siteName: "kavino",
-    url: "https://kavino.ir",
+    siteName: "Mohana shop",
+    url: "https://Mohanashop.ir",
     images: [
       {
         url: "/mainLogo.png",
         width: 1200,
         height: 630,
-        alt: "کاوه شاپ - فروشگاه اینترنتی لوازم خانگی",
+        alt: "محنا شاپ - فروشگاه اینترنتی لوازم خانگی",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "کاوینو",
+    title: "Mohanashop",
     description: "خرید آنلاین لوازم خانگی",
     images: ["/mainLogo.png"],
   },

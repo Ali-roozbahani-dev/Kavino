@@ -23,7 +23,7 @@ export default function Rating({
       </span>
       </>
       :
-      <span className="text-[14px] md:text-[15px] text-primary-text ms-2">( امتیازی ثبت نشده )</span>
+      <span className="text-[12px] md:text-[13px] text-primary-text ms-2">( امتیازی ثبت نشده )</span>
       }
     </div>
   );

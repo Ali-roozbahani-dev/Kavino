@@ -46,7 +46,7 @@ export async function generateMetadata({
       url: `/product/${product.slug}`,
       type: "website",
       locale: "fa_IR",
-      siteName: "Kaveh Shop",
+      siteName: "Mohana Shop",
       images: [
         {
           url: image,
@@ -80,7 +80,7 @@ export async function generateMetadata({
 
     authors: [
       {
-        name: "kavino",
+        name: "Mohana Shop",
       },
     ],
   };

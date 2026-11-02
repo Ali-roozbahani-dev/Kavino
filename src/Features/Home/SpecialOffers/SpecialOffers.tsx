@@ -45,9 +45,12 @@ export default function SpecialOffers({
       {/* Slider */}
       <Swiper
         slidesPerView={6.2}
-        spaceBetween={10}
+        spaceBetween={0}
         breakpoints={{
-          0: { slidesPerView: 1.2},
+          0: { slidesPerView: 1},
+          260: { slidesPerView: 1.3},
+          340: { slidesPerView: 1.5},
+          400: { slidesPerView: 1.8},
           500: { slidesPerView: 2.2},
           600: { slidesPerView: 2.6},
           768: { slidesPerView: 3.2},

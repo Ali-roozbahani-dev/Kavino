@@ -22,7 +22,7 @@ export default function ProductPurchase({PurchaseInTabs , variants , productId}:
 
     
     return (
-        <div className="flex justify-between h-[60px] xl:h-auto items-center xl:block w-full px-3.5 py-2
+        <div className="flex justify-between h-[55px] xl:h-auto items-center xl:block w-full px-3.5 py-2
         xl:border md:rounded-xl xl:p-5">
             {selectedVariant!! ?
 

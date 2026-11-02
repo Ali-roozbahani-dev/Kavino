@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: PageProps) {
       <ProductStoreInitializer defaultVariantId={variants[0]?.id} />
       <main className="lg:px-5 2xl:px-10">
 
-        <div className="container-0 px-2">          
+        <div className="container-0 px-3">          
           <ProductBreadcrumb name={name} path={category.path} />
           <div className="flex flex-wrap mb-5">
             <div className="w-full lg:w-1/2 xl:w-2/5">
@@ -64,7 +64,7 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
             <div
               className="bg-white block w-full xl:w-1/4 xl:ms-auto border-t xl:border-0
-                z-100 xl:z-auto fixed -bottom-2 right-0 xl:relative"
+                z-100 xl:z-auto fixed bottom-0 right-0 xl:relative"
             >
               <ProductPurchase  
               productId={id}          
