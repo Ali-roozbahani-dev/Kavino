@@ -53,7 +53,7 @@ export default function ProductTabs({
     <div ref={containerRef} className="md:border-x relative">
       <TabsHeader reviews_summary={reviews_summary} activeTab={activeTab} />
 
-      <div className="container-0 px-1.5">
+      <div className="container-0 px-3">
         <div className="flex">
           <div className="w-full xl:px-2 xl:w-3/4">
             <section

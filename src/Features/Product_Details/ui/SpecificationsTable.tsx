@@ -14,13 +14,13 @@ export default function SpecificationsTable({ attributes }: Props) {
           {attributes.map((attribute, i) => (
             <TableRow key={i} className="border-0">
               <TableCell className="w-1/3 bg-muted/40 px-0.75 py-0.75 font-medium text-foreground">
-                <div className="bg-[#e4f1fc] py-3 px-4">
+                <div className="bg-[#e4f1fc] py-3 px-4 text-[13px] md:text-[15px]">
                   {attribute.attribute}
                 </div>
               </TableCell>
 
               <TableCell className="py-0.75 px-0.75 text-muted-foreground">
-                <div className="bg-[#f0f6fc] py-3 px-4">{attribute.value}</div>
+                <div className="bg-[#f0f6fc] py-3 px-4 text-[13px] md:text-[15px]">{attribute.value}</div>
               </TableCell>
             </TableRow>
           ))}

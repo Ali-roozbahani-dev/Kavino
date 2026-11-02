@@ -8,13 +8,14 @@ import ReactQueryProvider from "@/providers/ReactQueryProvider";
 import { Toaster } from "@/ui/sonner"
 import { AuthBootstrap } from "@/Features/Auth";
 import { SessionSyncProviders } from "@/providers/SessionSyncProviders";
+import DemoDisclaimer from "@/ui/Dialogs/DemoDisclaimer";
 
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  title: "کاوه شاپ | فروشگاه اینترنتی لوازم خانگی",  
+  title: "محنا شاپ | فروشگاه اینترنتی لوازم خانگی",  
 };
 
 export default function RootLayout({
@@ -32,7 +33,8 @@ export default function RootLayout({
         <DirectionProvider dir="rtl">
           <ReactQueryProvider>  
             <SessionSyncProviders /> 
-            <AuthBootstrap />                                    
+            <AuthBootstrap />   
+            <DemoDisclaimer />                                 
             {children}                        
           </ReactQueryProvider>
           <Toaster />          
