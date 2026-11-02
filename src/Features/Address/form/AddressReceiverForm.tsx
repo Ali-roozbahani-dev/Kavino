@@ -26,7 +26,8 @@ export default function AddressReceiverForm(){
                 <Input 
                 {...register("receiver_name")}
                 id="firstName" 
-                className="py-5 rounded-md" 
+                className="py-5 rounded-md placeholder:text-[12px] placeholder:md:text-[13px] placeholder:lg:text-[15px]
+                text-[13px] md:text-[14px] lg:text-[15px]" 
                 placeholder="نام خود را وارد کنید" 
                 />
             </FieldContent>
@@ -40,7 +41,7 @@ export default function AddressReceiverForm(){
 
             <FieldContent>
                 <InputGroup className="py-5 rounded-md ltr">
-                <InputGroupAddon>
+                <InputGroupAddon className="text-[13px] md:text-[14px] lg:text-[15px] mt-px">
                     +98
                 </InputGroupAddon>
 
@@ -50,6 +51,8 @@ export default function AddressReceiverForm(){
                     dir="ltr"
                     maxLength={10}
                     placeholder="912*******"
+                    className="placeholder:text-[12px] placeholder:md:text-[13px] placeholder:lg:text-[15px]
+                    text-[13px] md:text-[14px] lg:text-[15px]"
                 />
                 </InputGroup>
             </FieldContent>

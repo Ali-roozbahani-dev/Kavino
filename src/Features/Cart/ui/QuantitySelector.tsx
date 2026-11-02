@@ -32,24 +32,21 @@ className}: Props) {
   
   return (
     <div
-      className={cn("border w-30 h-8 flex rounded-sm overflow-hidden", className)}
+      className={cn("border w-25 h-7 md:w-30 md:h-8 flex rounded-sm overflow-hidden", className)}
     >
       <button
       disabled={isPending || quantity >= stock}
       onClick={()=> changeQuantity(quantity + 1)}
-      className="w-1/3 flex-center bg-gray-100 disabled:opacity-100"
+      className="w-1/3 flex-center bg-gray-100 disabled:opacity-50"
       >
-        {quantity >= stock ? (
-          <span className="text-[10px] font-semibold">حداکثر</span>
-        ) : (
-          isIncreasing
-           ?
+        {
+          isIncreasing ?
           <Loader2 className="size-3 lg:size-4 animate-spin" />
           :
-          <Plus strokeWidth={1.8} className="size-4" />
-        )}
+          <Plus strokeWidth={1.8} className="size-3.5 md:size-4" />
+        }
       </button>
-      <span className="font-semibold w-1/3 flex-center">
+      <span className="font-semibold w-1/3 flex-center text-[14px] md:text-[15px]">
         {formatNumberWithoutSeparator(quantity)}
       </span>
 
@@ -62,7 +59,7 @@ className}: Props) {
           {isDecreasing ?
           <Loader2 className="size-3 lg:size-4 animate-spin" />
           :
-          <Minus strokeWidth={1.8} className="size-4" />
+          <Minus strokeWidth={1.8} className="size-3.5 md:size-4" />
         }
         </button>
       ) : (
@@ -74,7 +71,7 @@ className}: Props) {
           {isDeleting ?
           <Loader2 className="size-3 lg:size-4 animate-spin" />
           :
-          <Trash2 className="size-4.5" />
+          <Trash2 className="size-4 md:size-4.5" />
           }
         </button>
       )}

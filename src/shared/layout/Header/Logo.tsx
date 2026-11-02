@@ -7,7 +7,7 @@ export default function Logo(){
     return (
         <Link href={"/"}>
             <Image 
-            src={"/mainLogo.png"} 
+            src={"/mainLogo.webp"} 
             alt="Logo"
             width={907} 
             height={1008}

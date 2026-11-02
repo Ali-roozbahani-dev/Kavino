@@ -6,8 +6,9 @@ import { useFavoritesId } from "./hooks/useFavoritesId";
 import { useAddFavorite } from "./hooks/useAddFavorite";
 import { useDeleteFavorite } from "./hooks/useDeleteFavorite";
 import { toast } from "sonner";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "@/Features/Auth";
+import { useIsClient } from "@/shared/hooks/useIsClient";
 
 interface FavoriteToggleProps {
   id: number;
@@ -27,6 +28,11 @@ export default function FavoriteToggle({
 
   const favoriteItem = favorites?.find((i) => i.product_id === id);
   const isLoading = authPending || (!!user && favPending);
+  const isClient = useIsClient();
+
+ 
+
+  const disabled = !isClient || isLoading || !!favError || isAdding || isRemoving || !!authError;
 
   
   useEffect(() => {
@@ -43,7 +49,7 @@ export default function FavoriteToggle({
     <button
       type="button"
       onClick={handleClick}
-      disabled={isLoading || !!favError || isAdding || isRemoving || !!authError}    
+      disabled={disabled}    
       aria-pressed={!!favoriteItem}
       className="me-4"
     >

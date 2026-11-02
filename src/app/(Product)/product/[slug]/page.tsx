@@ -1,12 +1,11 @@
 import ProductGallery from "@/Features/Product_Details/ProductGallery/ProductGallery";
 import ProductSummary from "@/Features/Product_Details/ProductSummary/ProductSummary";
-import Main from "@/ui/Main";
 import ProductPurchase from "@/Features/Product_Details/ProductPurchase/ProductPurchase";
 import ProductTabs from "@/Features/Product_Details/ProductTabs/ProductTabs";
 import { getProduct } from "@/Features/Product_Details/api/getProduct";
 import { createProductJsonLd } from "@/entities/Product/lib/createProductJsonLd";
 import { ProductStoreInitializer } from "@/Features/Product_Details";
-import ProductBreadcrumb from "@/ui/BreadCrumbs/ProductBreadcrumb";
+import ProductBreadcrumb from "@/Features/Product_Details/ui/ProductBreadcrumb";
 import { serializeJsonLd } from "@/shared/utils/serializeJsonLd";
 
 type PageProps = {
@@ -17,8 +16,8 @@ type PageProps = {
 
 export default async function ProductPage({ params }: PageProps) {
   const { slug } = await params;
-  const decodedSlug = decodeURIComponent(slug);
-  const product = await getProduct(decodedSlug);
+  
+  const product = await getProduct(slug);
   
   const {
     id,
@@ -44,32 +43,34 @@ export default async function ProductPage({ params }: PageProps) {
         }}
       />
       <ProductStoreInitializer defaultVariantId={variants[0]?.id} />
-      <Main className="lg:px-5 2xl:px-10">
-        <ProductBreadcrumb name={name} path={category.path} />
+      <main className="lg:px-5 2xl:px-10">
 
-        <div className="flex flex-wrap mb-5">
-          <div className="w-full lg:w-1/2 xl:w-2/5">
-            <ProductGallery images={images} />
-          </div>
-          <div className="w-full lg:w-1/2 xl:w-1/4 xl:flex-1">
-            <ProductSummary
-              reviews_summary={reviews_summary}
-              variants={variants}
-              name={name}
-              brand={brand}
-              attributes={attributes}
-              highlight_attributes={highlight_attributes}
-              productId={id}
-            />
-          </div>
-          <div
-            className="bg-white block w-full xl:w-1/4 xl:ms-auto border-t xl:border-0
-              z-100 xl:z-auto fixed bottom-0 right-0 xl:relative"
-          >
-            <ProductPurchase  
-            productId={id}          
-            variants={variants} 
-            />
+        <div className="container-0 px-2">          
+          <ProductBreadcrumb name={name} path={category.path} />
+          <div className="flex flex-wrap mb-5">
+            <div className="w-full lg:w-1/2 xl:w-2/5">
+              <ProductGallery images={images} />
+            </div>
+            <div className="w-full lg:w-1/2 xl:w-1/4 xl:flex-1">
+              <ProductSummary
+                reviews_summary={reviews_summary}
+                variants={variants}
+                name={name}
+                brand={brand}
+                attributes={attributes}
+                highlight_attributes={highlight_attributes}
+                productId={id}
+              />
+            </div>
+            <div
+              className="bg-white block w-full xl:w-1/4 xl:ms-auto border-t xl:border-0
+                z-100 xl:z-auto fixed -bottom-2 right-0 xl:relative"
+            >
+              <ProductPurchase  
+              productId={id}          
+              variants={variants} 
+              />
+            </div>
           </div>
         </div>
         <ProductTabs
@@ -80,7 +81,7 @@ export default async function ProductPage({ params }: PageProps) {
           productSlug={productSlug}
           productId={id}
         />
-      </Main>
+      </main>
     </>
   );
 }

@@ -23,7 +23,7 @@ export default function CheckoutProductsDialog({
         {cart.items.map((item) => (
           <div
             key={item.id}
-            className="flex items-center gap-3 rounded-lg border p-3"
+            className="flex items-center gap-3 rounded-lg border p-2 md:p-3"
           >
             <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md bg-muted">
               <Image
@@ -36,26 +36,34 @@ export default function CheckoutProductsDialog({
             </div>
 
             <div className="min-w-0 flex-1">
-              <p className="line-clamp-2 text-sm font-medium">
+              <p className="line-clamp-2 text-[12px] md:text-[13px] lg:text-[14px] font-medium">
                 {item.product_name}
               </p>
 
-              <p className="mt-1 text-xs text-muted-foreground">
-                تعداد: {formatNumberWithoutSeparator(item.quantity)}
-              </p>
-            </div>
-
-            <div className="text-left">
-              {Number(item.discount_amount) > 0 && (
-                <p className="text-xs text-muted-foreground line-through">
-                  {formatNumber(item.unit_price)}
+              <div className="flex-between pt-3">
+                <p className="mt-1 text-xs text-muted-foreground">
+                  تعداد: {formatNumberWithoutSeparator(item.quantity)}
                 </p>
-              )}
 
-              <p className="text-sm font-semibold">
-                {formatNumber(item.final_price)} تومان
-              </p>
+                <div className="text-left">
+                  {Number(item.discount_amount) > 0 && (
+                    <p className="text-xs text-muted-foreground line-through">
+                      {formatNumber(item.unit_price)}
+                    </p>
+                  )}
+
+                  <p className="font-semibold text-[14px] md:text-[15px] lg:text-[16px]">
+                    {formatNumber(item.final_price)} 
+                    <span className="inline-block ms-1 text-[10px] md:text-[11px] lg:text-[12px]">
+                      تومان
+                    </span>
+                  </p>
+                </div>
+              </div>
+
             </div>
+
+            
           </div>
         ))}
       </div>

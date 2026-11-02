@@ -6,7 +6,7 @@ export default function BrandItem({ brand }: { brand: Brand }) {
   return (
     <Link
       href={`/brand/${brand.slug}`}
-      className="block h-[110px] w-[115px] md:w-[120px] rounded-lg p-2
+      className="block h-[110px] w-full rounded-lg p-2
       overflow-hidden flex-center bg-white"
       style={{
         boxShadow:
@@ -18,7 +18,7 @@ export default function BrandItem({ brand }: { brand: Brand }) {
           width={120}
           height={120}
           alt={`${brand.name} logo`}
-          className="w-full max-h-[110px]"
+          className="w-full h-auto"
         />      
     </Link>
   );

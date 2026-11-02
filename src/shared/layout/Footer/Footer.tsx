@@ -10,9 +10,9 @@ export default function Footer(){
     
 
     return (
-        <footer className="container-0 px-3">
+        <footer className="container-0 md:px-3">
             <FeaturesSection />
-            <div className="bg-theme-2 text-white rounded-t-lg">
+            <div className="bg-theme-2 text-white md:rounded-t-lg">
                 <div className="lg:hidden">
                     <MobileLists />
                 </div>

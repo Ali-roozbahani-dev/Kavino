@@ -6,7 +6,6 @@ import Link from "next/link";
 import { FaChevronLeft, FaFire } from "react-icons/fa6";
 import HomePageProductCard from "@/Features/Home/ui/HomePageProductCard";
 import { ProductListItem } from "@/entities/Product";
-import React from "react";
 
 export default function SpecialOffers({
   products,
@@ -14,7 +13,9 @@ export default function SpecialOffers({
   products: ProductListItem[];
 }) {
 
-  const selected_products = products.slice(0,10);
+  const selected_products = products
+    .filter((pro) => pro.has_stock)
+    .slice(0, 10);
 
   return (
     <section className="my-10 overflow-hidden md:rounded-2xl
@@ -27,7 +28,7 @@ export default function SpecialOffers({
             <FaFire className="text-lg" />
           </div>
 
-          <h2 className="font-bold text-[15px] lg:text-[18px]">
+          <h2 className="font-bold text-[14px] md:text-[15px] lg:text-[18px]">
             پیشنهادهای ویژه
           </h2>
         </div>
@@ -37,30 +38,30 @@ export default function SpecialOffers({
           className="flex items-center text-theme-4 text-[13px] lg:text-[15px]"
         >
           <span className="font-bold">مشاهده همه</span>
-          <FaChevronLeft className="ms-2 text-xs" />
+          <FaChevronLeft className="ms-1 md:ms-2 text-xs" />
         </Link>
       </div>
 
       {/* Slider */}
       <Swiper
         slidesPerView={6.2}
-        spaceBetween={12}
+        spaceBetween={10}
         breakpoints={{
-          500: { slidesPerView: 2.1, spaceBetween: 12 },
-          768: { slidesPerView: 3.2, spaceBetween: 16 },
-          1024: { slidesPerView: 4.2, spaceBetween: 18 },
-          1280: { slidesPerView: 5.2, spaceBetween: 20 },
+          0: { slidesPerView: 1.2},
+          500: { slidesPerView: 2.2},
+          600: { slidesPerView: 2.6},
+          768: { slidesPerView: 3.2},
+          1024: { slidesPerView: 5.2},
+          1280: { slidesPerView: 6.2},
         }}
         className="overflow-visible!"
       >
-        {selected_products.map((pro) => (
-          <React.Fragment key={pro.id}>
-            {pro.has_stock &&
-            <SwiperSlide className="h-auto">
-              <HomePageProductCard product={pro} />
-            </SwiperSlide>
-            }
-          </React.Fragment>
+        {selected_products.map((pro) => (         
+            
+          <SwiperSlide key={pro.id} className="h-auto">
+            <HomePageProductCard product={pro} />
+          </SwiperSlide>
+          
         ))}
       </Swiper>
     </section>

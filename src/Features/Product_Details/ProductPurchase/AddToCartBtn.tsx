@@ -67,7 +67,7 @@ export default function AddToCartBtn({selectedVariant }: Props) {
           disabled={isAddingToCart}
           onClick={addToCartHandler}
           variant={"Blue1"}
-          className="w-full rounded-sm px-5 h-11 lg:h-12.5 lg:text-[16px]"
+          className="w-full rounded-sm px-3 md:px-5 h-10 md:h-11 lg:h-12.5 text-[13px] md:text-[14px] lg:text-[16px]"
         >
           {isAddingToCart ? (
             <Loader2 className="size-5 lg:size-6 animate-spin" />

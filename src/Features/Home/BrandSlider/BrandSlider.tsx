@@ -33,8 +33,9 @@ export default function BrandSlider({ brands }: Props) {
         <div className="px-2 py-5 sm:px-4">
           <Swiper
           className="overflow-visible!"
-            spaceBetween={0}
+            spaceBetween={10}
             breakpoints={{
+              0: { slidesPerView: 2.4 },
               400: { slidesPerView: 3.2 },
               640: { slidesPerView: 4.2 },
               740: { slidesPerView: 5.2 },
@@ -43,7 +44,7 @@ export default function BrandSlider({ brands }: Props) {
             }}
           >
             {brands.map((brand) => (
-              <SwiperSlide 
+              <SwiperSlide
               key={brand.slug}
               >
                 <BrandItem brand={brand} />

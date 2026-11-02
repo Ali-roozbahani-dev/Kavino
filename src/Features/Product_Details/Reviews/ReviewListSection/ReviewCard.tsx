@@ -10,7 +10,7 @@ export default function ReviewCard({review}: Props){
     const {comment , created_at , rating , user} = review;
 
     return (
-        <div className="rounded-md border p-4 mb-3">
+        <div className="rounded-md border p-2.5 md:p-4 mb-3">
             <ReviewHeader 
             created_at={created_at}
             rating={rating}

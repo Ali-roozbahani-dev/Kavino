@@ -69,7 +69,9 @@ export default function AddressLocationForm() {
                 }}
               >
                 <SelectTrigger id="province" className="py-5 rounded-md w-full">
-                  <SelectValue placeholder="استان را انتخاب کنید" />
+                  <SelectValue 
+                  placeholder="استان را انتخاب کنید" 
+                  />
                 </SelectTrigger>
 
                 <SelectContent>
@@ -137,7 +139,8 @@ export default function AddressLocationForm() {
           <Input
             {...register("postal_code")}
             id="postalCode"
-            className="py-5 rounded-md"
+            className="py-5 rounded-md placeholder:text-[12px] placeholder:md:text-[13px] placeholder:lg:text-[15px]
+            text-[13px] md:text-[14px] lg:text-[15px]"
             inputMode="numeric"
             placeholder="کد پستی 10 رقمی  را وارد کنید"
           />
@@ -156,7 +159,8 @@ export default function AddressLocationForm() {
           <Input
             {...register("address_line")}
             id="address"
-            className="py-5 rounded-md"
+            className="py-5 rounded-md placeholder:text-[12px] placeholder:md:text-[13px] placeholder:lg:text-[15px]
+            text-[13px] md:text-[14px] lg:text-[15px]"
             placeholder="آدرس کامل خود را وارد کنید"
           />
 

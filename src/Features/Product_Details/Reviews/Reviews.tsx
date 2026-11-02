@@ -18,8 +18,7 @@ return (
         <div className={styles.tabTitle}>
             <MessageCircle className="size-4 md:size-6 me-2"/>
             <h1>دیدگاه کاربران</h1>                
-        </div>
-        <p className="text-primary-text2 py-4">تجربه و نظر خود را با دیگران به اشتراک بگذارید</p>
+        </div>        
 
         <div className="flex flex-wrap justify-center py-4">
             <div className="w-full lg:w-1/2 mb-4 lg:mb-0">

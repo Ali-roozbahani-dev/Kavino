@@ -14,12 +14,14 @@ import {
     AlertDialogTrigger,
 } from "@/ui/alert-dialog";
 import { useLogout } from "./hooks/useLogout";
+import { cn } from "@/shared/lib/utils";
 
 interface LogoutDialogProps {
     children?: ReactNode;
+    textClass?: string;
 }
 
-export default function LogoutDialog({ children }: LogoutDialogProps) {
+export default function LogoutDialog({ children , textClass }: LogoutDialogProps) {
     const { mutate: logout, isPending } = useLogout();
 
     return (
@@ -29,7 +31,7 @@ export default function LogoutDialog({ children }: LogoutDialogProps) {
                     <button
                         type="button"
                         disabled={isPending}
-                        className="flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm text-destructive hover:bg-destructive/10"
+                        className={cn("flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm text-destructive hover:bg-destructive/10" , textClass)}
                     >
                         <LogOut className="size-4" />
                         خروج از حساب
@@ -37,13 +39,13 @@ export default function LogoutDialog({ children }: LogoutDialogProps) {
                 )}
             </AlertDialogTrigger>
 
-            <AlertDialogContent dir="rtl" className="md:max-w-lg!">
+            <AlertDialogContent dir="rtl" className="w-[260px] sm:w-max md:max-w-lg!">
                 <AlertDialogHeader>
                     <AlertDialogTitle className="font-vazir">
                         خروج از حساب
                     </AlertDialogTitle>
 
-                    <AlertDialogDescription>
+                    <AlertDialogDescription className="text-[13px] md:text-[14px] lg:text-[15px]">
                         آیا مطمئن هستید که می‌خواهید از حساب کاربری خود خارج شوید؟
                     </AlertDialogDescription>
                 </AlertDialogHeader>

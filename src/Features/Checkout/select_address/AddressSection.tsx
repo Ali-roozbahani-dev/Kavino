@@ -54,7 +54,7 @@ export default function AddressSection() {
 
   return (
     
-    <section className="mt-5 rounded-xl border bg-background p-6" dir="rtl">
+    <section className="mt-5 rounded-xl lg:border bg-background p-0 md:p-3 lg:p-6" dir="rtl">
       <SelectAddressHeader addresses={addresses}/>
 
       

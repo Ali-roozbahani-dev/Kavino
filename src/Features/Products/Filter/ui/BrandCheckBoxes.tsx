@@ -39,7 +39,7 @@ export function BrandCheckBoxes({brandsOption}:{brandsOption: BrandOption[]}) {
                 />
                 <FieldLabel
                   htmlFor={brand.brand__slug}
-                  className="font-normal text-primary-text"
+                  className="font-normal text-primary-text text-[12px] md:text-[14px]"
                 >
                   {brand.brand__name}
                   <span className="text-[13px]">({formatNumberWithoutSeparator(brand.count)})</span>

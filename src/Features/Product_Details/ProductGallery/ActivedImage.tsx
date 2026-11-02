@@ -85,8 +85,6 @@ export default function ActivedImage({images , activeImage , setActiveImage , se
 
     };
 
-
-
     return (
         <div className="w-full lg:w-4/5 relative">
             {showZoom && (

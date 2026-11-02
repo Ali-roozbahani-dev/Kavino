@@ -19,16 +19,32 @@ export function ShareProduct() {
   const [isCopied , setIsCopied] = useState(false);
 
   const handleCopy = async () => {
+    const url = window.location.href;
 
     try {
-    await navigator.clipboard.writeText(window.location.href);
-    setIsCopied(true);
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(url);
+      } else {
+        // fallback
+        const textarea = document.createElement("textarea");
+        textarea.value = url;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
 
-    
+        const ok = document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        if (!ok) throw new Error("copy failed");
+      }
+
+      setIsCopied(true);
     } catch {
-    toast.error("خطا در کپی کردن لینک");
+      toast.error("خطا در کپی کردن لینک");
     }
-   };
+  };
   
 
   return (

@@ -27,7 +27,7 @@ export default function ProductsPageCard({
     >
       <Card
         className="
-          relative mx-auto w-full pt-0 border overflow-hidden
+          relative mx-auto w-full pt-0 md:border overflow-hidden p-1
 
           /* Mobile */
           flex flex-row-reverse h-[170px]
@@ -40,7 +40,7 @@ export default function ProductsPageCard({
         {/* Image */}
         <div
           className="
-            relative shrink-0 w-[130px] h-full
+            relative shrink-0 w-[115px] h-full
 
             md:w-full md:h-auto
           "
@@ -64,7 +64,7 @@ export default function ProductsPageCard({
         {/* Content */}
         <div
           className="
-            flex flex-col flex-1 min-w-0 justify-between py-3 px-3
+            flex flex-col flex-1 min-w-0 justify-between py-3 md:px-1
 
             md:block md:p-0
           "
@@ -72,10 +72,10 @@ export default function ProductsPageCard({
           <CardTitle
             className="
               text-soft-text font-vazir
-              text-[13px] xl:text-[14px]
-              line-clamp-3 leading-7
+              text-[10px] md:text-[13px] xl:text-[14px]
+              line-clamp-3 leading-5.5
 
-              md:px-3 md:line-clamp-2
+              md:px-3 md:leading-7 md:line-clamp-2
             "
           >
             {name}
@@ -83,18 +83,18 @@ export default function ProductsPageCard({
 
           <CardFooter
             className="
-              font-bold w-full mx-auto py-2 h-[55px] rounded-none
-              px-3 border-0 md:bg-transparent
+              font-bold w-full mx-auto py-2  md:h-[55px] rounded-none
+              px-1.5 md:px-3 border-0 md:bg-transparent relative
             "
           >
             {/* Discount Badge */}
         {(hasDiscount && has_stock) && (
           <Badge
             className="
-              md:absolute z-10 bg-[#ee2e2e]
-              py-2 right-2 top-2 rounded-sm
+              absolute z-10 bg-[#ee2e2e]
+              py-1.5 px-1 right-1 top-1 rounded-xs
 
-              md:py-3 md:rounded-full md:text-[15px]
+              md:py-3 md:px-2 md:rounded-full text-[11px] md:text-[15px]
             "
           >
             {discountPercentage.toLocaleString("fa-IR")}%
@@ -121,12 +121,12 @@ export default function ProductsPageCard({
               )}
 
               {/* قیمت نهایی */}
-              <div className="flex items-center gap-1 text-[15px] xl:text-[17px]">
+              <div className="flex items-center gap-1 text-[14px] md:text-[15px] xl:text-[17px]">
                 <span>
                   {final_price.toLocaleString("fa-IR")}
                 </span>
 
-                <span className="text-[11px] xl:text-[12px] font-normal">
+                <span className="text-[10px] xl:text-[11px] font-normal">
                   تومان
                 </span>
               </div>

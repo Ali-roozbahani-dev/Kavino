@@ -6,10 +6,10 @@ import AuthMenu from "../AuthMenu";
 export default function DesktopHeader() {
   return (    
     <div className="px-3 lg:px-17">
-      <div className="container-0 py-3  bg-white">
+      <div className="container-0 md:py-2  bg-white">
         <div className="flex-between pt-2">
           <div className="flex items-center flex-1">
-            <div className="w-35">
+            <div className="w-40">
               <Logo />
             </div>
             <div className="ms-5 w-130">

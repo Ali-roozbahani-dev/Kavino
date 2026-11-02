@@ -19,7 +19,7 @@ export default function RatingDistribution({ total_count, counts }: Props) {
   };
 
   return (
-    <div className="w-max mx-auto ltr">
+    <div className="w-full mx-auto ltr">
       {ratings.map((rating) => (
         <RatingBar
           key={rating}

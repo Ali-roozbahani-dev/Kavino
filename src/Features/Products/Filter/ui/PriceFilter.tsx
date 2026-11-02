@@ -69,7 +69,7 @@ export function PriceFilter({ initialMaxPrice }: Tprops) {
       </div>
 
       <div className="text-[12px] text-primary-text">
-        <div className="rounded-md border p-2 mb-3">
+        <div className="rounded-md md:border md:p-2 mb-3">
           <p>از</p>
           <div className="flex items-center">
             <input
@@ -80,11 +80,11 @@ export function PriceFilter({ initialMaxPrice }: Tprops) {
               }
               className="border md:text-[15px] focus:outline-theme px-2 py-2 me-2 flex-1 rounded-xs"
             />
-            <span>تومان</span>
+            <span className="text-[10px] md:text-[11px] l">تومان</span>
           </div>
         </div>
 
-        <div className="rounded-md border p-2">
+        <div className="rounded-md md:border md:p-2">
           <p>تا</p>
           <div className="flex items-center">
             <input
@@ -95,7 +95,7 @@ export function PriceFilter({ initialMaxPrice }: Tprops) {
               }
               className="border md:text-[15px] focus:outline-theme px-2 py-2 me-2 flex-1 rounded-xs"
             />
-            <span>تومان</span>
+            <span className="text-[10px] md:text-[11px] l">تومان</span>
           </div>
         </div>
       </div>

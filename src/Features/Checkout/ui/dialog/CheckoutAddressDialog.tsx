@@ -12,13 +12,13 @@ export default function CheckoutAddressDialog({
     <section className="space-y-3">
       <h3 className="font-semibold">آدرس ارسال</h3>
 
-      <div className="rounded-lg border p-4 text-sm">
-        <p className="leading-6 text-muted-foreground">
+      <div className="rounded-lg border p-2.5 md:p-4 text-sm">
+        <p className="leading-6 text-muted-foreground text-[13px] md:text-[15px]">
           {address.province.name}، {address.city.name}،{" "}
           {address.address_line}
         </p>
 
-        <p className="my-2 text-muted-foreground">
+        <p className="my-2 text-muted-foreground text-[13px] md:text-[15px]">
           <span>گیرنده:</span>
 
           <span className="inline-block ms-2">
@@ -39,7 +39,7 @@ export default function CheckoutAddressDialog({
           </p>
         )}
 
-        <p className="mt-1 text-muted-foreground">
+        <p className="mt-1 text-muted-foreground text-[13px] md:text-[15px]">
           کد پستی:
           <span className="inline-block ms-2">
             {formatNumberWithoutSeparator(Number(address.postal_code))}

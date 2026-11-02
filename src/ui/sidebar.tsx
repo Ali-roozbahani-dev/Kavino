@@ -271,8 +271,8 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <SlidersHorizontal className="inline-block me-4"/>
-      <span>فیلتر ها</span>
+      <SlidersHorizontal className="inline-block md:me-4"/>
+      <span className="hidden md:block">فیلتر ها</span>
     </Button>
   )
 }

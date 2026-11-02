@@ -16,21 +16,22 @@ export default function MobileHeader({
     <>
       <div className="container-0 py-3 px-2">
         <div className="flex-between">
-          <div className="flex items-center">
-            <div>
-              <MobileNavbar categoriesGroup={categoriesGroup} />
-            </div>
+          
+          <div className="flex">
+              <div>
+                <MobileNavbar categoriesGroup={categoriesGroup} />
+              </div>
 
-            <div className="ms-2">
-              <CartLink />
-            </div>
+              <div className="ms-1 md:ms-2">
+                <CartLink />
+              </div>
           </div>
 
-          <div className="w-25">
+          <div className="w-30">
             <Logo />
           </div>
 
-          <div className="flex">
+          <div className="flex justify-end min-w-[50px]">
             <AuthMenu />
           </div>
         </div>              

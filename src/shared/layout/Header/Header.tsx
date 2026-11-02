@@ -26,7 +26,7 @@ export default async function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-49 border-b border-[#ebebeb]  bg-white">
+      <header className="sticky top-0 z-49 border-b py-1 lg:py-1.5 border-[#ebebeb]  bg-white">
         <div className="hidden lg:block">
           <DesktopHeader />
         </div>
@@ -35,7 +35,7 @@ export default async function Header() {
           <MobileHeader categoriesGroup={categoriesGroup} />
         </div>
       </header>
-      <div className="sticky top-[100px] lg:top-[135px] mb-[60px] lg:mb-[50px] z-48">
+      <div className="sticky top-[77px] lg:top-[95px] mb-[60px] lg:mb-[50px] z-48">
         <DesktopNavbar categoriesGroup={categoriesGroup} />
       </div>
     </>

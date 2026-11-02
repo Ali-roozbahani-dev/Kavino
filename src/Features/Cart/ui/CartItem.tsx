@@ -23,7 +23,7 @@ export default function CartItem({item}: {item: TCartItem}){
                 </div>
                 <div className="ps-2 flex flex-col justify-between items-start">
                     <h3 
-                    className="font-semibold text-[13px] md:text-[14px] w-full">
+                    className="font-semibold text-[12px] sm:text-[14px] w-full mb-3 md:mb-0">
                         {product_name}
                     </h3>
                     <CartColor attributes={attributes}/>

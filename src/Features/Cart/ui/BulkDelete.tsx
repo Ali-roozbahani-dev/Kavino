@@ -24,22 +24,30 @@ export default function BulkDelete({isClearing , clearCart}: Props){
             <AlertDialogTrigger asChild>
                 <Button                 
                 variant={"destructive"} 
-                className="rounded-sm text-[13px] md:text-[14px] h-10 border bg-white">
-                    <Trash2 className="size-4 md:size-4.5"/>
-                    خالی کردن سبد خرید
+                className="rounded-sm text-[13px] md:text-[14px] h-8 md:h-10 border px-1 md:px-2">
+                    <Trash2 className="size-4.5"/>
+                    <span className="hidden md:block">
+                     خالی کردن سبد خرید
+                    </span>
                 </Button>                
             </AlertDialogTrigger>
-            <AlertDialogContent size="sm" className="rounded-sm">
+            <AlertDialogContent size="sm" className="rounded-sm w-[260px] sm:w-max md:max-w-lg!">
                 <AlertDialogHeader>
-                <AlertDialogTitle className="font-vazir">تمام محصولات از سبد خریدتان حذف شود ؟</AlertDialogTitle>
+                    
+                <AlertDialogTitle 
+                className="font-vazir text-[13px] md:text-[15px] lg:text-[15px]"
+                >تمام محصولات از سبد خریدتان حذف شود ؟
+                </AlertDialogTitle>
+
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                 <AlertDialogCancel className="rounded-sm">انصراف</AlertDialogCancel>
                 <AlertDialogAction 
+                variant={"Blue1"}
                 disabled={isClearing}
-                className="text-red-600 bg-white hover:bg-red-100 border! border-red-600! rounded-sm" 
+                className="rounded-sm"
                 onClick={clearCart} >
-                    خالی کردن سبد خرید                    
+                   بله                   
                 </AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
