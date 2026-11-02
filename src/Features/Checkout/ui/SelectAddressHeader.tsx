@@ -9,12 +9,12 @@ export default function SelectAddressHeader({addresses}:{addresses: AddressListI
 
     return (
         <div className="flex justify-between mb-6">
-            <h2 className="flex items-center gap-1.5 text-lg font-semibold">
-                <MapPin className="size-5" />
-                انتخاب آدرس
+            <h2 className="flex items-center gap-1.5 text-md md:text-lg font-semibold">
+                <MapPin className="size-4.5 md:size-5" />
+                 آدرس
             </h2>
 
-            <div className="flex gap-2">
+            <div className="flex gap-1 md:gap-2">
                 <AddressSelectorDialog addresses={addresses} />
                 {/* افزودن آدرس */}
                 <AddressFormDialog
@@ -25,7 +25,9 @@ export default function SelectAddressHeader({addresses}:{addresses: AddressListI
                     className="gap-1.5"
                     >
                     <Plus className="size-4" />
-                    افزودن آدرس
+                    <span className="hidden md:block">
+                     افزودن آدرس
+                    </span>
                     </Button>
                 }
                 />

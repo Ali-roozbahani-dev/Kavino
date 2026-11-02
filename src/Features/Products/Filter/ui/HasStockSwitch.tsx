@@ -22,7 +22,11 @@ export function HasStockSwitch() {
         )}
       />
 
-      <Label htmlFor="has_stock">فقط کالا های موجود</Label>
+      <Label 
+      htmlFor="has_stock"
+      className="text-[13px] md:text-[15px]"
+      >فقط کالا های موجود
+      </Label>
     </div>
   );
 }

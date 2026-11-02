@@ -1,4 +1,4 @@
-import { CardFooter } from "../card";
+import { CardFooter } from "../../../../ui/card";
 
 
 export default function FooterWithoutDiscount({price}: {price : number}){

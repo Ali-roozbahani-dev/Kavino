@@ -13,9 +13,10 @@ export default function CategorySlider({categories}: Props) {
   return (
     <div className='my-10 px-3 xl:px-5'>
         <Swiper
-        spaceBetween={0}        
+        spaceBetween={15}        
         breakpoints={{
-        400: { slidesPerView: 3.2 },
+        0: { slidesPerView: 2.2 },
+        400: { slidesPerView: 3.5 },
         640: { slidesPerView: 4.2 },
         800: { slidesPerView: 5.2 },
         1000: { slidesPerView: 6.2 },

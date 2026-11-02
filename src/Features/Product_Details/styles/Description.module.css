@@ -13,5 +13,5 @@
 }
 
 .description  p{
-    @apply  text-justify text-[14px] md:text-[15px] leading-loose
+    @apply  text-justify text-[12px] md:text-[15px] leading-loose
 }

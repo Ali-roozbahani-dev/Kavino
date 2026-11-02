@@ -40,7 +40,7 @@ export function CategoryCheckBoxes({categoryOptions}:{categoryOptions:CategoryOp
                 />
                 <FieldLabel
                   htmlFor={cat.category__slug}
-                  className="font-normal text-primary-text"
+                  className="font-normal text-[12px] md:text-[14px] text-primary-text"
                 >
                   {cat.category__name}
                   <span className="text-[13px]">({formatNumberWithoutSeparator(cat.count)})</span>

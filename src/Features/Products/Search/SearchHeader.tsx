@@ -59,15 +59,15 @@ export default function SearchHeader() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <InputGroup className="py-5 lg:py-6 px-2.5 rounded-full bg-[#f5f5f5]">
+      <InputGroup className="py-1 md:py-4 lg:py-6 px-2.5 rounded-full bg-[#f5f5f5]">
         <InputGroupInput 
-        className="placeholder:text-[13px] lg:placeholder:text-[15px]"
+        className="placeholder:text-[12px] lg:placeholder:text-[15px] text-[13px] md:text-[15px]"
         placeholder="جستوجو ..." 
         onFocus={()=> setOpenResult(true)}        
         value={searchValue} 
         onChange={(e) => setSearchValue(e.target.value)}/>
-        <InputGroupAddon className="ms-2">
-          <Search className="w-6! h-6!"/>
+        <InputGroupAddon className="ms-1 md:ms-2">
+          <Search className="size-5 md:size-6"/>
         </InputGroupAddon>      
       </InputGroup> 
 

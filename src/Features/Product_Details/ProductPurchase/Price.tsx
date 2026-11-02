@@ -21,6 +21,7 @@ export default function Price({selectedVariant}: {selectedVariant: ProductVarian
             :
             <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] text-theme-4">
                 <span>{price.toLocaleString("fa")}</span>
+                <span className="block w-max ms-auto md:ms-1 md:inline-block  text-[10px] md:text-[11px] lg:text-[12px]">تومان</span>
             </div>
             }
         </div>

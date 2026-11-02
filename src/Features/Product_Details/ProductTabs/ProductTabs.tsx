@@ -53,40 +53,42 @@ export default function ProductTabs({
     <div ref={containerRef} className="md:border-x relative">
       <TabsHeader reviews_summary={reviews_summary} activeTab={activeTab} />
 
-      <div className="flex">
-        <div className="w-full xl:px-2 xl:w-3/4">
-          <section
-            id="Description"
-            className="py-3 px-2 lg:p-5 scroll-mt-[160px] lg:scroll-mt-[190px]"
-          >
-            <Description description={description} />
-          </section>
-          <section
-            id="Specifications"
-            className="py-3 px-2 lg:p-5 scroll-mt-[160px] lg:scroll-mt-[190px]"
-          >
-            <ProductSpecifications
-              attributes={attributes}              
-            />
-          </section>
-          <section
-            id="Reviews"
-            className="py-3 px-2 lg:p-5 scroll-mt-[160px] lg:scroll-mt-[190px]"
-          >
-            <Reviews 
-            reviews_summary={reviews_summary}
-            productSlug={productSlug}
-            />
-          </section>
-        </div>
+      <div className="container-0 px-1.5">
+        <div className="flex">
+          <div className="w-full xl:px-2 xl:w-3/4">
+            <section
+              id="Description"
+              className="py-3 px-2 lg:p-5 scroll-mt-[160px] lg:scroll-mt-[190px]"
+            >
+              <Description description={description} />
+            </section>
+            <section
+              id="Specifications"
+              className="py-3 px-2 lg:p-5 scroll-mt-[160px] lg:scroll-mt-[190px]"
+            >
+              <ProductSpecifications
+                attributes={attributes}              
+              />
+            </section>
+            <section
+              id="Reviews"
+              className="py-3 px-2 lg:p-5 scroll-mt-[160px] lg:scroll-mt-[190px]"
+            >
+              <Reviews 
+              reviews_summary={reviews_summary}
+              productSlug={productSlug}
+              />
+            </section>
+          </div>
 
-        <div className="hidden xl:block w-1/4 py-5 pe-5 relative">
-          <div className="sticky top-[calc(var(--navbar-height)+70px)] w-full">
-            <ProductPurchase   
-            productId={productId}          
-            variants={variants} 
-            PurchaseInTabs={true} 
-            />
+          <div className="hidden xl:block w-1/4 py-5 pe-5 relative">
+            <div className="sticky top-[calc(var(--navbar-height)+70px)] w-full">
+              <ProductPurchase   
+              productId={productId}          
+              variants={variants} 
+              PurchaseInTabs={true} 
+              />
+            </div>
           </div>
         </div>
       </div>

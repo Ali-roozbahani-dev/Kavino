@@ -1,7 +1,6 @@
 "use client";
 
 import { Pencil } from "lucide-react";
-
 import { Button } from "@/ui/button";
 import AddressDialog from "@/Features/Address/ui/AddressFormDialog";
 import { AddressListItem } from "@/entities/Address/models/AddressList.types";
@@ -28,10 +27,13 @@ export default function SelectedAddress({
   }
 
   return (
-    <div className="flex items-center justify-between rounded-xl border p-4 transition-colors hover:bg-transparent">
+    <div className="relative flex items-start md:items-center justify-between rounded-md md:rounded-xl 
+    mt-7 md:mt-0
+    border gap-2 p-2.5 md:p-4 
+    transition-colors hover:bg-transparent">
       {/* اطلاعات آدرس */}
       <div className="space-y-2">
-        <div className="text-sm font-semibold">
+        <div className="text-[13px] md:text-[14px]  bg font-semibold">
           {address.address_line}
         </div>
 
@@ -59,11 +61,12 @@ export default function SelectedAddress({
           trigger={
             <Button
               type="button"
-              variant="Light"
+              variant="outline"
               aria-label="ویرایش آدرس"
+              className="absolute md:static -top-5 left-1 h-7 w-7 md:w-max md:h-10"
             >
-              <Pencil className="size-4" />
-              <span>ویرایش آدرس</span>
+              <Pencil className="size-3 md:size-4" />
+              <span className=" hidden md:block">ویرایش آدرس</span>
             </Button>
           }
           initialAddressId={address.id}

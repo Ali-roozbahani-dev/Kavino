@@ -25,7 +25,7 @@ export function SortBySelect({ordering,setOrdering}: Tprops) {
   return (
     <Select value={ordering ?? ""} onValueChange={(v: Ordering)=> setOrdering(v)}>
       <SelectTrigger className="w-full max-w-48 rounded-md py-3 lg:py-5">
-        <span className="text-primary-text text-[13px]">مرتب سازی :</span>
+        <span className="text-primary-text text-[11px] md:text-[13px]">مرتب سازی :</span>
         <SelectValue />
       </SelectTrigger>
       <SelectContent      

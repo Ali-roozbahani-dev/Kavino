@@ -17,13 +17,13 @@ export default function CheckoutShippingDialog({
     <section className="space-y-3">
       <h3 className="font-semibold">روش ارسال</h3>
 
-      <div className="flex items-center justify-between rounded-lg border p-4">
+      <div className="flex items-center justify-between rounded-lg border p-2.5 md:p-4">
         <div>
           <p className="font-medium">
             {shippingMethod.name}
           </p>
 
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="mt-1 text-[13px] md:text-[14px] text-muted-foreground">
             زمان تحویل: حدود{" "}
             {formatNumberWithoutSeparator(
               shippingMethod.estimated_days
@@ -32,11 +32,14 @@ export default function CheckoutShippingDialog({
           </p>
         </div>
 
-        <span className="font-medium">
+        <div className="font-medium text-[14px] md:text-[15px] lg:text-[16px]">
           {shippingCost === 0
             ? "رایگان"
-            : `${formatNumber(shippingCost)} تومان`}
-        </span>
+            : `${formatNumber(shippingCost)}`}
+            <span className="inline-block ms-1 text-[10px] md:text-[11px] lg:text-[12px]">
+              تومان
+            </span>
+        </div>
       </div>
     </section>
   );

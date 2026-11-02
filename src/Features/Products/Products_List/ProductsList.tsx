@@ -4,7 +4,7 @@ import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import EmptyResult from "./ui/EmptyResult";
 import { useColumns } from "@/Features/Products/Products_List/hooks/useColumns";
 import { ProductListItem } from "@/entities/Product";
-import ProductsPageCard from "@/ui/Product_Card/ProductsPageCard";
+import ProductsPageCard from "@/Features/Products/ui/Product_Card/ProductsPageCard";
 
 interface Props {
   products: ProductListItem[];
@@ -49,7 +49,7 @@ export default function ProductsList({ products }: Props) {
   }
 
   return (
-    <div ref={parentRef} className="px-5">
+    <div ref={parentRef} className="px-0 md:px-2.5 lg:px-5">
       <div
         style={{
           height: rowVirtualizer.getTotalSize(),
@@ -73,10 +73,11 @@ export default function ProductsList({ products }: Props) {
               }}
             >
               {row.map((product) => (
-                <ProductsPageCard
-                  key={product.slug}
-                  product={product}
-                />
+                <div key={product.slug} className="border-b md:border-0">
+                  <ProductsPageCard                    
+                    product={product}
+                  />
+                </div>                
               ))}
             </div>
           );

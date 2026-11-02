@@ -82,7 +82,7 @@ export function AddressSelectorDialog({
 
       <DialogContent
         dir="rtl"
-        className="sm:max-w-2xl h-150 overflow-y-auto block!"
+        className="h-screen rounded-none md:rounded-lg max-w-screen sm:max-w-2xl md:h-150 overflow-y-auto block! scrollbar-custom"
       >
         <DialogHeader>
           <DialogTitle className="font-vazir">
@@ -117,7 +117,7 @@ export function AddressSelectorDialog({
                   }
                 }}
                 className={`
-                  rounded-xl border p-4 transition
+                  rounded-md md:rounded-xl border p-4 transition
                   ${
                     isPending
                       ? "cursor-not-allowed opacity-60"

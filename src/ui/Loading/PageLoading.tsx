@@ -7,11 +7,11 @@ export default function PageLoading({containerclassName = ""}:{containerclassNam
   return (
     <div className={cn("h-screen flex flex-col items-center" , containerclassName)}>
       <Image 
-      src={"/loadingLogo.png"} 
+      src={"/loadingLogo.webp"} 
       alt="Logo"
       width={907} 
       height={1008}
-      className="w-40  h-auto mb-3 mt-55"
+      className="w-50  h-auto mb-3 mt-55"
       />
       <Dots className="w-13 ltr "/>
     </div>

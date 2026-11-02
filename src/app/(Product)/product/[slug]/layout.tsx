@@ -1,4 +1,6 @@
 import { getProduct } from "@/Features/Product_Details/api/getProduct";
+import Footer from "@/shared/layout/Footer/Footer";
+import Header from "@/shared/layout/Header/Header";
 import { Metadata } from "next";
 
 type PageProps = {
@@ -12,7 +14,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  const product = await getProduct(decodeURIComponent(slug));
+  const product = await getProduct(slug);
 
   const title = `${product.name} | خرید با بهترین قیمت`;
   const description =
@@ -78,7 +80,7 @@ export async function generateMetadata({
 
     authors: [
       {
-        name: "Kaveh Shop",
+        name: "kavino",
       },
     ],
   };
@@ -90,5 +92,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  return children;
+  return(
+    <div className="pb-12 xl:pb-0">
+      <>
+      <Header />                          
+        {children}
+      <Footer />         
+      </> 
+    </div>
+  ) 
 }

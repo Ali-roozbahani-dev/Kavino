@@ -24,12 +24,12 @@ export default function CartLink() {
         {showBadge &&
         <Badge
           className="rounded-full bg-theme-2 lg:bg-white lg:text-theme-4 border border-theme-4
-          h-4.5 w-4.5 lg:h-5 lg:w-5 pt-1 absolute -top-1 -right-1 lg:top-0lg:right-1"
+          h-4 w-4 lg:h-5 lg:w-5 pt-1 absolute -top-1 -right-1 lg:top-0lg:right-1 text-[11px] md:text-[13px]"
         >
           {formatNumberWithoutSeparator(cart.items.length)}
         </Badge>
         }
-        <FaCartShopping className="inline-block size-6 lg:size-6.5" />       
+        <FaCartShopping className="inline-block size-5 lg:size-6.5" />       
   
       </Link>
       {showBadge &&

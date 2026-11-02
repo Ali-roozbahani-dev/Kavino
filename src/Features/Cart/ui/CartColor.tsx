@@ -14,9 +14,9 @@ export default function CartColor({attributes}: {attributes: VariantAttribute[]}
     
     return(
         <div className="flex border p-1 w-max rounded-sm">
-            <span className="text-[12px] md:text-[13px]">{color.value}</span>
+            <span className="text-[11px] md:text-[13px]">{color.value}</span>
             <div 
-            className="border rounded-sm w-5 h-5 ms-2"
+            className="border rounded-xs md:rounded-sm w-4 h-4 md:w-5 md:h-5 ms-2"
             style={{
                 backgroundColor: colorCode
             }}

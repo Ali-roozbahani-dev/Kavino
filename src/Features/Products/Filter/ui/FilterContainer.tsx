@@ -52,8 +52,8 @@ export default function FilterContainer({facets , onSubmit , defaultValues}: Tpr
             className="flex h-full flex-col"
             >
             <SidebarHeader className="border-b">
-                <h1 className="font-bold text-[18px] px-4 py-2">
-                    <SlidersHorizontal className="inline-block me-4"/>
+                <h1 className="font-bold text-[16px] md:text-[18px] px-4 py-2">
+                    <SlidersHorizontal className="size-5 inline-block me-2.5"/>
                     <span>فیلتر ها</span>
                 </h1>
             </SidebarHeader>
@@ -67,7 +67,7 @@ export default function FilterContainer({facets , onSubmit , defaultValues}: Tpr
                 type="multiple"                
                 >
                 <AccordionItem value="category">
-                    <AccordionTrigger className="font-bold">
+                    <AccordionTrigger className="font-bold text-[13px] md:text-[15px]">
                     دسته‌بندی
                     </AccordionTrigger>
                     <AccordionContent className="max-h-72 overflow-y-auto">
@@ -76,7 +76,7 @@ export default function FilterContainer({facets , onSubmit , defaultValues}: Tpr
                 </AccordionItem>
 
                 <AccordionItem value="price">
-                    <AccordionTrigger className="font-bold">
+                    <AccordionTrigger className="font-bold text-[13px] md:text-[15px]">
                     محدوده قیمت
                     </AccordionTrigger>
                     <AccordionContent>
@@ -87,7 +87,7 @@ export default function FilterContainer({facets , onSubmit , defaultValues}: Tpr
 
                 {firstSegment !== "brand" &&
                 <AccordionItem value="brand">
-                    <AccordionTrigger className="font-bold">
+                    <AccordionTrigger className="font-bold text-[13px] md:text-[15px]">
                     برند
                     </AccordionTrigger>
                     <AccordionContent className="max-h-72 overflow-y-auto">

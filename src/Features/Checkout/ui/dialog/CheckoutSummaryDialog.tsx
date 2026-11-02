@@ -23,9 +23,15 @@ export default function CheckoutSummaryDialog({
             مبلغ کالاها
           </span>
 
-          <span>
-            {formatNumber(cart.subtotal)} تومان
-          </span>
+          <div>
+            <span>
+              {formatNumber(cart.subtotal)} 
+            </span>
+            <span className="inline-block ms-1 text-[12px] md:text-[13px] lg:text-[14px]">
+              تومان
+            </span>
+          </div>
+
         </div>
 
         {Number(cart.product_discount) > 0 && (
@@ -33,7 +39,10 @@ export default function CheckoutSummaryDialog({
             <span>تخفیف محصولات</span>
 
             <span>
-              - {formatNumber(cart.product_discount)} تومان
+              - {formatNumber(cart.product_discount)}
+            </span>
+            <span className="inline-block ms-1 text-[12px] md:text-[13px] lg:text-[14px]">
+            تومان
             </span>
           </div>
         )}
@@ -45,7 +54,10 @@ export default function CheckoutSummaryDialog({
             </span>
 
             <span>
-              - {formatNumber(cart.coupon_discount)} تومان
+              - {formatNumber(cart.coupon_discount)} 
+            </span>
+            <span className="inline-block ms-1 text-[12px] md:text-[13px] lg:text-[14px]">
+            تومان
             </span>
           </div>
         )}
@@ -58,20 +70,25 @@ export default function CheckoutSummaryDialog({
           <span>
             {shippingCost === 0
               ? "رایگان"
-              : `${formatNumber(shippingCost)} تومان`}
+              : `${formatNumber(shippingCost)}`}
+              <span className="inline-block ms-1 text-[12px] md:text-[13px] lg:text-[14px]">
+              تومان
+              </span>
           </span>
         </div>
 
         <Separator />
 
         <div className="flex items-center justify-between text-base font-bold">
-          <span>مبلغ قابل پرداخت</span>
+          <span className="text-[15px] md:text-[16px] lg:text-[18px]">مبلغ قابل پرداخت</span>
 
           <span className="text-primary">
             {formatNumber(
               Number(cart.total) + Number(shippingCost)
             )}{" "}
+            <span className="inline-block text-[12px] md:text-[13px] lg:text-[14px]">
             تومان
+            </span>
           </span>
         </div>
       </div>

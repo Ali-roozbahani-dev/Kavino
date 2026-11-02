@@ -5,7 +5,7 @@ import { getImageUrl } from "@/shared/lib/getImageUrl";
 import Image from "next/image";
 import Link from "next/link";
 import { FavoriteListItem, FavoriteToggle } from "@/Features/Favorites";
-import NoStock from "@/ui/Product_Card/NoStock";
+import NoStock from "@/Features/Products/ui/Product_Card/NoStock";
 
 export default function FavoriteItemCard({
   product,

@@ -4,6 +4,7 @@ import "./globals.css";
 import { useEffect } from "react";
 import Image from "next/image";
 import { vazir } from "./fonts";
+import Link from "next/link";
 
 export default function GlobalError({
   error,
@@ -51,12 +52,12 @@ export default function GlobalError({
               تلاش مجدد
             </button>
 
-            <a
+            <Link
               href="/"
               className="flex h-11 items-center rounded-xl border border-gray-300 px-8"
             >
               صفحهٔ اصلی
-            </a>
+            </Link>
           </div>
 
           {error.digest && (

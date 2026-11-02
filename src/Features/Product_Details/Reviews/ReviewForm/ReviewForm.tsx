@@ -56,7 +56,7 @@ export default function ReviewForm({productSlug}: {productSlug: string}){
         onSubmit={handleSubmit(sendReviewHandler)}
         className="rounded-lg border p-3">
             <h3 className="font-semibold mb-2 lg:text-[17px]">نظر خود را بنویسید</h3>
-            <p className="text-primary-text text-[14px] lg:text-[15px]">دیدگاه شما به انتخاب دیگران کمک میکند</p>
+            <p className="text-primary-text text-[13px] md:text-[15px] lg:text-[15px">دیدگاه شما به انتخاب دیگران کمک میکند</p>
 
 
 

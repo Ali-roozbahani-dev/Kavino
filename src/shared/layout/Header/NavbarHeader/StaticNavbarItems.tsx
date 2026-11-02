@@ -18,7 +18,8 @@ export default function StaticNavbarItems() {
                   min-h-12
                   px-4
                   rounded-xl
-                  text-[14px]
+                  text-[13px]
+                  md:text-[14px]
                   font-medium
                   text-gray-700
                   transition-all duration-200

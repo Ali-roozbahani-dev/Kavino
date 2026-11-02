@@ -27,7 +27,7 @@ export default function AddressFormDialog({
       </DialogTrigger>
 
       <DialogContent
-        className="max-h-[90vh] overflow-y-auto sm:max-w-3xl scrollbar-custom rounded-sm"
+        className="h-screen rounded-none md:rounded-lg max-w-screen sm:max-w-2xl md:h-150 overflow-y-auto block! scrollbar-custom"
         dir="rtl"
       >
         <DialogHeader>
@@ -36,7 +36,7 @@ export default function AddressFormDialog({
           </DialogTitle>
 
         {!initialAddressId &&
-          <DialogDescription>
+          <DialogDescription className="mb-2.5 text-[13px] md:text-[14px]">
             اطلاعات آدرس و گیرنده را وارد کنید.
           </DialogDescription>
         }

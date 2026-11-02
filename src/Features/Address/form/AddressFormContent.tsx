@@ -85,7 +85,7 @@ export default function AddressFormContent({
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
-        <section className="rounded-xl border bg-background p-6">
+        <section className="rounded-xl md:border bg-background md:p-6 mt-6 md:mt-0">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <AddressReceiverForm />
             <AddressLocationForm />

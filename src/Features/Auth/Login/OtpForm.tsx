@@ -85,12 +85,24 @@ export default function OtpForm({mobile , callbackUrl}: Props) {
       }}
       pattern={REGEXP_ONLY_DIGITS}>
         <InputOTPGroup>
-          <InputOTPSlot index={0} className="data-[active=true]:ring-outline-input data-[active=true]:border-theme-4 mx-1 h-13 w-10 border rounded-md"/>
-          <InputOTPSlot index={1} className="data-[active=true]:ring-outline-input data-[active=true]:border-theme-4 mx-1 h-13 w-10 border rounded-md"/>
-          <InputOTPSlot index={2} className="data-[active=true]:ring-outline-input data-[active=true]:border-theme-4 mx-1 h-13 w-10 border rounded-md"/>
-          <InputOTPSlot index={3} className="data-[active=true]:ring-outline-input data-[active=true]:border-theme-4 mx-1 h-13 w-10 border rounded-md"/>
-          <InputOTPSlot index={4} className="data-[active=true]:ring-outline-input data-[active=true]:border-theme-4 mx-1 h-13 w-10 border rounded-md"/>
-          <InputOTPSlot index={5} className="data-[active=true]:ring-outline-input data-[active=true]:border-theme-4 mx-1 h-13 w-10 border rounded-md"/>
+          <InputOTPSlot index={0} className="data-[active=true]:ring-outline-input 
+          data-[active=true]:border-theme-4 mx-1 
+          h-10 w-7 md:h-13 md:w-10 border rounded-md"/>
+          <InputOTPSlot index={1} className="data-[active=true]:ring-outline-input 
+          data-[active=true]:border-theme-4 mx-1 
+          h-10 w-7 md:h-13 md:w-10 border rounded-md"/>
+          <InputOTPSlot index={2} className="data-[active=true]:ring-outline-input 
+          data-[active=true]:border-theme-4 mx-1 
+          h-10 w-7 md:h-13 md:w-10 border rounded-md"/>
+          <InputOTPSlot index={3} className="data-[active=true]:ring-outline-input 
+          data-[active=true]:border-theme-4 mx-1 
+          h-10 w-7 md:h-13 md:w-10 border rounded-md"/>
+          <InputOTPSlot index={4} className="data-[active=true]:ring-outline-input 
+          data-[active=true]:border-theme-4 mx-1 
+          h-10 w-7 md:h-13 md:w-10 border rounded-md"/>
+          <InputOTPSlot index={5} className="data-[active=true]:ring-outline-input 
+          data-[active=true]:border-theme-4 mx-1 
+          h-10 w-7 md:h-13 md:w-10 border rounded-md"/>
         </InputOTPGroup>
       </InputOTP>
     </Field>

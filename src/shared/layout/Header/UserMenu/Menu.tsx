@@ -1,37 +1,32 @@
 import Link from "next/link";
 import { Package, User } from "lucide-react";
+import {
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
+
 import LogoutDialog from "@/Features/Auth/Logout/LogoutDialog";
 
-export default function 
-Menu(){
+export default function Menu() {
+  return (
+    <>
+      <DropdownMenuItem asChild>
+        <Link href="/profile" className="cursor-pointer text-[13px] md:text-[15px]">
+          <User className="size-4" />
+          پروفایل من
+        </Link>
+      </DropdownMenuItem>
 
-    return (      
-        <div
-            className="
-            invisible absolute left-0 top-full z-50 mt-2 w-52
-            translate-y-2 opacity-0
-            rounded-md border bg-popover p-1 shadow-md
-            transition-all duration-200
-            group-hover:visible group-hover:translate-y-0 group-hover:opacity-100
-            "
-        >
-            <Link
-            href="/profile"
-            className="flex items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-muted"
-            >
-            <User className="size-4" />
-            پروفایل من
-            </Link>
+      <DropdownMenuItem asChild>
+        <Link href="/profile/orders" className="cursor-pointer text-[13px] md:text-[15px]">
+          <Package className="size-4" />
+          سفارش‌های من
+        </Link>
+      </DropdownMenuItem>
 
-            <Link
-            href="/profile/orders"
-            className="flex items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-muted"
-            >
-            <Package className="size-4" />
-            سفارش‌های من
-            </Link>
+      <DropdownMenuSeparator />
 
-            <LogoutDialog />
-        </div>
-    )
+      <LogoutDialog textClass="text-[13px] md:text-[15px]"/>
+    </>
+  );
 }

@@ -11,7 +11,7 @@ export default function FormResetBtn({defaultValues}: {defaultValues: FormInput}
         onClick={()=> reset(defaultValues)}
         variant={"Light"}
         type="button" 
-        className="w-full  rounded-sm py-5">
+        className="w-full text-[13px] md:text-[14px] rounded-sm py-4 md:py-5">
             <RefreshCcw />
             <span>پاک کردن فیلتر ها</span>
         </Button>    

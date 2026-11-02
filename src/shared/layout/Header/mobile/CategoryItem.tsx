@@ -32,7 +32,7 @@ export default function CategoryItem({ parent, categoryChildren }: Tprops) {
         <AccordionTrigger
           className="
             px-4 py-4
-            text-[15px]
+            text-[13px]
             font-semibold
             text-gray-800
             hover:no-underline
@@ -72,7 +72,7 @@ export default function CategoryItem({ parent, categoryChildren }: Tprops) {
                     "
                   />
 
-                  <span className="truncate">{child.name}</span>
+                  <span className="truncate text-[13px]">{child.name}</span>
                 </Link>
               </SheetClose>
             ))}
@@ -87,11 +87,11 @@ export default function CategoryItem({ parent, categoryChildren }: Tprops) {
       <Link
         href={`/category/${parent.slug}`}
         className="
-          flex items-center
+          flex items-center 
           min-h-14
           px-4
           border-b border-gray-100
-          text-[15px]
+          text-[13px]
           font-semibold
           text-gray-800
           transition-colors

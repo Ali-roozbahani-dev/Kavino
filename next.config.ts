@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const backendInternalUrl =
-  process.env.BACKEND_INTERNAL_URL ?? "http://django:8000";
+  process.env.BACKEND_INTERNAL_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "";
 
 let backendProtocol: "http" | "https" = "http";
 let backendHostname = "127.0.0.1";
@@ -39,6 +39,18 @@ const nextConfig: NextConfig = {
         protocol: "http",
         hostname: "localhost",
         port: "8000",
+        pathname: "/media/**",
+      },
+      {
+        protocol: "http",
+        hostname: "87.107.108.25",
+        port: "",
+        pathname: "/media/**",
+      },
+      {
+        protocol: "https",
+        hostname: "Mohanashop.ir",
+        port: "",
         pathname: "/media/**",
       },
     ],

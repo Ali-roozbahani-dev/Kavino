@@ -34,7 +34,7 @@ export default function ModalActivedImage({images , activeImage , setActiveImage
             onSlideChange={(swiper) => {
                 setActiveImage(images[swiper.realIndex]);
             }}
-            className="w-90 lg:w-100 2xl:w-110"                 
+            className="w-full lg:w-100 2xl:w-110"                 
             >
             {images.map((image)=>(
 

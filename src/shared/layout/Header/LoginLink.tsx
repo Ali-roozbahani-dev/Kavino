@@ -10,9 +10,9 @@ export default function LoginLink(){
     return (
         <Link 
         href={loginUrl} 
-        className="shadow rounded-md py-2 px-1.5 lg:px-2.5
+        className="shadow rounded-md py-1.5 px-1 md:py-2 lg:px-2.5
             hover:text-theme-hover flex-center h-full">
-            <LogIn className="size-6 inline-block lg:hidden"/>            
+            <LogIn className="size-5 md:size-6 inline-block lg:hidden"/>            
             <span className="hidden lg:inline-block font-bold text-[14px]">ورود / ثبت نام</span>
         </Link>
     )
