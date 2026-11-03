@@ -2,6 +2,7 @@ import { AddressList, PageTitle } from "@/Features/User_Profile";
 import AddressFormDialog from "@/Features/Address/ui/AddressFormDialog";
 import { Button } from "@/ui/button";
 import {
+  MapPin,
   Plus,
 } from "lucide-react";
 
@@ -10,10 +11,22 @@ export default function AddressesPage() {
   return (
     <section className="space-y-5">
       {/* Header */}
-      <div className="flex  gap-4 bg-white py-5 lg:p-5 justify-between">
+      <div className="flex gap-4 bg-white py-5 lg:p-5 justify-between items-start">
         <PageTitle>
-          آدرس‌های من
-        </PageTitle>     
+        <div>
+            <div className="flex items-center gap-4">
+              <div
+                className={"hidden lg:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"}
+              >     
+              <MapPin strokeWidth={1.8} size={25} />         
+              </div>
+      
+              <div>
+                <h1 className="text-[15px] md:text-xl font-bold">آدرس ها </h1>
+              </div>
+            </div>
+          </div>        
+      </PageTitle>     
 
 
         <AddressFormDialog trigger={
@@ -21,10 +34,10 @@ export default function AddressesPage() {
         <Button
           variant={"Blue3"}
           type="button"
-          className="flex h-9 md:h-11 items-center justify-center gap-2 rounded-md px-3 md:px-5 text-sm font-medium"
+          className="flex h-7 md:h-11 items-center justify-center gap-2 rounded-md px-2 md:px-5 text-[12px] md:text-[15px] font-medium"
         >
           <Plus size={18} />
-          افزودن آدرس جدید
+          افزودن آدرس 
         </Button>
         }/>
       </div>

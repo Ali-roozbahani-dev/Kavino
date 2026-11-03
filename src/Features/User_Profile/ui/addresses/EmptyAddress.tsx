@@ -8,11 +8,11 @@ export default function EmptyAddress(){
             <MapPin size={28} />
             </div>
 
-            <h2 className="mt-4 font-bold text-gray-900">
+            <h2 className="mt-4 text-[15px] md:text-xl font-bold text-gray-900">
             هنوز آدرسی ثبت نکرده‌اید
             </h2>
 
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-[12px] md:text-[14px] text-gray-500">
             برای ثبت سفارش ابتدا یک آدرس اضافه کنید.
             </p>
       </div>

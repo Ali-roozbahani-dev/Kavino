@@ -7,7 +7,7 @@ export function ProfileRootLink(){
 
     return(
         <Link  href={"/profile"}>
-            <CircleArrowRight strokeWidth={1.6} className="size-8"/>                        
+            <CircleArrowRight strokeWidth={1.6} className="size-6 md:size-7 lg:size-8"/>                        
         </Link>
     )
 
