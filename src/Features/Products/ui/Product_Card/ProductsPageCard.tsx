@@ -23,7 +23,7 @@ export default function ProductsPageCard({
     <Link
       target="_blank"
       href={`/product/${product.slug}`}
-      className="block relative hover:shadow-[0px_0px_5px_1px_#e3e2e2]"
+      className="block relative hover:shadow-[0px_0px_5px_1px_#e3e2e2] h-full"
     >
       <Card
         className="
@@ -33,7 +33,7 @@ export default function ProductsPageCard({
           flex flex-row-reverse h-[170px]
 
           /* Desktop */
-          md:flex md:flex-col md:p-0 md:h-full
+          md:flex md:flex-col md:p-0 md:h-full 
         "
       >        
 
@@ -65,18 +65,15 @@ export default function ProductsPageCard({
         {/* Content */}
         <div
           className="
-            flex flex-col flex-1 min-w-0 justify-between py-3 md:px-1
-
-            md:block md:p-0
-          "
+            flex flex-col flex-1 min-w-0 justify-between py-3 md:px-1"
         >
           <CardTitle
             className="
-              text-soft-text font-vazir
-              text-[10px] md:text-[13px] xl:text-[14px]
+              text-soft-text font-vazir font-semibold
+              text-[11px] md:text-[13px] xl:text-[14px]
               line-clamp-3 leading-5.5
 
-              md:px-3 md:leading-7 md:line-clamp-2
+              md:px-3 md:line-clamp-2 mb-2
             "
           >
             {name}
@@ -85,7 +82,7 @@ export default function ProductsPageCard({
           <CardFooter
             className="
               font-bold w-full mx-auto py-2  md:h-[55px] rounded-none
-              px-1.5 md:px-3 border-0 md:bg-transparent relative
+              px-1.5 md:px-3 border-0 md:bg-transparent relative flex items-end 
             "
           >
             {/* Discount Badge */}

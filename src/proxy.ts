@@ -37,7 +37,6 @@ export const config = {
     matcher: [
         "/Login",
         "/LoginWithOtp",
-        "/checkout/address",
         "/checkout/shipping",
         "/profile",
         "/profile/:path*",

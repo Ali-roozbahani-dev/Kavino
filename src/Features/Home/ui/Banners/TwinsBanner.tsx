@@ -7,33 +7,32 @@ export default function TwinsBanner({banners}: {banners: GridBannerItem[]}){
 
 
     return (
-        <div className="flex flex-wrap lg:flex-nowrap items-center justify-between my-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 my-5 md:my-8">
+        {banners.map((banner) => (
+            <Link
+            key={banner.id}
+            href={banner.url}
+            className="block min-w-0"
+            >
+            <Image
+                src={banner.mobile_image}
+                width={1000}
+                height={308}
+                alt="banner"
+                className="rounded-md w-full h-auto md:hidden"
+                unoptimized
+            />
 
-            {banners.map((banner)=>(
-                <Link 
-                key={banner.id} 
-                href={banner.url} 
-                className="block w-full md:w-1/2 lg:pe-2 mb-3 lg:mb-0">
-                    <Image 
-                    src={banner.mobile_image} 
-                    width={1000} 
-                    height={308} 
-                    alt="banner"
-                    className="rounded-md md:hidden"
-                    unoptimized
-                    />
-
-                    <Image 
-                    src={banner.desktop_image} 
-                    width={1000} 
-                    height={308} 
-                    alt="banner"
-                    className="rounded-md hidden md:block"
-                    unoptimized
-                    />
-                </Link>           
-
-            ))}
+            <Image
+                src={banner.desktop_image}
+                width={1000}
+                height={308}
+                alt="banner"
+                className="rounded-md hidden md:block w-full h-auto"
+                unoptimized
+            />
+            </Link>
+        ))}
         </div>
     )
 }

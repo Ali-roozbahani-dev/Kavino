@@ -28,7 +28,7 @@ export default async function HomePage() {
       {heroItems.length > 0 && <HeroSlider sliders={heroItems} />}
 
       {categoryItems.length > 0 && (
-        <div className="max-w-400 mx-auto">
+        <div className="max-w-400 mx-auto mt-5 md:mt-10">
           <CategorySlider categories={categoryItems} />
         </div>
       )}
@@ -42,13 +42,14 @@ export default async function HomePage() {
           <SpecialOffers products={discountItems} />
         )}
 
+        {brandItems.length > 0 && (
+          <BrandSlider brands={brandItems} />
+        )}
+        
         {secondBannerItems.length > 0 && (
           <FourBanner banners={secondBannerItems} />
         )}
 
-        {brandItems.length > 0 && (
-          <BrandSlider brands={brandItems} />
-        )}
       </div>
     </main>
   );
