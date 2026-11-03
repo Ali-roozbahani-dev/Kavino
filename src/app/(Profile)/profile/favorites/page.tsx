@@ -9,9 +9,7 @@ export default function FavoritesPage() {
 
 
   return (
-    <div className="space-y-4">
-
-
+    <div className="space-y-5">
       <PageTitle>
         <div className="bg-white py-5 lg:p-5">
             <div className="flex items-center gap-4">
@@ -22,12 +20,11 @@ export default function FavoritesPage() {
               </div>
       
               <div>
-                <h1 className="text-xl font-bold">علاقه مندی ها</h1>
+                <h1 className="text-[15px] md:text-xl font-bold">علاقه مندی ها</h1>
               </div>
             </div>
           </div>        
-      </PageTitle>
-      
+      </PageTitle>    
 
       <FavoriteProductsList />
     </div>

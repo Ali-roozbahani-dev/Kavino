@@ -9,11 +9,11 @@ export  function EmptyOrders(){
           <Package size={28} />
         </div>
 
-        <h2 className="mt-4 font-bold text-gray-900">
+        <h2 className="mt-4 text-[15px] md:text-xl font-bold text-gray-900">
           هنوز سفارشی ثبت نکرده‌اید
         </h2>
 
-        <p className="mt-2 text-sm text-gray-500">
+        <p className="mt-2 text-[12px] md:text-[14px] text-sm text-gray-500">
           سفارش‌های شما بعد از ثبت در این بخش نمایش داده می‌شوند.
         </p>
       </div>
