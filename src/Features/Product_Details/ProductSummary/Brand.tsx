@@ -20,6 +20,7 @@ export default function Brand({ brand }: { brand: Tbrand }) {
           height={500}
           alt={`${name} image`}
           className="w-20 md:w-30 absolute left-0 top-0"
+          unoptimized
         />
       )}
     </div>

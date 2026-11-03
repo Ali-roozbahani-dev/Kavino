@@ -42,7 +42,8 @@ export default function HeroSlider({sliders}: Props){
                     width={1200} 
                     height={250} 
                     alt={slider.title ?? "تصویر هیرو بنر"} 
-                    className='w-full h-auto hidden lg:block'                
+                    className='w-full h-auto hidden lg:block'     
+                    unoptimized           
                     />
 
                     <Image 
@@ -50,7 +51,8 @@ export default function HeroSlider({sliders}: Props){
                     width={1200} 
                     height={410} 
                     alt={slider.title ?? "تصویر هیرو بنر"} 
-                    className='w-full h-auto lg:hidden'                
+                    className='w-full h-auto lg:hidden'   
+                    unoptimized             
                     />
                 </Link>
             </SwiperSlide>         

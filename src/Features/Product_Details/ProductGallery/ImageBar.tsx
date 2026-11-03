@@ -49,6 +49,7 @@ setOpenModal }: Props) {
                 height={1500}
                 alt={image.alt_text}
                 className="w-full"
+                unoptimized
               />
 
               {hasOverlay && (

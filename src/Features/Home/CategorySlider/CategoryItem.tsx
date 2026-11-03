@@ -22,6 +22,7 @@ export default function CategoryItem({category}: Props){
                 height={140}
                 alt={category.name ?? "category image"}
                 className="h-auto w-full mx-auto"
+                unoptimized
                 />
             </div>
             <p className="text-center font-semibold text-[11px]  xs:text-[12px] lg:text-[14px] pt-4">{category.name}</p>

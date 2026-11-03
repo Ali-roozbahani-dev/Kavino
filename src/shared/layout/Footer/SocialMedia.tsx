@@ -26,7 +26,8 @@ export default function SocialMedia(){
                     width={100} 
                     height={100} 
                     alt="e-namad-logo" 
-                    className="w-full h-auto"                        
+                    className="w-full h-auto"   
+                    unoptimized                     
                     />
                 </Link>
             </div>

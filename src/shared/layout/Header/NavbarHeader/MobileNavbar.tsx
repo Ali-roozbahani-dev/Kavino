@@ -31,7 +31,7 @@ export default function MobileNavbar({categoriesGroup,}:{categoriesGroup: TCateg
 
       <SheetContent side="right" className="w-[320px] p-0 z-200">
         <SheetHeader className="pb-0! pt-3 px-1">
-          <Image src={"/mainLogo.webp"} width={100} height={100} alt="logo"/>          
+          <Image src={"/mainLogo.webp"} width={100} height={100} alt="logo" unoptimized/>          
         </SheetHeader>
 
         <div className="overflow-y-auto h-full pb-20  scrollbar-custom">

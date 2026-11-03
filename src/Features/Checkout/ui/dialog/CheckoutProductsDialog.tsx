@@ -32,6 +32,7 @@ export default function CheckoutProductsDialog({
                 src={item.image.image}
                 alt={item.product_name}
                 className="h-full w-full object-contain"
+                unoptimized
               />
             </div>
 

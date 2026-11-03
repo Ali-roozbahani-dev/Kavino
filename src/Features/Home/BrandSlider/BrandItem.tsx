@@ -19,6 +19,7 @@ export default function BrandItem({ brand }: { brand: Brand }) {
           height={120}
           alt={`${brand.name} logo`}
           className="w-full h-auto"
+          unoptimized
         />      
     </Link>
   );

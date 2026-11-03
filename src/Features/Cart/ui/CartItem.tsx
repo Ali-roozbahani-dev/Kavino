@@ -19,6 +19,7 @@ export default function CartItem({item}: {item: TCartItem}){
                     width={1000}
                     height={1000}
                     className="w-full"
+                    unoptimized
                     />
                 </div>
                 <div className="ps-2 flex flex-col justify-between items-start">

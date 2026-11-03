@@ -58,6 +58,7 @@ export default function ProductsPageCard({
               md:h-auto
               ${has_stock ? "" : "opacity-60"}
             `}
+            unoptimized
           />
         </div>
 

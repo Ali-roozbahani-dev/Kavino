@@ -20,6 +20,7 @@ export default function DrawerItem({item}: {item: TCartItem}){
                     width={1000}
                     height={1000}
                     className="w-full"
+                    unoptimized
                     />
                 </div>
                 <div className="ps-2">

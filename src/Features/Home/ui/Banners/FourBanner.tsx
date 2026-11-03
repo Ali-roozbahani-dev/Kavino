@@ -22,6 +22,7 @@ export default function FourBanner({
             height={308}
             alt="banner"
             className="rounded-md w-full md:hidden"
+            unoptimized
           />
 
           {/* Tablet & Desktop */}
@@ -31,6 +32,7 @@ export default function FourBanner({
             height={308}
             alt="banner"
             className="rounded-md w-full hidden md:block"
+            unoptimized
           />
         </Link>
       ))}

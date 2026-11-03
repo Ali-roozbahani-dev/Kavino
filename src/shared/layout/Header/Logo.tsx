@@ -12,6 +12,7 @@ export default function Logo(){
             width={907} 
             height={1008}
             className="w-full  h-auto"
+            unoptimized
             />                    
         </Link>
     )

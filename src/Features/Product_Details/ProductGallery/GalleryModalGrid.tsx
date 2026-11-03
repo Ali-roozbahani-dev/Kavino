@@ -26,6 +26,7 @@ export default function ModalGalleryGrid({images , activeImage , setActiveImage}
                     width={1000}
                     height={1500}
                     alt={image.alt_text}
+                    unoptimized
                     />
                 </div>
             </div>                         

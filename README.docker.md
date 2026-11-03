@@ -33,7 +33,7 @@
 | متغیر                    | اجباری | مقدار نمونه           | توضیح                                                                 |
 |--------------------------|--------|------------------------|------------------------------------------------------------------------|
 | `BACKEND_INTERNAL_URL`   | بله    | `http://django:8000`  | آدرس داخلیِ سرویس Django در شبکهٔ Docker Compose (نام سرویس، نه localhost) |
-| `NEXT_PUBLIC_SITE_URL`   | بله    | `https://kavino.com`  | آدرس عمومی خودِ سایت؛ فقط برای تگ‌های canonical/OG در متادیتای SEO استفاده می‌شود (ربطی به بک‌اند ندارد) |
+| `NEXT_PUBLIC_SITE_URL`   | بله    | `https://Mohanashop.com`  | آدرس عمومی خودِ سایت؛ فقط برای تگ‌های canonical/OG در متادیتای SEO استفاده می‌شود (ربطی به بک‌اند ندارد) |
 | `PORT`                   | خیر    | `3000`                 | پورت داخلی سرور Next.js (پیش‌فرض 3000، همان چیزی که در Dockerfile EXPOSE شده) |
 | `HOSTNAME`               | خیر    | `0.0.0.0`              | باید `0.0.0.0` باشد تا سرور از بیرون container قابل دسترسی باشد        |
 | `NODE_ENV`               | خیر    | `production`           | در Dockerfile از پیش تنظیم شده                                          |
@@ -55,7 +55,7 @@ docker build -t kaveh-shop-frontend:latest .
 ```bash
 docker run --rm -p 3000:3000 \
   -e BACKEND_INTERNAL_URL=http://host.docker.internal:8000 \
-  -e NEXT_PUBLIC_SITE_URL=https://kavino.com \
+  -e NEXT_PUBLIC_SITE_URL=https://Mohanashop.com \
   kaveh-shop-frontend:latest
 ```
 
@@ -72,7 +72,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - BACKEND_INTERNAL_URL=http://django:8000
-      - NEXT_PUBLIC_SITE_URL=https://kavino.com
+      - NEXT_PUBLIC_SITE_URL=https://Mohanashop.com
     expose:
       - "3000"
     # پورت به بیرون باز نمی‌شود؛ Nginx روی همین شبکهٔ Compose
