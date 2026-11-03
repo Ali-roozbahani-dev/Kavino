@@ -32,7 +32,8 @@ export default function HomePageProductCard({product}: {product: ProductListItem
           width={196}
           height={2000}
           alt={product.name}
-          className="w-full h-auto"          
+          className="w-full h-auto"   
+          unoptimized       
         />        
           
         <CardTitle className="font-normal font-vazir px-3 text-[14px] md:text-[15px] lg:text-[16px] line-clamp-2">

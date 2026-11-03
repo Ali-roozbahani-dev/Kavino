@@ -20,6 +20,7 @@ export default function TwinsBanner({banners}: {banners: GridBannerItem[]}){
                     height={308} 
                     alt="banner"
                     className="rounded-md md:hidden"
+                    unoptimized
                     />
 
                     <Image 
@@ -28,6 +29,7 @@ export default function TwinsBanner({banners}: {banners: GridBannerItem[]}){
                     height={308} 
                     alt="banner"
                     className="rounded-md hidden md:block"
+                    unoptimized
                     />
                 </Link>           
 

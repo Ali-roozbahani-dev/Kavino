@@ -12,6 +12,7 @@ export default function PageLoading({containerclassName = ""}:{containerclassNam
       width={907} 
       height={1008}
       className="w-50  h-auto mb-3 mt-55"
+      unoptimized
       />
       <Dots className="w-13 ltr "/>
     </div>

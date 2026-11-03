@@ -62,6 +62,7 @@ export default function FavoriteItemCard({
                 md:h-auto
                 ${has_stock ? "" : "opacity-60"}
                 `}
+                unoptimized
             />
             </div>
 

@@ -32,6 +32,7 @@ export default function GlobalError({
             height={360}
             priority
             className="mx-auto"
+            unoptimized
           />
 
           <h1 className="mt-8 text-2xl font-bold">

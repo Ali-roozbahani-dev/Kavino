@@ -20,6 +20,7 @@ export default function NotFoundContent() {
           height={420}
           priority
           className="mx-auto"
+          unoptimized
         />
 
         <h1 className="mt-8 text-xl md:text-3xl font-bold">

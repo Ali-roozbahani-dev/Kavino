@@ -106,7 +106,8 @@ export default function ActivedImage({images , activeImage , setActiveImage , se
                 alt={activeImage.alt_text} 
                 onMouseMove={handleMouseMove} 
                 onMouseEnter={() => setShowZoom(true)}
-                onMouseLeave={() => setShowZoom(false)}                      
+                onMouseLeave={() => setShowZoom(false)}   
+                unoptimized                   
                 />                         
             </div>
 
@@ -137,7 +138,8 @@ export default function ActivedImage({images , activeImage , setActiveImage , se
                         alt={image.alt_text} 
                         onMouseMove={handleMouseMove} 
                         onMouseEnter={() => setShowZoom(true)}
-                        onMouseLeave={() => setShowZoom(false)}                      
+                        onMouseLeave={() => setShowZoom(false)}     
+                        unoptimized                 
                         />                         
                     </div>
                 </SwiperSlide>               

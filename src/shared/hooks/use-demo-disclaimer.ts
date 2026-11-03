@@ -29,10 +29,6 @@ function readAccepted(): string | null {
   }
 }
 
-/**
- * وضعیت نمایش مودال اطلاعیه را مدیریت می‌کند.
- * @param version با تغییر این مقدار، مودال دوباره برای همه نمایش داده می‌شود.
- */
 export function useDemoDisclaimer(version = "v1") {
   const open = useSyncExternalStore(
     subscribe,

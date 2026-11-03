@@ -38,6 +38,7 @@ export default async function LoginWithOtpPge({searchParams}: PageProps){
               width={1000} 
               height={1000} alt="logo"
               className="w-full" 
+              unoptimized
               />
             </Link>
             <h1 className="font-bold text-[16px] md:text-[18px] text-center mt-5 mb-3">کد ارسال شده را وارد کنید</h1> 

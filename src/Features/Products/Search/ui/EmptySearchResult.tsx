@@ -11,6 +11,7 @@ export default function EmptySearchResult({className}: {className: string}){
             height={1254} 
             className="w-full h-auto" 
             alt="تصویر خالی"
+            unoptimized
             />
         </div>
     )

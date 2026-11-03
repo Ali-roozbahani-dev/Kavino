@@ -41,6 +41,7 @@ export default function GalleryModalSlider({images , activeImage , setActiveImag
                     width={1000}
                     height={1500}
                     alt={image.alt_text}
+                    unoptimized
                     />
                 </button>
             </SwiperSlide>                          
