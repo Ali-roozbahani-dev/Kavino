@@ -45,7 +45,7 @@ export default function HeaderList({
           </div>
         </div>
       </div>
-      <div className="md:hidden mb-3 sm:flex justify-center items-center">
+      <div className="md:hidden mb-3 flex justify-start items-center">
         <span className="font-semibold text-[13px]">{formatNumberWithoutSeparator(count)} محصول</span>
       </div>
     </div>

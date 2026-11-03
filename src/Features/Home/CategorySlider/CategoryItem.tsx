@@ -25,7 +25,7 @@ export default function CategoryItem({category}: Props){
                 unoptimized
                 />
             </div>
-            <p className="text-center font-semibold text-[11px]  xs:text-[12px] lg:text-[14px] pt-4">{category.name}</p>
+            <p className="text-center font-semibold text-[12px]  xs:text-[12px] lg:text-[14px] pt-4">{category.name}</p>
         </Link>
     )
 }

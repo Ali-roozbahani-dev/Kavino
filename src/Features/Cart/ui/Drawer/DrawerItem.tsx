@@ -12,7 +12,7 @@ export default function DrawerItem({item}: {item: TCartItem}){
     return(
         <div className="flex justify-between not-last:border-b not-last:pb-4 not-first:pt-4">
         
-            <div className="flex">
+            <div className="flex w-full">
                 <div className="w-25">
                     <Image 
                     src={image.image}
@@ -23,7 +23,7 @@ export default function DrawerItem({item}: {item: TCartItem}){
                     unoptimized
                     />
                 </div>
-                <div className="ps-2">
+                <div className="ps-2 flex-1">
                     <h3 
                     className="font-semibold text-[13px] md:text-[14px] w-full pt-2 pb-4">
                         {product_name}
