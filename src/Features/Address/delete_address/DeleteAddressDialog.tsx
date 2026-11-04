@@ -17,7 +17,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/ui/alert-dialog";
+} from "@/components/ui/alert-dialog";
 import { useDeleteAddress } from "./hook/useDeleteAddress";
 
 interface Props {

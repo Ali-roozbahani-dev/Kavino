@@ -5,7 +5,7 @@ import {
   SelectItem,    
   SelectTrigger,
   SelectValue,
-} from "@/ui/select"
+} from "@/components/ui/select"
 import { Ordering } from "@/Features/Products/Filter/types/TproductSection";
 import { Dispatch, SetStateAction } from "react";
 const sortOptions = [

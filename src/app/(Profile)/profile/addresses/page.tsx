@@ -1,6 +1,6 @@
 import { AddressList, PageTitle } from "@/Features/User_Profile";
 import AddressFormDialog from "@/Features/Address/ui/AddressFormDialog";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   MapPin,
   Plus,

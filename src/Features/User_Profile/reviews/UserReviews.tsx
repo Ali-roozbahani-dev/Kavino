@@ -2,7 +2,7 @@
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver"
 import { useUserReviews } from "./hooks/useUserReviews";
 import FilterTabs from "./FilterTabs";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { PageTitle } from "../ui/PageTitle";
 import { ReviewsHeader } from "../ui/reviews/ReviewsHeader";
 import { EmptyReviews } from "../ui/reviews/EmptyReviews";

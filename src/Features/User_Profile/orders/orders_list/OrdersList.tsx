@@ -1,7 +1,7 @@
 "use client";
 import { useOrders } from "./hooks/useOrders";
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { EmptyOrders } from "../../ui/orders/EmptyOrders";
 import { OrderListHeader } from "../../ui/orders/OrderListHeader";
 import { OrdersListItem } from "../../ui/orders/OrdersListItem";

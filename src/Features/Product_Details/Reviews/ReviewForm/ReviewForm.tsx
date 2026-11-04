@@ -4,7 +4,7 @@ import RatingInput from "./RatingInput";
 import SendReview from "./SendReview";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TreviewForm, ReviewFormSchema } from "./schema/ReviewFormSchema";
-import FieldError from "@/ui/Error/FieldError";
+import FieldError from "@/components/ui/Error/FieldError";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { api } from "@/shared/lib/axios_instance";

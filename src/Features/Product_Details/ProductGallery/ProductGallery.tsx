@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { Badge } from "@/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { GalleryModal } from "./GalleryModal";
 import ActivedImage from "./ActivedImage";
 import { ProductImage } from "@/entities/Product";

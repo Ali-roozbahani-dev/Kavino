@@ -1,4 +1,4 @@
-import NotFoundContent from "@/ui/NotFoundContent";
+import NotFoundContent from "@/components/ui/NotFoundContent";
 
 
 

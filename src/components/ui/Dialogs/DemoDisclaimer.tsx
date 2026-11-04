@@ -7,9 +7,9 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter,
-} from "@/ui/dialog";
+} from "@/components/ui/dialog";
 
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { Info } from "lucide-react";
 import { useDemoDisclaimer } from "@/shared/hooks/use-demo-disclaimer";
 

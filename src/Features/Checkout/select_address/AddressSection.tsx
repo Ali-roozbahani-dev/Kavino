@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import {
   useAddressesList,
 } from "@/Features/Address/hooks/useAddressesList";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { useCheckoutStore } from "../store/checkoutStore";
 import SelectAddressHeader from "../ui/SelectAddressHeader";
 import SelectedAddress from "./SelectedAddress";

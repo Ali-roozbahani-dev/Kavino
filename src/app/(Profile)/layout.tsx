@@ -1,7 +1,7 @@
 import { AuthGuardWrapper } from "@/Features/Auth";
 import { ProfileNavigation } from "@/Features/User_Profile";
 import Header from "@/shared/layout/Header/Header";
-import Main from "@/ui/Main";
+import Main from "@/components/ui/Main";
 import { connection } from "next/server";
 
 export const dynamic = "force-dynamic";

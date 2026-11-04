@@ -1,6 +1,6 @@
 "use client";
 
-import { Slider } from "@/ui/slider";
+import { Slider } from "@/components/ui/slider";
 import { useFormContext } from "react-hook-form";
 import { useEffect, useRef, useState } from "react";
 import { formatNumber } from "@/shared/utils/formatNumber";

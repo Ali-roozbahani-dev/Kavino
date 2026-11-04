@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { SheetClose } from "@/ui/sheet";
+import { SheetClose } from "@/components/ui/sheet";
 
 import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/ui/accordion";
+} from "@/components/ui/accordion";
 
 import { CategoryListItem } from "@/entities/Category/models/Category.types";
 

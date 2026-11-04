@@ -12,7 +12,7 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-} from "@/ui/alert-dialog";
+} from "@/components/ui/alert-dialog";
 import { useLogout } from "./hooks/useLogout";
 import { cn } from "@/shared/lib/utils";
 

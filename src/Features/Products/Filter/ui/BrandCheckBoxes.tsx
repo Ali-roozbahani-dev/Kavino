@@ -1,10 +1,10 @@
-import { Checkbox } from "@/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox"
 import {
   Field,  
   FieldGroup,  
   FieldLabel,  
   FieldSet,
-} from "@/ui/field"
+} from "@/components/ui/field"
 import { BrandOption } from "@/entities/Product";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 import { Controller, useFormContext } from "react-hook-form";

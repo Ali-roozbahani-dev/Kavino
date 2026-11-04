@@ -4,17 +4,17 @@ import {
   Field,
   FieldContent,
   FieldLabel,
-} from "@/ui/field";
-import { Input } from "@/ui/input";
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/ui/select";
+} from "@/components/ui/select";
 import { useFormContext, Controller, useWatch } from "react-hook-form";
-import FieldError from "@/ui/Error/FieldError";
+import FieldError from "@/components/ui/Error/FieldError";
 import { useProvinces } from "@/entities/Location/hooks/useProvinces";
 import { Province } from "@/entities/Location/models/locations.types";
 import AddressLocationFormSkeleton from "@/Features/Address/ui/AddressLocationFormSkeleton";

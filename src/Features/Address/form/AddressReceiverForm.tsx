@@ -1,13 +1,13 @@
 "use client"
-import { Input } from "@/ui/input";
+import { Input } from "@/components/ui/input";
 import {
   Field,
   FieldContent,
   FieldLabel,
-} from "@/ui/field";
+} from "@/components/ui/field";
 import { useFormContext } from "react-hook-form";
-import FieldError from "@/ui/Error/FieldError";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@/ui/input-group";
+import FieldError from "@/components/ui/Error/FieldError";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 
 
 export default function AddressReceiverForm(){

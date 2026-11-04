@@ -1,5 +1,5 @@
-import { Badge } from "@/ui/badge";
-import { Card, CardFooter, CardTitle } from "@/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardFooter, CardTitle } from "@/components/ui/card";
 import { getDiscountPercentage } from "@/shared/utils/getDiscountPercentage";
 import { getImageUrl } from "@/shared/lib/getImageUrl";
 import Image from "next/image";

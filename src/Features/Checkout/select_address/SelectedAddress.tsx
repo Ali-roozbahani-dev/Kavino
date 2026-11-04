@@ -1,7 +1,7 @@
 "use client";
 
 import { Pencil } from "lucide-react";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import AddressDialog from "@/Features/Address/ui/AddressFormDialog";
 import { AddressListItem } from "@/entities/Address/models/AddressList.types";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";

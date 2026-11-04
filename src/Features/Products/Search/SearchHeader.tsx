@@ -5,7 +5,7 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/ui/input-group"
+} from "@/components/ui/input-group"
 import { Result } from "./ui/Result"
 import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"

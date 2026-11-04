@@ -1,5 +1,5 @@
 "use client";
-import { Table, TableBody, TableCell, TableRow } from "@/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { ProductAttribute } from "@/entities/Product";
 
 interface Props {

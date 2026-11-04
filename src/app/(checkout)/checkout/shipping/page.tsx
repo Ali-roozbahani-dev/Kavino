@@ -1,9 +1,9 @@
 "use client"
 import CheckoutHeader from "@/Features/Checkout/ui/CheckoutHeader";
-import Main from "@/ui/Main";
+import Main from "@/components/ui/Main";
 import ShippingSection from "@/Features/Checkout/Shipping/ShippingSection";
 import { useCheckoutGuard } from "@/Features/Checkout/hooks/useCheckoutGuard";
-import PageLoading from "@/ui/Loading/PageLoading";
+import PageLoading from "@/components/ui/Loading/PageLoading";
 import AddressSection from "@/Features/Checkout/select_address/AddressSection";
 import CouponSection from "@/Features/Checkout/Coupon/CouponSection";
 import CheckoutSummary from "@/Features/Checkout/Summary/CheckoutSummary";

@@ -1,4 +1,4 @@
-import { Dots } from "@/ui/Loading/dots"
+import { Dots } from "@/components/ui/Loading/dots"
 import { cn } from "@/shared/lib/utils"
 import Image from "next/image"
 

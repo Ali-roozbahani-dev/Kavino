@@ -8,8 +8,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/ui/dialog";
-import Spinner from "@/ui/Loading/Spinner";
+} from "@/components/ui/dialog";
+import Spinner from "@/components/ui/Loading/Spinner";
 import { useOrderDetail } from "./hook/useOrderDetail";
 
 interface OrderDetailDialogProps {

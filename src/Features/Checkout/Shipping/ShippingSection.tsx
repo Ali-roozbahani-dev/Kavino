@@ -1,6 +1,6 @@
 "use client"
 import { useGetShippingMethods } from "@/Features/Checkout/Shipping/hooks/useGetShippingMethods";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { useCheckoutStore } from "@/Features/Checkout/store/checkoutStore";
 import MethodSelector from "./MethodSelector";
 

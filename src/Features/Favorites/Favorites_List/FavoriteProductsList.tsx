@@ -3,7 +3,7 @@
 import EmptyFavorites from "@/Features/User_Profile/ui/favorites/EmptyFavorites";
 import { useFavorites } from "./hooks/useFavorites"
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import FavoriteItemCard from "@/Features/Favorites/ui/FavoriteItemCard";
 
 export default function FavoriteProductsList(){

@@ -3,7 +3,7 @@ import { useCart } from "@/Features/Cart/hooks/useCart";
 import CartListHeader from "./CartListHeader";
 import EmptyCart from "./EmptyCart";
 import { useClearCart } from "@/Features/Cart/hooks/useClearCart";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import { CartList } from "./CartList";
 import { CheckoutSummary } from "@/Features/Checkout";
 
