@@ -1,6 +1,6 @@
 "use client"
 
-import { Progress } from "@/ui/progress"
+import { Progress } from "@/components/ui/progress"
 
 interface Props{
   percent: number;

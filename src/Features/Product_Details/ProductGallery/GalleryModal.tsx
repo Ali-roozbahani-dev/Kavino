@@ -2,7 +2,7 @@ import {
   Dialog,  
   DialogContent,  
   DialogOverlay,    
-} from "@/ui/dialog"
+} from "@/components/ui/dialog"
 import { Dispatch, SetStateAction, useState } from "react"
 
 import ModalGalleryGrid from "./GalleryModalGrid";

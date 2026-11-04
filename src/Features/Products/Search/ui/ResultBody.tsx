@@ -1,4 +1,4 @@
-import Spinner from "@/ui/Loading/Spinner";
+import Spinner from "@/components/ui/Loading/Spinner";
 import ResultItem from "./ResultItem";
 import EmptySearchResult from "@/Features/Products/Search/ui/EmptySearchResult";
 import { ProductListItem } from "@/entities/Product";

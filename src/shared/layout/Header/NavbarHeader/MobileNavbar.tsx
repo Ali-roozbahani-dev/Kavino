@@ -8,11 +8,11 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/ui/sheet";
+} from "@/components/ui/sheet";
 
 import {
   Accordion,  
-} from "@/ui/accordion";
+} from "@/components/ui/accordion";
 import { TCategoriesGroup } from "../desktop/Categories/utils/categorizeCategories";
 import CategoryItem from "../mobile/CategoryItem";
 import StaticNavbarItems from "./StaticNavbarItems";

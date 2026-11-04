@@ -2,7 +2,7 @@
 
 // Client wrapper جدا از layout سرور، تا Header (Server Component) بتونه به‌عنوان
 // prop از بیرون پاس داده بشه و مستقیم داخل فایل کلاینتی import نشه (خطای async Server Component in Client)
-import PageLoading from "@/ui/Loading/PageLoading";
+import PageLoading from "@/components/ui/Loading/PageLoading";
 import { useAuthGuard } from "./hooks/useAuthGuard";
 
 export default function AuthGuardWrapper({

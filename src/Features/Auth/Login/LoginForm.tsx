@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react"
-import { InputGroup,InputGroupInput } from "@/ui/input-group";
-import { Label } from "@/ui/label";
+import { InputGroup,InputGroupInput } from "@/components/ui/input-group";
+import { Label } from "@/components/ui/label";
 import RequestOtpBtn from "./RequestOtpBtn";
-import FieldError from "@/ui/Error/FieldError";
+import FieldError from "@/components/ui/Error/FieldError";
 import { useRequestOtp } from "./hooks/useRequestOtp";
 import { loginSchema } from "./schema/loginSchema";
 

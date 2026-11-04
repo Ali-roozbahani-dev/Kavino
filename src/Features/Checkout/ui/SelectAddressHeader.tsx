@@ -1,6 +1,6 @@
 import AddressFormDialog from "@/Features/Address/ui/AddressFormDialog";
 import { AddressSelectorDialog } from "@/Features/Address/ui/SelectAddressDialog";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { AddressListItem } from "@/entities/Address";
 import { MapPin, Plus } from "lucide-react";
 

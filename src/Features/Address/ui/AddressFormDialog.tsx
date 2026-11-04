@@ -8,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/ui/dialog"
+} from "@/components/ui/dialog"
 
 interface AddressDialogProps {
   trigger: React.ReactNode;

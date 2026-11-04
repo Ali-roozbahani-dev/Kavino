@@ -1,6 +1,6 @@
 "use client";
-import { Label } from "@/ui/label";
-import { Switch } from "@/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import { useFormContext, Controller } from "react-hook-form";
 import { FormInput, FormOutput } from "../schema/filterProductsSchema";
 

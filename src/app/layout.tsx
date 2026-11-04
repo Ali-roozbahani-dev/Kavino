@@ -5,10 +5,10 @@ import { Geist } from "next/font/google";
 import { cn } from "@/shared/lib/utils";
 import { DirectionProvider } from "@radix-ui/react-direction";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
-import { Toaster } from "@/ui/sonner"
+import { Toaster } from "@/components/ui/sonner"
 import { AuthBootstrap } from "@/Features/Auth";
 import { SessionSyncProviders } from "@/providers/SessionSyncProviders";
-import DemoDisclaimer from "@/ui/Dialogs/DemoDisclaimer";
+import DemoDisclaimer from "@/components/ui/Dialogs/DemoDisclaimer";
 
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});

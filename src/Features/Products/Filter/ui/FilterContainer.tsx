@@ -5,14 +5,14 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-} from "@/ui/sidebar";
+} from "@/components/ui/sidebar";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/ui/accordion";
+} from "@/components/ui/accordion";
 import { CategoryCheckBoxes } from "./CategoryCheckBoxes";
 import { BrandCheckBoxes } from "./BrandCheckBoxes";
 import { PriceFilter } from "./PriceFilter";

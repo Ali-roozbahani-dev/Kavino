@@ -2,7 +2,7 @@
 
 import { Pencil, Check, X, Loader2 } from "lucide-react";
 import { UpdateUserForm } from "./schema/updateUserSchema ";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 
 export type EditableField = keyof UpdateUserForm;
 

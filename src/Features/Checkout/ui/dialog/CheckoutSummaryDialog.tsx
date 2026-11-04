@@ -1,4 +1,4 @@
-import { Separator } from "@/ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { Checkout } from "@/entities/Checkout/models/Checkout.types";
 import { formatNumber } from "@/shared/utils/formatNumber";
 

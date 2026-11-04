@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -7,8 +7,8 @@ import {
   DialogHeader,  
   DialogTitle,
   DialogTrigger,
-} from "@/ui/dialog"
-import { Label } from "@/ui/label"
+} from "@/components/ui/dialog"
+import { Label } from "@/components/ui/label"
 import { Copy, Share2 } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"

@@ -1,8 +1,8 @@
 "use client";
 
-import { SidebarTrigger } from "@/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { SortBySelect } from "./SortBySelect";
-import { FilterTrigger } from "@/ui/FilterTrigger";
+import { FilterTrigger } from "@/components/ui/FilterTrigger";
 import { Dispatch, SetStateAction } from "react";
 import { CategoryListItem } from "@/entities/Category/models/Category.types";
 import { Ordering } from "@/Features/Products/Filter/types/TproductSection";

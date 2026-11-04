@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { PanelTopClose, SlidersHorizontal } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 

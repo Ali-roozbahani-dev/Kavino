@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import QuantitySelector from "../../Cart/ui/QuantitySelector";
@@ -7,7 +7,7 @@ import { useCart } from "@/Features/Cart/hooks/useCart";
 import { useAddToCart } from "@/Features/Cart/hooks/useAddToCart";
 import NotifyWhenAvailableBtn from "./NotifyWhenAvailableBtn";
 import { ProductVariant } from "@/entities/Product";
-import SectionLoadingSpinner from "@/ui/Loading/SectionLoadingSpinner";
+import SectionLoadingSpinner from "@/components/ui/Loading/SectionLoadingSpinner";
 import { useAuth } from "../../Auth";
 
 interface Props {
@@ -57,7 +57,7 @@ export default function AddToCartBtn({selectedVariant }: Props) {
           
           <Link
             href={"/cart"}
-            className="border border-theme-2 font-semibold p-2 text-[12px] md:text-[13px]"
+            className={`border border-theme-2 font-semibold p-2 text-[12px] md:text-[13px] ${addedVariant ? "hidden lg:block" : "block"}`}
           >
             مشاهده سبد خرید
           </Link>
@@ -67,15 +67,16 @@ export default function AddToCartBtn({selectedVariant }: Props) {
           disabled={isAddingToCart}
           onClick={addToCartHandler}
           variant={"Blue1"}
-          className="w-full rounded-sm px-3 md:px-5 h-10 md:h-11 lg:h-12.5 text-[13px] md:text-[14px] lg:text-[16px]"
+          className="w-32 md:w-auto xl:w-full  flex rounded-sm px-3 md:px-5 h-10 md:h-11 lg:h-12.5 text-[13px] md:text-[14px] lg:text-[16px]"
         >
           {isAddingToCart ? (
             <Loader2 className="size-5 lg:size-6 animate-spin" />
           ) : (
+            <>
             <ShoppingCart className="hidden md:block size-5 lg:size-6" />
-          )}
-
-          افزودن به سبد خرید
+            <span>افزودن به سبد خرید</span>
+            </>
+          )}          
         </Button>
       )}
     </>

@@ -1,12 +1,12 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { Field } from "@/ui/field"
+import { Field } from "@/components/ui/field"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/ui/input-otp"
+} from "@/components/ui/input-otp"
 import CountDown from "./CountDown"
 import EditNumLink from "./EditNumLink"
 import {useState } from "react"

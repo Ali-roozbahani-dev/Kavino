@@ -6,10 +6,10 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/ui/dialog";
+} from "@/components/ui/dialog";
 
-import { Button } from "@/ui/button";
-import { Separator } from "@/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Checkout } from "@/entities/Checkout/models/Checkout.types";
 import CheckoutAddressDialog from "./CheckoutAddressDialog";
 import CheckoutShippingDialog from "./CheckoutShippingDialog";

@@ -1,7 +1,7 @@
 "use client"
 import { useAddressesList } from "@/Features/Address/hooks/useAddressesList";
 import { useInfiniteScrollObserver } from "@/shared/hooks/useInfiniteScrollObserver";
-import SectionLoadingDots from "@/ui/Loading/SectionLoadingDots";
+import SectionLoadingDots from "@/components/ui/Loading/SectionLoadingDots";
 import AddressItemSkeleton from "../ui/addresses/AddressItemSkeleton";
 import EmptyAddress from "../ui/addresses/EmptyAddress";
 import AddressItem from "../ui/addresses/AddressItem";

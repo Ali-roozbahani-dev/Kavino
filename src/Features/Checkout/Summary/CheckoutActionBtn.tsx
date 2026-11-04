@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
-import { Button } from "@/ui/button";
-import { Skeleton } from "@/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { usePathname, useRouter } from "next/navigation";
 import { useCheckoutStore } from "../store/checkoutStore";
 import { toast } from "sonner";

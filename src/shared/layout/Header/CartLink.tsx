@@ -1,6 +1,6 @@
 "use client";
 import CartDrawer from "@/Features/Cart/ui/Drawer/CartDrawer";
-import { Badge } from "@/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/Features/Cart/hooks/useCart";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 import Link from "next/link";

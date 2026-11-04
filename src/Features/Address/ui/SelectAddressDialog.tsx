@@ -8,9 +8,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/ui/dialog";
+} from "@/components/ui/dialog";
 
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { useSetDefaultAddress } from "@/Features/Address";
 import { AddressListItem } from "@/entities/Address";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";

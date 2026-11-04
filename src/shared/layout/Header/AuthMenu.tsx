@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useMe } from "@/Features/Auth/hooks/useMe";
 import LoginLink from "./LoginLink";
 import UserMenu from "./UserMenu/UserMenu";
-import { Skeleton } from "@/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function AuthMenu() {
   const [mounted, setMounted] = useState(false);

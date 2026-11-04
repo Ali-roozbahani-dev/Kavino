@@ -4,7 +4,7 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from "@/ui/breadcrumb"
+} from "@/components/ui/breadcrumb"
 import { CategoryPath} from "@/entities/Category/models/Category.types";
 import React from "react";
 

@@ -16,6 +16,9 @@ try {
 }
 
 const nextConfig: NextConfig = {
+  devIndicators: {
+    position: "top-right",
+  },
   output: "standalone",
   skipTrailingSlashRedirect: true,
 

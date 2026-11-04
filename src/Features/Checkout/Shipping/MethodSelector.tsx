@@ -1,5 +1,5 @@
 "use client";
-import { RadioGroup, RadioGroupItem } from "@/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ShippingMethodList } from "@/Features/Checkout/Shipping/types/ShippingMethod";
 import { formatNumberWithoutSeparator } from "@/shared/utils/formatNumber";
 import { Truck } from "lucide-react";

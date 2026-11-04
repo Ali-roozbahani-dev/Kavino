@@ -7,7 +7,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/ui/accordion";
+} from "@/components/ui/accordion";
 
 import { footerLists} from "./footerLists";
 import SocialMedia from "./SocialMedia";

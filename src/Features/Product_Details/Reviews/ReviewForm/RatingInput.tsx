@@ -1,5 +1,5 @@
 "use client"
-import FieldError from "@/ui/Error/FieldError";
+import FieldError from "@/components/ui/Error/FieldError";
 import { Star } from "lucide-react";
 import { useState } from "react";
 

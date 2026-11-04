@@ -1,4 +1,4 @@
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { useGetReviews } from "@/Features/Product_Details/Reviews/hooks/useGetReviews";
 import { ChevronDown, LoaderCircle } from "lucide-react";
 
